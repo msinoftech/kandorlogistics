@@ -1,0 +1,287 @@
+import type { Metadata } from "next";
+import Script from "next/script";
+import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
+import Link from "next/link";
+
+import { blogs } from "@/lib/data";
+import { testimonials } from "@/lib/testimonials";
+import { whyhireus } from "@/lib/whyhireus";
+
+import BlogCard from "@/components/BlogCard";
+import ContactForm from "@/components/ContactForm";
+import ContactSection from "@/components/ContactSection";
+import StatsSection from "@/components/StatsSection";
+import AboutSection from "@/components/AboutSection";
+import ProcessSection from "@/components/ProcessSection";
+import WhyHireSection from "@/components/WhyhireSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FaqSection from "@/components/FaqSection";
+import HeroLayout from "@/components/HeroLayout";
+import ServiceCard from "@/components/ServiceCard";
+
+export const metadata: Metadata = {
+  title: `Best Trucking Dispatch Company | Hire Your Local Trucking Dispatcher`,
+  description: "Kandor Logistics offers reliable trucking dispatch services for owner-operators, with experienced dispatchers available 24/7 to support your operations.",
+  keywords: [ "logistics", "freight forwarding", "supply chain", "shipping", "customs brokerage", "cargo", "global transport", "Kandor",],
+  alternates: {
+    canonical: `${BASE_URL}`,
+  },
+  openGraph: {
+    title: `Best Trucking Dispatch Company | Hire Your Local Trucking Dispatcher`,
+    description: "Kandor Logistics offers reliable trucking dispatch services for owner-operators, with experienced dispatchers available 24/7 to support your operations.",
+    url: `${BASE_URL}`,
+    type: "website",
+    siteName: "Kandor Logistics",
+    locale: "en_US",
+    images: [
+      {
+        url: `${BASE_URL}/social-hero.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "A large cargo ship being loaded at a bustling port.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@KandorLogistics",
+    creator: "@KandorLogistics",
+    title: "Kandor Logistics: Secure Global Supply Chain",
+    description: "Comprehensive freight forwarding, customs brokerage, and transport services ensuring your goods arrive safely and on time.",
+    images: `${BASE_URL}/twitter-card.jpg`,
+  },
+};
+
+export default function HomePage() {
+  const { phone } = contactInfo;
+
+  const homeschemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": `${BASE_URL}`,
+        "name": `${APP_NAME}`,
+        "description": "Global Freight, Customs, and Supply Chain Management Services.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": `${BASE_URL}/search?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        }
+      },
+      {
+        "@type": "WebPage",
+        "url": `${BASE_URL}`,
+        "name": "Global Freight & Supply Chain Management - Home",
+        "inLanguage": "en-US",
+        "description": "Kandor Logistics provides comprehensive global supply chain, freight forwarding, and customs brokerage services. Secure and efficient logistics solutions worldwide."
+      },
+      {
+        "@type": "Organization",
+        "name": `${APP_NAME}`,
+        "url": `${BASE_URL}`,
+        "logo": `${BASE_URL}/logo.png`,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": `${phone}`,
+          "contactType": "customer service",
+          "areaServed": "Global",
+          "availableLanguage": ["en","es","zh"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/kandorlogistics",
+          "https://www.linkedin.com/company/kandorlogistics",
+          "https://twitter.com/KandorLogistics"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": `${APP_NAME} - Texas Hub`,
+        "url": `${BASE_URL}/locations/texas`,
+        "telephone": `${phone}`,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Houston",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
+        "serviceType": "Freight Forwarding and Logistics"
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": `${APP_NAME} - Chicago Hub`,
+        "url": `${BASE_URL}/locations/chicago`,
+        "telephone": `${phone}`,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chicago",
+          "addressRegion": "IL",
+          "addressCountry": "US"
+        },
+        "serviceType": "Freight Forwarding and Logistics"
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": `${APP_NAME} - California Hub`,
+        "url": `${BASE_URL}/locations/california`,
+        "telephone": `${phone}`,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "serviceType": "Freight Forwarding and Logistics"
+      }
+    ]
+  };
+
+  return (
+      <>
+      {/* Add Structured Data for Home Page */}
+      <Script id="homepage-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeschemaData, null, 2),}}/>
+
+      <HeroLayout />
+
+      <StatsSection />
+
+      <section className="relative overflow-hidden py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center">
+            <h2 className="text-2xl text-gray-900 md:text-4xl font-bold text-center">Our Best Trucking Dispatching Services</h2>
+            <p className="mt-4 mx-auto">We are one of the best-paying trucking dispatch companies for owner-operators, providing dedicated 24/7 personalized support to help reduce your workload and allow you to focus solely on the road.  While knowing and managing logistics expertly locally, our team of professional truck dispatchers deals.</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
+            <ServiceCard />
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/services" role="button" id="all_services_link" className="inline-flex items-center gap-2 hover:text-red-600 hover:scale-105 transition-transform duration-300 font-medium">View All Services →</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+          <AboutSection
+            image="/about-us.svg"
+            title="Your Local Trucking Dispatch Company for Sustainable Transport and Logistics Solutions"
+            content={`Kandor Logistics leads the industry with certified freight services across major U.S. corridors. Over the past decade, we have consistently increased carrier profitability for owner-operators and fleets, with gains up to 20 percent. Our expert truck dispatchers handle 75 units, including dry van, reefer, flatbed, and other specialized trailers. Responding to demand, we expanded dispatch service from drayage at the Port of Houston to Chicago and California. Our professional team delivers local expertise for clear communication, efficient routing, and safe deliveries.`}
+            listTitle="Your Truck dispatchers do all of the back-office work, including."
+            listItems={[
+              "Finding ideal loads",
+              "Negotiate To Brokers for the Best Rates",
+              "Booking and Assigning Loads",
+              "Managing motor carrier compliance",
+              "Billing and Collections",
+              "Share of PODs and BOLs, etc.",
+            ]}
+            linkText="About us"
+            linkUrl="/about"
+            imageClassName="rounded-2xl overflow-hidden shadow-2xl"
+          />
+
+      </section>
+
+      <ProcessSection />
+
+      <WhyHireSection
+        subheading=""
+        heading="Why hire a Truck Dispatcher?"
+        description=""
+        items={whyhireus}
+      />
+
+      <section className="relative bg-white py-10">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl text-gray-900 md:text-4xl font-bold text-center">Trucking Dispatching Insights, News & Analysis</h2>
+          <p className="text-center mt-3 max-w-3xl mx-auto">In addition to our dedicated service, we monitor marketing trends to make informed decisions and support the growth of our business partners, including shippers, brokers, and owner-operators.</p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+            {blogs.slice(0, 3).map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link href="/blog" role="button" id="all_blog_link" className="inline-flex items-center gap-2 text-gray-600 hover:text-red-600 hover:scale-105 transition">View All Blogs →</Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="bg-white max-w-7xl mx-auto px-6 py-20">
+          <div className="rounded-3xl bg-white drop-shadow-lg p-8">
+            <div className="relative text-center pb-8">
+                <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
+                <p className="mt-3">Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Left Content */}
+              <div className="relative">
+                <div className="mt-6">
+                  <ContactSection/>
+                </div>
+              </div>
+
+              {/* Right Form */}
+              <div className="relative">
+                <ContactForm />
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="relative text-center pb-8">
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center mb-10">Frequently Asked Questions</h2>
+            </div>
+
+            <FaqSection
+              title="Why Outsource the Dispatch?"
+              content={`Outsourcing trucking dispatch services offers several advantages:
+                    <ul>
+                      <li>1. It is cost-efficient to hire cheaper labor from overseas countries.</li>
+                      <li>2. Professional dispatch availability for 24/7, ensuring better load management.</li>
+                      <li>3. Accessibility to experienced dispatchers, who can do load negotiations, route optimization, and compliance management in a professional way.</li>
+                      <li>4. Trucking companies can focus on their core operations while dispatch work can be handled by professional dispatchers offshore.</li>
+                    </ul>`}
+            />
+            <FaqSection
+              title="What Security Protocols Are Followed While Dispatching?"
+              content={`For the security and safety of operations, dispatch follows strict protocols:
+              <ul>
+                <li>1 . Secure servers and encrypted communication channels are used for data protection.</li>
+                <li>2. To ensure all the drivers follow FMCSA and DOT transport regulations</li>
+                <li>3. Regular checks to ensure driver’s license, truck insurance and licenses are up to date in the system.</li>
+                <li>4. Verification of brokers to prevent fraud or late payments.</li>
+                <li>5. GPS tracking and ELD integration to monitor driver tracking and their driving records.</li>
+              </ul>`}
+            />
+            <FaqSection
+              title="How to Ensure a Smooth Transition?"
+              content={`Proper planning is required to ensure a smooth transition.
+              <ul>
+                <li>1. Start with partial outsourcing and proper training before full transition of dispatch operations</li>
+                <li>2. The driver and in-house team should be informed about the new dispatch.</li>
+                <li>3. Access to TMS, tracking software, and other required tools should be integrated with the remote Team.</li>
+                <li>4. Provide proper training & support to start a smooth transition with the new dispatch processes.</li>
+              </ul>`}
+            />
+            <FaqSection
+              title="Understanding of dispatching process"
+              content={`Knowing how to assign loads to drivers, considering factors like route optimization, driver availability, and delivery deadlines.`}
+            />
+        </div>
+      </section>
+
+
+      <TestimonialsSection
+        subheading=""
+        heading="What Our Clients Say"
+        testimonials={testimonials}
+      />
+      
+      </>
+  );
+}
