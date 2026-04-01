@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { APP_NAME } from "@/lib/config";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FaqProvider } from "@/components/FaqSection";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "800", "900"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: `${APP_NAME} | Best Trucking Dispatch Service USA`,
   description: "experience of more than 5 years, we make sure that the net revenues of our owner-operators and fleets increase by at least 20% every year by providing them with a good value load.",
@@ -44,7 +39,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}>
+      <body className={`${roboto.variable} antialiased bg-white`}>
         {/* Google Tag Manager (noscript) fallback */}
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDVGJZWP" height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe>

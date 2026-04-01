@@ -17,9 +17,9 @@ export default function BlogClient() {
   return (
     <section className="bg-white pb-20 sm:pt-40 md:pt-40 lg:pt-40 pt-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-8xl lg:max-w-4xl mx-auto text-center pb-12">
+          <div className="max-w-4xl mx-auto text-center space-y-3 pb-12">
             <h1 className="text-2xl text-gray-900 md:text-4xl font-bold">Latest Business News, Insights & Analysis</h1>
-            <p className="mt-3 mx-auto text-md">Explore the latest trends, tips, and expert insights to drive your trucking business or related. Our experts address entrepreneurship, management, marketing, and innovation to help your business grow and stay ahead of the competition.</p>
+            <p>Explore the latest trends, tips, and expert insights to drive your trucking business or related. Our experts address entrepreneurship, management, marketing, and innovation to help your business grow and stay ahead of the competition.</p>
           </div>
 
         {/* Blog grid */}
@@ -30,7 +30,7 @@ export default function BlogClient() {
         </div>
 
         {blogs.length > itemsPerPage && (
-          <div className="flex justify-center items-center mt-10 space-x-2">
+          <div className="flex justify-center items-center mt-10 space-x-3">
             {/* Previous Button */}
             <button
               onClick={() => handlePageChange(currentPage - 1)}

@@ -118,16 +118,16 @@ export default function BoxTruckDispatchPage() {
     {/* Schema Markup */}
     <Script id="box-truck-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
     
-    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-12">
-        <div className="max-w-7xl mx-auto px-6">
-            <h1 className="text-3xl md:text-4xl font-bold pb-12 text-gray-900">Box Truck Dispatch</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Box Truck Dispatch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <div className="flex-1">
                     <Image src="/box-truck-dispatch-support-for-trucking.jpg" alt="dispatcher for box trucks" width={600} height={400} className="w-full rounded-xl shadow-md object-cover"/>
                 </div>
-                <div className="flex-1">
-                    <h2 className="text-2xl md:text-3xl font-bold pb-6 text-gray-900">24/7 Box Truck Dispatch Support for Trucking Companies and Independent Drivers</h2>
-                    <p className="text-gray-700 leading-relaxed">Our 24/7 support enables trucking companies and independent operators to secure every load and opportunity. Box Truck Dispatching Services encompass profitable load identification, paperwork management, and communication facilitation during transit. Let our team help maintain operational efficiency and support business growth.</p>
+                <div className="flex-1 space-y-3">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">24/7 Box Truck Dispatch Support for Trucking Companies and Independent Drivers</h2>
+                    <p>Our 24/7 support enables trucking companies and independent operators to secure every load and opportunity. Box Truck Dispatching Services encompass profitable load identification, paperwork management, and communication facilitation during transit. Let our team help maintain operational efficiency and support business growth.</p>
                 </div>
             </div>
         </div>
@@ -136,10 +136,10 @@ export default function BoxTruckDispatchPage() {
     <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             {/* Heading Section */}
-            <div className="max-w-4xl mx-auto text-center mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">How a Professional Box Truck Dispatch Company Streamlines Operations and Increases Earnings</h2>
-                <p className="text-gray-600">Partnering with a professional dispatching firm gives your business access to logistics expertise, advanced tools, and reliable operational support.</p>
-                <p className="text-gray-600">How can a skilled dispatcher benefit your trucking business?</p>
+            <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">How a Professional Box Truck Dispatch Company Streamlines Operations and Increases Earnings</h2>
+                <p>Partnering with a professional dispatching firm gives your business access to logistics expertise, advanced tools, and reliable operational support.</p>
+                <p>How can a skilled dispatcher benefit your trucking business?</p>
             </div>
 
             {/* Content Section */}
@@ -150,32 +150,32 @@ export default function BoxTruckDispatchPage() {
                 </div>
 
                 {/* Right Content */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
                         <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
-                        <p className="text-gray-700">Optimise routes and schedule loads efficiently.​</p>
+                        <p>Optimise routes and schedule loads efficiently.​</p>
                     </div>
 
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
                         <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
-                        <p className="text-gray-700">Negotiate effectively with trusted brokers and shippers.</p>
+                        <p>Negotiate effectively with trusted brokers and shippers.</p>
                     </div>
                     
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
                         <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
-                        <p className="text-gray-700">Provide real-time communication and load tracking.</p>
+                        <p>Provide real-time communication and load tracking.</p>
                     </div>
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
                         <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
-                        <p className="text-gray-700">Plan routes to reduce fuel costs and prevent delays.</p>
+                        <p>Plan routes to reduce fuel costs and prevent delays.</p>
                     </div>
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
                         <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
-                        <p className="text-gray-700">Ensure timely updates and load visibility.</p>
+                        <p>Ensure timely updates and load visibility.</p>
                     </div>
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
                         <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
-                        <p className="text-gray-700">Maximise truck utilisation to increase earnings.</p>
+                        <p>Maximise truck utilisation to increase earnings.</p>
                     </div>
                 </div>
             </div>
@@ -186,9 +186,9 @@ export default function BoxTruckDispatchPage() {
         <div className="max-w-7xl mx-auto px-6 space-y-18">
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-                <div className="flex-1">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">Dedicated Dispatchers for Your Box Truck Fleet</h2>
-                    <p className="text-gray-700 mb-6 leading-relaxed">Having a dedicated dispatcher for your box trucks means you always have someone to handle everything: negotiating top-paying loads, monitoring routes, coordinating shipments, and managing communication. This role also enables innovative load planning, reduces downtime, and improves delivery efficiency, resulting in higher margins and greater operational consistency.</p>
+                <div className="flex-1 space-y-3">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Dedicated Dispatchers for Your Box Truck Fleet</h2>
+                    <p>Having a dedicated dispatcher for your box trucks means you always have someone to handle everything: negotiating top-paying loads, monitoring routes, coordinating shipments, and managing communication. This role also enables innovative load planning, reduces downtime, and improves delivery efficiency, resulting in higher margins and greater operational consistency.</p>
                 </div>
                 <div className="flex-1">
                     <Image src="/Dispatchers-for-Your-Box-Truck-Fleet.jpg" alt="best paying trucking companies for owner operators" width={600} height={400} className="w-full rounded-xl shadow-md object-cover"/>
@@ -199,16 +199,16 @@ export default function BoxTruckDispatchPage() {
                 <div className="order-2 md:order-1 flex-1">
                     <Image src="/Operations-with-Our-Expert-Box-Truck-Dispatch-Team.jpg" alt="best trucking dispatch companies" width={600} height={400} className="w-full rounded-xl shadow-md object-cover"/>
                 </div>
-                <div className="order-1 md:order-2 flex-1">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">Simplify Operations with Our Expert Box Truck Dispatch Team</h2>
-                    <p className="text-gray-700 mb-6 leading-relaxed">Managing daily routes, paperwork, and load tracking can complicate your operations as your business grows. To support your fleet’s expansion, we also scale our dispatching support with modern tools, load boards, and industry insights. Our expert team works to simplify your workflow, reduce empty miles, and keep your business growing.</p>
+                <div className="order-1 md:order-2 flex-1 space-y-3">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Simplify Operations with Our Expert Box Truck Dispatch Team</h2>
+                    <p>Managing daily routes, paperwork, and load tracking can complicate your operations as your business grows. To support your fleet’s expansion, we also scale our dispatching support with modern tools, load boards, and industry insights. Our expert team works to simplify your workflow, reduce empty miles, and keep your business growing.</p>
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-                <div className="flex-1">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">Why Growing Trucking Companies Prefer Box Truck Dispatch Service?</h2>
-                    <p className="text-gray-700 mb-6 leading-relaxed">Time is money in every business. That is why savvy turn to professional Box Truck Dispatch Services to handle load booking, negotiations, and compliance. This lets them focus on growing their fleet.  The result is steady cash flow, higher productivity, and a clear road to expansion.</p>
+                <div className="flex-1 space-y-3">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Why Growing Trucking Companies Prefer Box Truck Dispatch Service?</h2>
+                    <p>Time is money in every business. That is why savvy turn to professional Box Truck Dispatch Services to handle load booking, negotiations, and compliance. This lets them focus on growing their fleet.  The result is steady cash flow, higher productivity, and a clear road to expansion.</p>
                 </div>
                 <div className="flex-1">
                     <Image src="/Why-Growing-Trucking-Companies-Prefer-Box-Truck-Dispatch.jpg" alt="trucking dispatch companies" width={600} height={400} className="w-full rounded-xl shadow-md object-cover"/>
@@ -229,23 +229,23 @@ export default function BoxTruckDispatchPage() {
                 </div>
 
                 {/* Right Content */}
-                <div className="space-y-6">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">What Do Kandor Logistics Box Truck Dispatchers Offer?</h2>
-                    <p className="text-gray-600">At Kandor Logistics, our skilled box truck dispatch team provides 24/7 support, helping drivers and fleet operators achieve maximum efficiency and consistent revenue through professional dispatch management.
+                <div className="space-y-3">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">What Do Kandor Logistics Box Truck Dispatchers Offer?</h2>
+                    <p>At Kandor Logistics, our skilled box truck dispatch team provides 24/7 support, helping drivers and fleet operators achieve maximum efficiency and consistent revenue through professional dispatch management.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" className="bg-white max-w-7xl mx-auto px-6 py-12">
+    <section className="bg-white max-w-7xl mx-auto px-6 py-12">
         <div className="rounded-3xl bg-white drop-shadow-lg p-8">
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Left Content */}
                 <div className="relative">
-                    <div className="mt-6">
+                    <div className="space-y-3">
                     <div className="text-2xl md:text-3xl text-gray-900 md:text-4xl font-bold">Partner with Us to Scale Your Business</div>
-                    <p className="mt-3">Contact us for a customised dispatch plan tailored to your equipment, lanes, and rate goals so that you can drive with confidence</p>
+                    <p>Contact us for a customised dispatch plan tailored to your equipment, lanes, and rate goals so that you can drive with confidence</p>
                     </div>
 
                 </div>
@@ -260,8 +260,8 @@ export default function BoxTruckDispatchPage() {
 
     <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="relative text-center pb-8">
-                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center mb-10">Frequently Asked Questions</h2>
+            <div className="relative text-center space-y-3 pb-8">
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
 
             <FaqSection

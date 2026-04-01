@@ -65,7 +65,7 @@ export async function POST(req: Request) {
     });
 
     const mailOptions = {
-      from: `"${name}" <${email}>`,
+      from: `${name} <${email}>`,
       to: process.env.SEND_TO,
       subject: "New Inquiry via Contact Form",
       html: `<div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">

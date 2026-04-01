@@ -102,7 +102,7 @@ const ContactForm = () => {
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-3">
-        <select id="service" aria-label="Select Service" name="service" required value={formData.service} onChange={handleChange} className="block w-full rounded-xl border border-gray-200 bg-transparent px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500">
+        <select id="service" aria-label="Select Service" name="service" required value={formData.service} onChange={handleChange} className="block w-full rounded-xl border border-gray-200 bg-transparent px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-500">
           <option value="">--Select Service--</option>
           <option value="hotshot-dispatch">Hotshot Dispatch</option>
           <option value="flatbeds-step-deck-dispatch">Flatbeds/Step Deck Dispatch</option>
@@ -120,7 +120,7 @@ const ContactForm = () => {
         <button type="submit" disabled={status === "sending"} className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-400 text-white px-6 py-3 rounded-md font-medium shadow-lg hover:bg-red-700 transition-transform transform hover:-translate-y-1 cursor-pointer" aria-disabled={status === "sending"}>
           {status === "sending" ? "Sending…" : "Request Quote"}
         </button>
-        <div className="text-sm mt-2 text-gray-500">Or <a href={phoneHref} className="underline">book a call</a></div>
+        <div className="text-gray-500">Or <a href={phoneHref} className="underline">book a call</a></div>
       </div>
 
       {status === "success" && (

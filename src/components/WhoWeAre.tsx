@@ -21,19 +21,20 @@ export default function WhoWeAre() {
         </div>
 
         {/* Right Content */}
-        <div>
-          {/* <p className="text-sm uppercase font-semibold text-red-600 tracking-wider mb-3">Who We Are</p> */}
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">Our Success Story & Growth</h2>
-          <p className="text-gray-600 mb-4 leading-relaxed">We launched our port drayage operations at the Port of Texas, building strong relationships with owner-operators, carriers, brokers, and shippers. As demand for reliable dispatch solutions has grown, we have expanded our services across major U.S. lanes. Today, our team manages  75+ active trucking units — including Dry Vans, Reefers, Hotshots, Box Trucks, Lowboys, Flatbeds, and Step Decks.</p>
-          <p className="text-gray-600 mb-4 leading-relaxed">Our success is driven by our commitment to helping owner-operators and fleet companies operate more profitably and efficiently.</p>
-
+        <div className="relative space-y-3">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Our Success Story & Growth</h2>
+          <p>We launched our port drayage operations at the Port of Texas, building strong relationships with owner-operators, carriers, brokers, and shippers. As demand for reliable dispatch solutions has grown, we have expanded our services across major U.S. lanes. Today, our team manages  75+ active trucking units — including Dry Vans, Reefers, Hotshots, Box Trucks, Lowboys, Flatbeds, and Step Decks.</p>
+          <p>Our success is driven by our commitment to helping owner-operators and fleet companies operate more profitably and efficiently.</p>
+          
+          <hr className="my-6 border-gray-300" />
+          
           {/* Bullet Points */}
-          <div className="space-y-3 border-t border-gray-300 mt-6 pt-6">
+          <div className="space-y-3">
             <div className="flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.5 1.2l-2.3 1.1a11 11 0 005.5 5.5l1.1-2.3a1 1 0 011.2-.5l4.5 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.7 21 3 14.3 3 6V5z"/>
                 </svg>
-              <p className="text-gray-700">Get in Touch today. We are a dedicated partner to discuss your dispatch needs and how we can support your business growth.</p>
+              <p>Get in Touch today. We are a dedicated partner to discuss your dispatch needs and how we can support your business growth.</p>
             </div>
           </div>
         </div>

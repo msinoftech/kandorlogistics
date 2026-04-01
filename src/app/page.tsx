@@ -147,9 +147,9 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center">
+          <div className="text-center space-y-3">
             <h2 className="text-2xl text-gray-900 md:text-4xl font-bold text-center">Our Best Trucking Dispatching Services</h2>
-            <p className="mt-4 mx-auto">We are one of the best-paying trucking dispatch companies for owner-operators, providing dedicated 24/7 personalized support to help reduce your workload and allow you to focus solely on the road.  While knowing and managing logistics expertly locally, our team of professional truck dispatchers deals.</p>
+            <p>We are one of the best-paying trucking dispatch companies for owner-operators, providing dedicated 24/7 personalized support to help reduce your workload and allow you to focus solely on the road.  While knowing and managing logistics expertly locally, our team of professional truck dispatchers deals.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
@@ -194,10 +194,13 @@ export default function HomePage() {
 
       <section className="relative bg-white py-10">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl text-gray-900 md:text-4xl font-bold text-center">Trucking Dispatching Insights, News & Analysis</h2>
-          <p className="text-center mt-3 max-w-3xl mx-auto">In addition to our dedicated service, we monitor marketing trends to make informed decisions and support the growth of our business partners, including shippers, brokers, and owner-operators.</p>
+          
+          <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
+            <h2 className="text-2xl text-gray-900 md:text-4xl font-bold text-center">Trucking Dispatching Insights, News & Analysis</h2>
+            <p>In addition to our dedicated service, we monitor marketing trends to make informed decisions and support the growth of our business partners, including shippers, brokers, and owner-operators.</p>
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {blogs.slice(0, 3).map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}
@@ -210,9 +213,9 @@ export default function HomePage() {
 
       <section id="contact" className="bg-white max-w-7xl mx-auto px-6 py-20">
           <div className="rounded-3xl bg-white drop-shadow-lg p-8">
-            <div className="relative text-center pb-8">
+            <div className="relative text-center pb-8 space-y-3">
                 <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
-                <p className="mt-3">Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
+                <p>Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -233,8 +236,8 @@ export default function HomePage() {
 
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="relative text-center pb-8">
-                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center mb-10">Frequently Asked Questions</h2>
+            <div className="relative text-center pb-8 space-y-3">
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
 
             <FaqSection

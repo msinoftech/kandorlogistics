@@ -79,7 +79,7 @@ export default function Header() {
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8 mx-auto">
               {NAV.map((item) => (
-                <Link key={item.href} href={item.href} className="relative group px-1 py-2 text-sm font-medium text-gray-800 hover:text-red-600">
+                <Link key={item.href} href={item.href} className="text-sm font-medium hover:text-red-600 transition-all duration-200 relative group">
                   {item.name}
                   <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-red-500 to-orange-400 transition-all duration-300 group-hover:w-full" />
                 </Link>
@@ -88,12 +88,12 @@ export default function Header() {
 
             {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-3">
-              <a href={schedule} target="_blank" id="schedule_a_call" role="button" className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-md text-sm font-semibold bg-gradient-to-r from-red-600 to-orange-500 text-white shadow">
+              <Link href={schedule} target="_blank" id="schedule_a_call" role="button" className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-md text-sm font-semibold bg-gradient-to-r from-red-600 to-orange-500 text-white shadow">
                 Schedule a Call
                 <svg className="w-4 h-4 -mr-1" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12h14M12 5l7 7-7 7" stroke="rgba(255,255,255,0.95)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </a>
+              </Link>
 
               {/* Mobile Toggle */}
               <button onClick={() => setOpen(!open)} role="button" className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-red-600 hover:bg-white/10 focus:ring-2 focus:ring-red-400" aria-label="Toggle menu">
@@ -122,7 +122,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <a href={schedule} target="_blank" id="schedule_a_call_mobile" role="button" className="mt-2 inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-semibold shadow">Schedule a Call</a>
+            <Link href={schedule} target="_blank" id="schedule_a_call_mobile" role="button" className="mt-2 inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-semibold shadow">Schedule a Call</Link>
           </nav>
         </div>
       </div>

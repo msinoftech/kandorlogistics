@@ -41,8 +41,8 @@ const FaqSection: React.FC<FaqSectionProps> = ({ title, content }) => {
   };
 
   return (
-    <section id="faq" className="mb-4">
-      <div className="max-w-4xl mx-auto">
+    <section className="mb-4">
+      <div className="max-w-5xl mx-auto">
         <div className="flex flex-col gap-3">
           <details
             open={isOpen}
@@ -78,7 +78,7 @@ const FaqSection: React.FC<FaqSectionProps> = ({ title, content }) => {
               <div className="px-6 pb-6 pt-0">
                 {content && (
                   <div
-                    className="pl-2 border-t border-gray-100 pt-5 text-gray-600 text-[15px] leading-relaxed prose prose-sm prose-li:my-1 prose-ul:my-2 max-w-none"
+                    className="pl-2 border-t border-gray-100 pt-5 text-gray-600 prose prose-sm prose-li:my-1 prose-ul:my-2 max-w-none"
                     dangerouslySetInnerHTML={{ __html: content }}
                   />
                 )}

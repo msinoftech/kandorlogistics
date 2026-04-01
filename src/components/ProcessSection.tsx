@@ -15,15 +15,15 @@ const processSteps: ProcessStep[] = [
 
 const ProcessSection: React.FC = () => {
   return (
-    <section id="process" className="bg-gray-900 px-4 py-20">
+    <section className="bg-gray-900 px-4 py-20">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-left md:text-center text-white">How Does Our Truck Dispatch Company Power Your Business?</h2>
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {processSteps.map((step) => (
-            <div key={step.n} className="rounded-2xl drop-shadow-lg p-6 border border-gray-400 bg-gray-800 hover:shadow-2xl transition transform hover:-translate-y-1">
-              <div className="h-10 w-10 rounded-full bg-gradient-to-r from-red-600 to-orange-400 text-white grid place-content-center font-bold mb-3">{step.n}</div>
-              <div className="text-xl text-white font-semibold mt-3">{step.t}</div>
-              <p className="text-white mt-2">{step.d}</p>
+            <div key={step.n} className="rounded-2xl space-y-3 p-6 border border-gray-400 bg-gray-800 hover:shadow-2xl transition transform hover:-translate-y-1">
+              <div className="h-10 w-10 rounded-full bg-gradient-to-r from-red-600 to-orange-400 text-white grid place-content-center font-bold">{step.n}</div>
+              <div className="text-xl text-white font-semibold">{step.t}</div>
+              <p className="text-white">{step.d}</p>
             </div>
           ))}
         </div>

@@ -103,24 +103,19 @@ export default function Contact() {
   return (
     <>
       {/* Inject JSON-LD Schema */}
-      <Script
-        id="contact-schema"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchemaData) }}
-      />
+      <Script id="contact-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchemaData) }}/>
 
       <section className="sm:pt-40 md:pt-40 lg:pt-40 pt-40 bg-gray-50 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-8xl lg:max-w-5xl mx-auto text-center pb-12">
+          <div className="max-w-4xl mx-auto text-center space-y-3 pb-12">
             <h1 className="text-2xl text-gray-900 md:text-4xl font-bold">Reach Out and Connect with Our Expert Team</h1>
-            <p className="mt-2 font-bold mx-auto text-md">No matter where you are or when you need us, we’re here for you.</p>
-            <p className="mt-3 mx-auto text-md">We’re excited to connect! Have a question, need a hand, or want to share your thoughts? Our team is ready and eager to help.</p>
+            <p>No matter where you are or when you need us, we’re here for you.</p>
+            <p>We’re excited to connect! Have a question, need a hand, or want to share your thoughts? Our team is ready and eager to help.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-white px-8 py-12 shadow-md rounded-lg">
-            <div className="relative mb-6">
-              <p className="mb-4 font-bold mx-auto text-md">Get in Touch with Our Support Team</p>
+            <div className="relative space-y-3">
+              <div className="text-xl font-semibold text-gray-900 mb-4">Get in Touch with Our Support Team</div>
               <ContactForm />
             </div>
             <div className="relative">

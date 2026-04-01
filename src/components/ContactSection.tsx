@@ -17,7 +17,7 @@ const ContactSection = () => {
           </div>
           <div>
             <strong className="block text-gray-800">Phone Number:</strong>
-            <a href={phoneHref} className="text-md hover:text-red-600">{phone}</a>
+            <a href={phoneHref} className="hover:text-red-600">{phone}</a>
           </div>
         </li>
 
@@ -30,7 +30,7 @@ const ContactSection = () => {
           </div>
           <div>
             <strong className="block text-gray-800">Email Address:</strong>
-            <a href={emailHref} className="text-md hover:text-red-600">{email}</a>
+            <a href={emailHref} className="hover:text-red-600">{email}</a>
           </div>
         </li>
       </ul>

@@ -139,9 +139,9 @@ export default function ServicesPage() {
 
     <section className="bg-gray-50 sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-8xl lg:max-w-4xl mx-auto text-center pb-12">
-          <h1 className="text-2xl text-gray-900 md:text-4xl font-bold">Professional Dispatch Service for Owner-Operators & Growing Fleets</h1>
-          <p className="mt-4 mx-auto text-md">We are a full-service dispatching company dedicated to the profitable outcomes you deserve. Whether you are an owner-operator or a fleet company, our expert freight dispatchers manage all back-office tasks, secure high-value loads, and offer the support you need to grow your business. Focus on driving while we handle your earnings.</p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 mb-12">
+          <h2 className="text-2xl text-gray-900 md:text-4xl font-bold">Professional Dispatch Service for Owner-Operators & Growing Fleets</h2>
+          <p>We are a full-service dispatching company dedicated to the profitable outcomes you deserve. Whether you are an owner-operator or a fleet company, our expert freight dispatchers manage all back-office tasks, secure high-value loads, and offer the support you need to grow your business. Focus on driving while we handle your earnings.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -149,10 +149,10 @@ export default function ServicesPage() {
           {/* Service 1 */}
           <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
             <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8">
-                <div className="text-xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors"><Link href="/services/hotshot-dispatch">Hotshot Dispatch</Link></div>
-                <p className="text-md">Kandor Logistics streamlines your business with expert hotshot dispatch services, managing bookings and back-office tasks to boost efficiency and growth.</p>
-                <div className="flex item-end justify-end my-4">
+              <div className="p-6 pb-8 space-y-3">
+                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/hotshot-dispatch">Hotshot Dispatch</Link></div>
+                <p>Kandor Logistics streamlines your business with expert hotshot dispatch services, managing bookings and back-office tasks to boost efficiency and growth.</p>
+                <div className="flex justify-end">
                   <Link href="/services/hotshot-dispatch" aria-label="Discover more about Hotshot Dispatch" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
                 </div>
               </div>
@@ -174,10 +174,10 @@ export default function ServicesPage() {
           {/* Service 2 */}
           <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
             <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8">
-                <div className="text-xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors"><Link href="/services/flatbeds-step-deck-dispatch">Flatbeds/Step Deck Dispatch</Link></div>
-                <p className="text-md">Kandor Logistics connects flatbed carriers with profitable long and short-haul loads, ensuring steady work, fair earnings, and efficient logistics management.</p>
-                <div className="flex item-end justify-end my-4">
+              <div className="p-6 pb-8 space-y-3">
+                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/flatbeds-step-deck-dispatch">Flatbeds/Step Deck Dispatch</Link></div>
+                <p>Kandor Logistics connects flatbed carriers with profitable long and short-haul loads, ensuring steady work, fair earnings, and efficient logistics management.</p>
+                <div className="flex justify-end">
                   <Link href="/services/flatbeds-step-deck-dispatch" aria-label="Discover more about Flatbeds and Step Deck Dispatch" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
                 </div>
               </div>
@@ -199,10 +199,10 @@ export default function ServicesPage() {
           {/* Service 3 */}
           <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
             <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8">
-                <div className="text-xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors"><Link href="/services/power-only-units-dispatching">Power Only Units Dispatch</Link></div>
-                <p className="text-md">Kandor Logistics supports power-only truckers with reliable dispatch services and affordable trailer rentals to keep operations running smoothly.</p>
-                <div className="flex item-end justify-end my-4">
+              <div className="p-6 pb-8 space-y-3">
+                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/power-only-units-dispatching">Power Only Units Dispatch</Link></div>
+                <p>Kandor Logistics supports power-only truckers with reliable dispatch services and affordable trailer rentals to keep operations running smoothly.</p>
+                <div className="flex justify-end">
                   <Link href="/services/power-only-units-dispatching" aria-label="Discover more about Power Only Units Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
                 </div>
               </div>
@@ -224,10 +224,10 @@ export default function ServicesPage() {
           {/* Service 4 */}
           <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
             <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8">
-                <div className="text-xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors"><Link href="/services/low-boy-dispatching">Low Boy Dispatch</Link></div>
-                <p className="text-md">Kandor Logistics connects lowboy carriers with bulk shipment projects, ensuring steady loads, efficient dispatching, and helping increase carrier revenue by 25%.</p>
-                <div className="flex item-end justify-end my-4">
+              <div className="p-6 pb-8 space-y-3">
+                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/low-boy-dispatching">Low Boy Dispatch</Link></div>
+                <p>Kandor Logistics connects lowboy carriers with bulk shipment projects, ensuring steady loads, efficient dispatching, and helping increase carrier revenue by 25%.</p>
+                <div className="flex justify-end">
                   <Link href="/services/low-boy-dispatching" aria-label="Discover more about Low Boy Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
                 </div>
               </div>
@@ -249,10 +249,10 @@ export default function ServicesPage() {
           {/* Service 5 */}
           <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
             <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8">
-                <div className="text-xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors"><Link href="/services/box-truck-dispatching">Box Truck Dispatch</Link></div>
-                <p className="text-md">Kandor Logistics provides steady box truck loads daily, ensuring your truck stays profitable and productive while we handle all dispatching needs.</p>
-                <div className="flex item-end justify-end my-4">
+              <div className="p-6 pb-8 space-y-3">
+                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/box-truck-dispatching">Box Truck Dispatch</Link></div>
+                <p>Kandor Logistics provides steady box truck loads daily, ensuring your truck stays profitable and productive while we handle all dispatching needs.</p>
+                <div className="flex justify-end">
                   <Link href="/services/box-truck-dispatching" aria-label="Discover more about Box Truck Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
                 </div>
               </div>
@@ -274,10 +274,10 @@ export default function ServicesPage() {
           {/* Service 6 */}
           <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
             <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8">
-                <div className="text-xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors"><Link href="/services/dry-van-dispatching">Dry Van Dispatch</Link></div>
-                <p className="text-md">Kandor Logistics specializes in dry van dispatch, optimizing routes, reducing fuel costs, and ensuring smooth, hassle-free pickups and deliveries for drivers.</p>
-                <div className="flex item-end justify-end my-4">
+              <div className="p-6 pb-8 space-y-3">
+                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/dry-van-dispatching">Dry Van Dispatch</Link></div>
+                <p>Kandor Logistics specializes in dry van dispatch, optimizing routes, reducing fuel costs, and ensuring smooth, hassle-free pickups and deliveries for drivers.</p>
+                <div className="flex justify-end">
                   <Link href="/services/dry-van-dispatching" aria-label="Discover more about Dry Van Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
                 </div>
               </div>
@@ -299,10 +299,10 @@ export default function ServicesPage() {
           {/* Service 7 */}
           <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
             <div className="relative md:items-stretch mb-6 z-10">
-              <div className="p-6 pb-8">
-                <div className="text-2xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors"><Link href="/services/reefer-dispatching">Reefer Dispatch</Link></div>
-                <p className="text-md">Kandor Logistics provides reliable reefer dispatch services with strict 30-minute temperature checks, ensuring safe transport of food, pharmaceuticals, and chemicals.</p>
-                <div className="flex item-end justify-end my-4">
+              <div className="p-6 pb-8 space-y-3">
+                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/reefer-dispatching">Reefer Dispatch</Link></div>
+                <p>Kandor Logistics provides reliable reefer dispatch services with strict 30-minute temperature checks, ensuring safe transport of food, pharmaceuticals, and chemicals.</p>
+                <div className="flex justify-end">
                   <Link href="/services/reefer-dispatching" aria-label="Discover more about Reefer Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
                 </div>
               </div>
@@ -321,16 +321,15 @@ export default function ServicesPage() {
             </div>
           </div>
 
-
         </div>
       </div>
     </section>
 
-    <section id="contact" className="bg-white max-w-7xl mx-auto px-6 py-20">
+    <section className="bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="rounded-3xl bg-white drop-shadow-lg p-8">
-            <div className="relative text-center pb-8">
+            <div className="relative text-center space-y-3 pb-8">
                 <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
-                <p className="mt-3">Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
+                <p>Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">

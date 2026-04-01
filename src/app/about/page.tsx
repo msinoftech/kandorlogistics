@@ -153,9 +153,9 @@ export default function about() {
       <Script id="about-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchemaData) }}/>
 
       <div className="max-w-7xl mx-auto sm:pt-40 md:pt-40 lg:pt-40 pt-40">
-        <div className="max-w-8xl lg:max-w-4xl mx-auto text-center">
-          <h1 className="text-2xl text-gray-900 md:text-4xl font-bold">Meet Kandor Logistics: Your Trusted Dispatch Partner in the USA</h1>
-          <p className="mt-4 mx-auto text-md">At Kandor Logistics, we are proud to be the trusted backbone for owner-operators and fleet companies across the USA. Our goal is to simplify trucking operations so your business operates efficiently and profitably.</p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+          <h2 className="text-2xl text-gray-900 md:text-4xl font-bold">Meet Kandor Logistics: Your Trusted Dispatch Partner in the USA</h2>
+          <p>At Kandor Logistics, we are proud to be the trusted backbone for owner-operators and fleet companies across the USA. Our goal is to simplify trucking operations so your business operates efficiently and profitably.</p>
         </div>
       </div>
 
@@ -180,7 +180,7 @@ export default function about() {
       <section className="element-row section-process py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Heading */}
-          <div className="text-center">
+          <div className="text-center space-y-3">
             <div className="text-2xl text-gray-900 md:text-4xl font-bold text-center">Our Work Process</div>
           </div>
 
@@ -192,9 +192,9 @@ export default function about() {
                   const isLast = index === workProcess.length - 1;
                   return (
                     <li key={index} className="relative pb-8">
-                      <div className="relative flex items-start space-x-6">
+                      <div className="relative flex items-start gap-6">
                         <div className="flex-shrink-0">
-                          <span className="h-10 w-10 flex items-center justify-center rounded-full bg-indigo-50 ring-8 ring-white">
+                          <span className="h-10 w-10 flex items-center justify-center rounded-full bg-indigo-50">
                             {item.icon && (
                               <Image
                                 src={item.icon}
@@ -206,25 +206,18 @@ export default function about() {
                             )}
                           </span>
                         </div>
-                        <div className="min-w-0 flex-1">
+                        <div className="flex-1">
                           {item.title && (
-                            <p className="text-lg font-semibold text-gray-900">
-                              {item.title}
-                            </p>
+                            <div className="font-semibold text-gray-900">{item.title}</div>
                           )}
                           {item.content && (
-                            <div className="mt-2 text-sm text-gray-600">
-                              {item.content}
-                            </div>
+                            <p>{item.content}</p>
                           )}
                         </div>
                       </div>
 
                       {!isLast && (
-                        <span
-                          className="absolute left-5 top-10 -ml-px h-full w-0.5 bg-gray-200"
-                          aria-hidden="true"
-                        ></span>
+                        <span className="absolute left-5 top-10 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
                       )}
                     </li>
                   );
