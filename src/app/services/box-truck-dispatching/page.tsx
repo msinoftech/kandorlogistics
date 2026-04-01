@@ -152,29 +152,29 @@ export default function BoxTruckDispatchPage() {
                 {/* Right Content */}
                 <div className="space-y-3">
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Optimise routes and schedule loads efficiently.​</p>
                     </div>
 
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Negotiate effectively with trusted brokers and shippers.</p>
                     </div>
                     
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Provide real-time communication and load tracking.</p>
                     </div>
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Plan routes to reduce fuel costs and prevent delays.</p>
                     </div>
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Ensure timely updates and load visibility.</p>
                     </div>
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Maximise truck utilisation to increase earnings.</p>
                     </div>
                 </div>

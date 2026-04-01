@@ -211,34 +211,34 @@ export default function DryVanDispatchPage() {
                 {/* Right Content */}
                 <div className="space-y-4">
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Accurate and timely load scheduling</p>
                     </div>
 
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Negotiating better rates</p>
                     </div>
 
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Securing high-paying freight</p>
                     </div>
 
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Handling all your paperwork and bills</p>
                     </div>
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>24/7 support for assistance on the road</p>
                     </div>
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Making sure you meet all safety and delivery rules</p>
                     </div>
                     <div className="flex items-start gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition">
-                        <div className="w-3 h-3 bg-blue-600 mt-2 rounded-sm"></div>
+                        <div className="w-2 h-2 min-w-2 min-h-2 bg-blue-600 mt-2 rounded-sm"></div>
                         <p>Optimising dispatch routes to reduce empty miles and fuel costs</p>
                     </div>
                 </div>
