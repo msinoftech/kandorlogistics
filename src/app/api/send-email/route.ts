@@ -67,7 +67,7 @@ export async function POST(req: Request) {
     const mailOptions = {
       from: `${name} <${email}>`,
       to: process.env.SEND_TO,
-      subject: "New Inquiry via Contact Form: " + name + " | " + new Date().toLocaleString(),
+      subject: "New Inquiry via Contact Form - " + name + " - " + new Date().toLocaleDateString('en-IN'),
       html: `<div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
               <table cellpadding="10" cellspacing="0" border="0" width="100%" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e0e0e0;">
                 <tr style="background: linear-gradient(to right, #dc2626, #fb923c); background-color: #dc2626; color: #ffffff;">
