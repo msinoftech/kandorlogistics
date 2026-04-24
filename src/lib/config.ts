@@ -5,7 +5,7 @@ export const contactInfo = {
   logo: "/kas-logo.png",
   phone: "+1 469 635 9085",
   email: "info@kandorlogistics.us",
-  schedule: "https://calendly.com/gurwinder-kandorservices/30min"
+  schedule: "https://calendly.com/kandorlogistics-info/30min"
 };
 
 export const socialLinks = [
