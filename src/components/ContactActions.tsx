@@ -3,8 +3,9 @@
 import { contactInfo } from "@/lib/config";
 
 export default function ContactActions() {
-  const { phone, schedule } = contactInfo;
+  const { phone, whatsapp, schedule } = contactInfo;
   const phoneHref = `${phone.replace(/[^+\d]/g, "")}`;
+  const whatsappHref = `${whatsapp.replace(/[^+\d]/g, "")}`;
 
   return (
     <div className="max-w-7xl mx-auto relative">
@@ -21,7 +22,7 @@ export default function ContactActions() {
         "
       >
         {/* WhatsApp Chat */}
-        <a href={`https://wa.me/${phoneHref}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+        <a href={`https://wa.me/${whatsappHref}`} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
           <div className="relative bg-white p-3 rounded-full shadow hover:bg-green-100 transition">
             <svg
               height="32px"
