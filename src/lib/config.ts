@@ -3,7 +3,7 @@ export const BASE_URL = "https://kandorlogistics.us";
 
 export const contactInfo = {
   logo: "/kas-logo.png",
-  phone: "+1 469 635 9085",
+  phone: "+1 650 275 4660",
   email: "info@kandorlogistics.us",
   schedule: "https://calendly.com/kandorlogistics-info/30min"
 };
