@@ -60,7 +60,7 @@ const FaqSection: React.FC<FaqSectionProps> = ({ title, content }) => {
               <span
                 className={`
                   flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold transition-all duration-300
-                  ${isOpen ? "bg-red-600 text-white" : "bg-gray-100 text-gray-600 group-hover:bg-gray-200"}
+                  ${isOpen ? "bg-gradient-to-r from-red-600 to-orange-400 text-white" : "bg-gray-100 text-gray-600 group-hover:bg-gray-200"}
                 `}
               >
                 {isOpen ? "−" : "+"}

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { contactInfo, socialLinks } from "@/lib/config";
+import { BASE_URL, contactInfo, socialLinks } from "@/lib/config";
 import ContactActions from "./ContactActions";
 
 export default function Footer() {
@@ -18,19 +18,19 @@ export default function Footer() {
   };
 
   const usefulLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: `/about` },
-    { name: "Services", href: `/services` },
-    { name: "Blog", href: `/blog` },
-    { name: "Contact", href: `/contact` },
+    { name: "Home", href: `${BASE_URL}` },
+    { name: "About", href: `${BASE_URL}/about` },
+    { name: "Services", href: `${BASE_URL}/services` },
+    { name: "Blog", href: `${BASE_URL}/blog` },
+    { name: "Contact", href: `${BASE_URL}/contact` },
   ];
 
   const servicesLinks = [
-    { name: "Hotshot Dispatch", href: `/services/hotshot-dispatch` },
-    { name: "Flatbeds/Step Deck Dispatch", href: `/services/flatbeds-step-deck-dispatch` },
-    { name: "Power Only Units Dispatch", href: `/services/power-only-units-dispatching` },
-    { name: "Low Boy Dispatch", href: `/services/low-boy-dispatching` },
-    { name: "Box Truck Dispatch", href: `/services/box-truck-dispatching` },
+    { name: "Hotshot Dispatch", href: `${BASE_URL}/services/hotshot-dispatch` },
+    { name: "Flatbeds/Step Deck Dispatch", href: `${BASE_URL}/services/flatbeds-step-deck-dispatch` },
+    { name: "Power Only Units Dispatch", href: `${BASE_URL}/services/power-only-units-dispatching` },
+    { name: "Low Boy Dispatch", href: `${BASE_URL}/services/low-boy-dispatching` },
+    { name: "Box Truck Dispatch", href: `${BASE_URL}/services/box-truck-dispatching` },
   ];
 
 
@@ -43,7 +43,7 @@ export default function Footer() {
           <div>
             <div>
               <div className="mb-4">
-                <Link href="/" className="inline-block">
+                <Link href={`${BASE_URL}`} className="inline-block">
                   <Image src={logo} width={150} height={50} alt="Kandor Logistics" className="object-contain"/>
                 </Link>
               </div>

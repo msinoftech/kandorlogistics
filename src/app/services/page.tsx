@@ -1,9 +1,9 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import Script from "next/script";
 import ContactForm from "@/components/ContactForm";
 import ContactSection from "@/components/ContactSection";
+import ServicesCardLayout from "@/components/ServicesCardLayout";
 
 export const metadata: Metadata = {
   title: `Top-Notch Dispatch Service for Owner Operators and Fleet Companies`,
@@ -139,187 +139,47 @@ export default function ServicesPage() {
 
     <section className="bg-gray-50 sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 mb-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 mb-12">
           <h2 className="text-2xl text-gray-900 md:text-4xl font-bold">Professional Dispatch Service for Owner-Operators & Growing Fleets</h2>
           <p>We are a full-service dispatching company dedicated to the profitable outcomes you deserve. Whether you are an owner-operator or a fleet company, our expert freight dispatchers manage all back-office tasks, secure high-value loads, and offer the support you need to grow your business. Focus on driving while we handle your earnings.</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          {/* Service 1 */}
-          <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8 space-y-3">
-                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/hotshot-dispatch">Hotshot Dispatch</Link></div>
-                <p>Kandor Logistics streamlines your business with expert hotshot dispatch services, managing bookings and back-office tasks to boost efficiency and growth.</p>
-                <div className="flex justify-end">
-                  <Link href="/services/hotshot-dispatch" aria-label="Discover more about Hotshot Dispatch" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-0 w-full -z-0">
-              <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" className="w-full opacity-40 group-hover:opacity-60 transition-all duration-300">
-                <path fill="url(#waveGradient)" d="M0,224L30,192C60,160,120,96,180,74.7C240,53,300,75,360,101.3C420,128,480,160,540,176C600,192,660,192,720,170.7C780,149,840,107,900,96C960,85,1020,107,1080,138.7C1140,171,1200,213,1260,213.3C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-                ></path>
-                <defs>
-                  <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#f87171" />
-                    <stop offset="100%" stopColor="#fb923c" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          {/* Service 2 */}
-          <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8 space-y-3">
-                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/flatbeds-step-deck-dispatch">Flatbeds/Step Deck Dispatch</Link></div>
-                <p>Kandor Logistics connects flatbed carriers with profitable long and short-haul loads, ensuring steady work, fair earnings, and efficient logistics management.</p>
-                <div className="flex justify-end">
-                  <Link href="/services/flatbeds-step-deck-dispatch" aria-label="Discover more about Flatbeds and Step Deck Dispatch" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-0 w-full -z-0">
-              <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" className="w-full opacity-40 group-hover:opacity-60 transition-all duration-300">
-                <path fill="url(#waveGradient)" d="M0,224L30,192C60,160,120,96,180,74.7C240,53,300,75,360,101.3C420,128,480,160,540,176C600,192,660,192,720,170.7C780,149,840,107,900,96C960,85,1020,107,1080,138.7C1140,171,1200,213,1260,213.3C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-                ></path>
-                <defs>
-                  <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#f87171" />
-                    <stop offset="100%" stopColor="#fb923c" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          {/* Service 3 */}
-          <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8 space-y-3">
-                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/power-only-units-dispatching">Power Only Units Dispatch</Link></div>
-                <p>Kandor Logistics supports power-only truckers with reliable dispatch services and affordable trailer rentals to keep operations running smoothly.</p>
-                <div className="flex justify-end">
-                  <Link href="/services/power-only-units-dispatching" aria-label="Discover more about Power Only Units Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-0 w-full -z-0">
-              <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" className="w-full opacity-40 group-hover:opacity-60 transition-all duration-300">
-                <path fill="url(#waveGradient)" d="M0,224L30,192C60,160,120,96,180,74.7C240,53,300,75,360,101.3C420,128,480,160,540,176C600,192,660,192,720,170.7C780,149,840,107,900,96C960,85,1020,107,1080,138.7C1140,171,1200,213,1260,213.3C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-                ></path>
-                <defs>
-                  <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#f87171" />
-                    <stop offset="100%" stopColor="#fb923c" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          {/* Service 4 */}
-          <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8 space-y-3">
-                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/low-boy-dispatching">Low Boy Dispatch</Link></div>
-                <p>Kandor Logistics connects lowboy carriers with bulk shipment projects, ensuring steady loads, efficient dispatching, and helping increase carrier revenue by 25%.</p>
-                <div className="flex justify-end">
-                  <Link href="/services/low-boy-dispatching" aria-label="Discover more about Low Boy Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-0 w-full -z-0">
-              <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" className="w-full opacity-40 group-hover:opacity-60 transition-all duration-300">
-                <path fill="url(#waveGradient)" d="M0,224L30,192C60,160,120,96,180,74.7C240,53,300,75,360,101.3C420,128,480,160,540,176C600,192,660,192,720,170.7C780,149,840,107,900,96C960,85,1020,107,1080,138.7C1140,171,1200,213,1260,213.3C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-                ></path>
-                <defs>
-                  <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#f87171" />
-                    <stop offset="100%" stopColor="#fb923c" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          {/* Service 5 */}
-          <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8 space-y-3">
-                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/box-truck-dispatching">Box Truck Dispatch</Link></div>
-                <p>Kandor Logistics provides steady box truck loads daily, ensuring your truck stays profitable and productive while we handle all dispatching needs.</p>
-                <div className="flex justify-end">
-                  <Link href="/services/box-truck-dispatching" aria-label="Discover more about Box Truck Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-0 w-full -z-0">
-              <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" className="w-full opacity-40 group-hover:opacity-60 transition-all duration-300">
-                <path fill="url(#waveGradient)" d="M0,224L30,192C60,160,120,96,180,74.7C240,53,300,75,360,101.3C420,128,480,160,540,176C600,192,660,192,720,170.7C780,149,840,107,900,96C960,85,1020,107,1080,138.7C1140,171,1200,213,1260,213.3C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-                ></path>
-                <defs>
-                  <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#f87171" />
-                    <stop offset="100%" stopColor="#fb923c" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          {/* Service 6 */}
-          <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="relative md:items-stretch z-10 mb-6">
-              <div className="p-6 pb-8 space-y-3">
-                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/dry-van-dispatching">Dry Van Dispatch</Link></div>
-                <p>Kandor Logistics specializes in dry van dispatch, optimizing routes, reducing fuel costs, and ensuring smooth, hassle-free pickups and deliveries for drivers.</p>
-                <div className="flex justify-end">
-                  <Link href="/services/dry-van-dispatching" aria-label="Discover more about Dry Van Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-0 w-full -z-0">
-              <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" className="w-full opacity-40 group-hover:opacity-60 transition-all duration-300">
-                <path fill="url(#waveGradient)" d="M0,224L30,192C60,160,120,96,180,74.7C240,53,300,75,360,101.3C420,128,480,160,540,176C600,192,660,192,720,170.7C780,149,840,107,900,96C960,85,1020,107,1080,138.7C1140,171,1200,213,1260,213.3C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-                ></path>
-                <defs>
-                  <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#f87171" />
-                    <stop offset="100%" stopColor="#fb923c" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          {/* Service 7 */}
-          <div className="relative group bg-gradient-to-br from-white via-red-50 to-orange-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="relative md:items-stretch mb-6 z-10">
-              <div className="p-6 pb-8 space-y-3">
-                <div className="text-xl font-bold text-gray-900 hover:text-red-600"><Link href="/services/reefer-dispatching">Reefer Dispatch</Link></div>
-                <p>Kandor Logistics provides reliable reefer dispatch services with strict 30-minute temperature checks, ensuring safe transport of food, pharmaceuticals, and chemicals.</p>
-                <div className="flex justify-end">
-                  <Link href="/services/reefer-dispatching" aria-label="Discover more about Reefer Dispatching" className="gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-red-500 to-orange-400 rounded-full shadow hover:from-red-600 hover:to-orange-500 transition-all">Discover more →</Link>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-0 w-full -z-0">
-              <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" className="w-full opacity-40 group-hover:opacity-60 transition-all duration-300">
-                <path fill="url(#waveGradient)" d="M0,224L30,192C60,160,120,96,180,74.7C240,53,300,75,360,101.3C420,128,480,160,540,176C600,192,660,192,720,170.7C780,149,840,107,900,96C960,85,1020,107,1080,138.7C1140,171,1200,213,1260,213.3C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-                ></path>
-                <defs>
-                  <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#f87171" />
-                    <stop offset="100%" stopColor="#fb923c" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ServicesCardLayout
+            title="Hotshot Dispatch"
+            excerpt="Kandor Logistics streamlines your business with expert hotshot dispatch services, managing bookings and back-office tasks to boost efficiency and growth."
+            link={`${BASE_URL}/services/hotshot-dispatch`}
+          />
+          <ServicesCardLayout
+            title="Flatbeds/Step Deck Dispatch"
+            excerpt="Kandor Logistics connects flatbed carriers with profitable long and short-haul loads, ensuring steady work, fair earnings, and efficient logistics management."
+            link={`${BASE_URL}/services/flatbeds-step-deck-dispatch`}
+          />
+          <ServicesCardLayout
+            title="Power Only Units Dispatch"
+            excerpt="Kandor Logistics supports power-only truckers with reliable dispatch services and affordable trailer rentals to keep operations running smoothly."
+            link={`${BASE_URL}/services/power-only-units-dispatching`}
+          />
+          <ServicesCardLayout
+            title="Low Boy Dispatch"
+            excerpt="Kandor Logistics connects lowboy carriers with bulk shipment projects, ensuring steady loads, efficient dispatching, and helping increase carrier revenue by 25%."
+            link={`${BASE_URL}/services/low-boy-dispatching`}
+          />
+          <ServicesCardLayout
+            title="Box Truck Dispatch"
+            excerpt="Kandor Logistics provides steady box truck loads daily, ensuring your truck stays profitable and productive while we handle all dispatching needs."
+            link={`${BASE_URL}/services/box-truck-dispatching`}
+          />
+          <ServicesCardLayout
+            title="Dry Van Dispatch"
+            excerpt="Kandor Logistics specializes in dry van dispatch, optimizing routes, reducing fuel costs, and ensuring smooth, hassle-free pickups and deliveries for drivers."
+            link={`${BASE_URL}/services/dry-van-dispatching`}
+          />
+          <ServicesCardLayout
+            title="Reefer Dispatch"
+            excerpt="Kandor Logistics provides reliable reefer dispatch services with strict 30-minute temperature checks, ensuring safe transport of food, pharmaceuticals, and chemicals."
+            link={`${BASE_URL}/services/reefer-dispatching`}
+          />
 
         </div>
       </div>

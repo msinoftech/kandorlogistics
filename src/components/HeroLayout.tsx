@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import { BASE_URL } from "@/lib/config";
 
 export default function HeroSection() {
   return (
@@ -25,7 +26,7 @@ export default function HeroSection() {
             <p>As your dedicated outsourced truck dispatch company, our expert team provides 24/7 support-from rate negotiation to back-office paperwork-ensuring reliable delivery to the destination.</p>
 
             <div className="flex flex-wrap gap-4">
-              <a href={`/contact`} role="button" id="hero-button" className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-400 text-white px-6 py-3 rounded-md font-medium shadow-lg hover:bg-red-700 transition-transform transform hover:-translate-y-1">Contact Us</a>
+              <a href={`${BASE_URL}/contact`} role="button" id="hero-button" className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-400 text-white px-6 py-3 rounded-md font-medium shadow-lg hover:bg-red-700 transition-transform transform hover:-translate-y-1">Contact Us</a>
             </div>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-2">

@@ -1,17 +1,17 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { contactInfo } from "@/lib/config";
+import { BASE_URL, contactInfo } from "@/lib/config";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Topbar from "@/components/TopBar";
 
 const NAV = [
-  { name: "Home", href: "/" },
-  { name: "About", href: `/about` },
-  { name: "Services", href: `/services` },
-  { name: "Blog", href: `/blog` },
-  { name: "Contact", href: `/contact` },
+  { name: "Home", href: `${BASE_URL}` },
+  { name: "About", href: `${BASE_URL}/about` },
+  { name: "Services", href: `${BASE_URL}/services` },
+  { name: "Blog", href: `${BASE_URL}/blog` },
+  { name: "Contact", href: `${BASE_URL}/contact` },
 ];
 
 export default function Header() {
@@ -70,7 +70,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="relative flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href={`${BASE_URL}`} className="flex items-center">
               <div className="relative w-[100px] h-10">
                 <Image src={logo} alt="Kandor Logistics" fill sizes="(max-width: 768px) 100px, 120px" className="object-contain transition-transform hover:scale-105"/>
               </div>

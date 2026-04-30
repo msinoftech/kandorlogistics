@@ -152,12 +152,41 @@ export default function HomePage() {
             <p>We are one of the best-paying trucking dispatch companies for owner-operators, providing dedicated 24/7 personalized support to help reduce your workload and allow you to focus solely on the road.  While knowing and managing logistics expertly locally, our team of professional truck dispatchers deals.</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
-            <ServiceCard />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-12">
+              <ServiceCard
+                title="Hotshot Dispatch"
+                excerpt="Kandor Logistics streamlines your business with expert hotshot dispatch services, managing bookings and back-office tasks to boost efficiency and growth."
+                link={`${BASE_URL}/services/hotshot-dispatch`}
+              />
+              <ServiceCard
+                title="Flatbeds/Step Deck Dispatch"
+                excerpt="Kandor Logistics connects flatbed carriers with profitable long and short-haul loads, ensuring steady work, fair earnings, and efficient logistics management."
+                link={`${BASE_URL}/services/flatbeds-step-deck-dispatch`}
+              />
+              <ServiceCard
+                title="Power Only Units Dispatch"
+                excerpt="Kandor Logistics supports power-only truckers with reliable dispatch services, load sourcing, and affordable trailer rentals to keep operations running smoothly."
+                link={`${BASE_URL}/services/power-only-units-dispatching`}
+              />
+              <ServiceCard
+                title="Low Boy Dispatch"
+                excerpt="Kandor Logistics connects lowboy carriers with bulk shipment projects, ensuring steady loads, efficient dispatching, and helping increase carrier revenue by 25%."
+                link={`${BASE_URL}/services/low-boy-dispatching`}
+              />
+              <ServiceCard
+                title="Box Truck Dispatch"
+                excerpt="Kandor Logistics provides steady box truck loads daily, ensuring your truck stays profitable and productive while we handle all dispatching needs."
+                link={`${BASE_URL}/services/box-truck-dispatching`}
+              />
+              <ServiceCard
+                title="Dry Van Dispatch"
+                excerpt="Kandor Logistics specializes in dry van dispatch, optimizing routes, reducing fuel costs, and ensuring smooth, hassle-free pickups and deliveries for drivers."
+                link={`${BASE_URL}/services/dry-van-dispatching`}
+              />
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/services" role="button" id="all_services_link" className="inline-flex items-center gap-2 hover:text-red-600 hover:scale-105 transition-transform duration-300 font-medium">View All Services →</Link>
+            <Link href={`${BASE_URL}/services`} role="button" id="all_services_link" className="inline-flex items-center gap-2 hover:text-red-600 hover:scale-105 transition-transform duration-300 font-medium">View All Services →</Link>
           </div>
         </div>
       </section>
@@ -177,7 +206,7 @@ export default function HomePage() {
               "Share of PODs and BOLs, etc.",
             ]}
             linkText="About us"
-            linkUrl="/about"
+            linkUrl={`${BASE_URL}/about`}
             imageClassName="rounded-2xl overflow-hidden shadow-2xl"
           />
 
@@ -206,7 +235,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-6">
-            <Link href="/blog" role="button" id="all_blog_link" className="inline-flex items-center gap-2 text-gray-600 hover:text-red-600 hover:scale-105 transition">View All Blogs →</Link>
+            <Link href={`${BASE_URL}/blog`} role="button" id="all_blog_link" className="inline-flex items-center gap-2 text-gray-600 hover:text-red-600 hover:scale-105 transition">View All Blogs →</Link>
           </div>
         </div>
       </section>
