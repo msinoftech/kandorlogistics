@@ -15,29 +15,31 @@ import AboutSection from "@/components/AboutSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhyHireSection from "@/components/WhyhireSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import FaqSection from "@/components/FaqSection";
+import {FaqSection} from "@/components/FaqSection";
 import HeroLayout from "@/components/HeroLayout";
 import ServiceCard from "@/components/ServiceCard";
 
+const { phone, logo } = contactInfo;
+
 export const metadata: Metadata = {
-  title: `Best Trucking Dispatch Company | Hire Your Local Trucking Dispatcher`,
-  description: "Kandor Logistics offers reliable trucking dispatch services for owner-operators, with experienced dispatchers available 24/7 to support your operations.",
+  title: `Trucking Dispatch Company in Texas | Kandor Logistics`,
+  description: "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!",
   keywords: [ "logistics", "freight forwarding", "supply chain", "shipping", "customs brokerage", "cargo", "global transport", "Kandor",],
   alternates: {
     canonical: `${BASE_URL}`,
   },
   openGraph: {
-    title: `Best Trucking Dispatch Company | Hire Your Local Trucking Dispatcher`,
-    description: "Kandor Logistics offers reliable trucking dispatch services for owner-operators, with experienced dispatchers available 24/7 to support your operations.",
+    title: `Trucking Dispatch Company in Texas | Kandor Logistics`,
+    description: "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!",
     url: `${BASE_URL}`,
     type: "website",
-    siteName: "Kandor Logistics",
+    siteName: `${APP_NAME}`,
     locale: "en_US",
     images: [
       {
-        url: `${BASE_URL}/social-hero.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${BASE_URL}/about-us1.1.jpg`,
+        width: 500,
+        height: 500,
         alt: "A large cargo ship being loaded at a bustling port.",
       },
     ],
@@ -46,14 +48,51 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@KandorLogistics",
     creator: "@KandorLogistics",
-    title: "Kandor Logistics: Secure Global Supply Chain",
-    description: "Comprehensive freight forwarding, customs brokerage, and transport services ensuring your goods arrive safely and on time.",
-    images: `${BASE_URL}/twitter-card.jpg`,
+    title: "Trucking Dispatch Company in Texas | Kandor Logistics",
+    description: "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!",
+    images: `${BASE_URL}${logo}`,
   },
 };
 
+const faqItems = [
+  {
+    title:"Why Outsource the Dispatch?",
+    content:`Outsourcing trucking dispatch services offers several advantages:
+      <ul>
+        <li>1. It is cost-efficient to hire cheaper labor from overseas countries.</li>
+        <li>2. Professional dispatch availability for 24/7, ensuring better load management.</li>
+        <li>3. Accessibility to experienced dispatchers, who can do load negotiations, route optimization, and compliance management in a professional way.</li>
+        <li>4. Trucking companies can focus on their core operations while dispatch work can be handled by professional dispatchers offshore.</li>
+      </ul>`,
+  },
+  {
+    title:"What Security Protocols Are Followed While Dispatching?",
+    content:`For the security and safety of operations, dispatch follows strict protocols:
+      <ul>
+        <li>1 . Secure servers and encrypted communication channels are used for data protection.</li>
+        <li>2. To ensure all the drivers follow FMCSA and DOT transport regulations</li>
+        <li>3. Regular checks to ensure driver’s license, truck insurance and licenses are up to date in the system.</li>
+        <li>4. Verification of brokers to prevent fraud or late payments.</li>
+        <li>5. GPS tracking and ELD integration to monitor driver tracking and their driving records.</li>
+      </ul>`,
+  },
+  {
+    title:"How to Ensure a Smooth Transition?",
+    content:`Proper planning is required to ensure a smooth transition.
+      <ul>
+        <li>1. Start with partial outsourcing and proper training before full transition of dispatch operations</li>
+        <li>2. The driver and in-house team should be informed about the new dispatch.</li>
+        <li>3. Access to TMS, tracking software, and other required tools should be integrated with the remote Team.</li>
+        <li>4. Provide proper training & support to start a smooth transition with the new dispatch processes.</li>
+      </ul>`,
+  },
+  {
+    title:"Understanding of dispatching process",
+    content:`Knowing how to assign loads to drivers, considering factors like route optimization, driver availability, and delivery deadlines.`,
+  },
+];
+
 export default function HomePage() {
-  const { phone } = contactInfo;
 
   const homeschemaData = {
     "@context": "https://schema.org",
@@ -62,7 +101,7 @@ export default function HomePage() {
         "@type": "WebSite",
         "url": `${BASE_URL}`,
         "name": `${APP_NAME}`,
-        "description": "Global Freight, Customs, and Supply Chain Management Services.",
+        "description": "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!",
         "potentialAction": {
           "@type": "SearchAction",
           "target": `${BASE_URL}/search?q={search_term_string}`,
@@ -74,13 +113,13 @@ export default function HomePage() {
         "url": `${BASE_URL}`,
         "name": "Global Freight & Supply Chain Management - Home",
         "inLanguage": "en-US",
-        "description": "Kandor Logistics provides comprehensive global supply chain, freight forwarding, and customs brokerage services. Secure and efficient logistics solutions worldwide."
+        "description": "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!"
       },
       {
         "@type": "Organization",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}/logo.png`,
+        "logo": `${BASE_URL}${logo}`,
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": `${phone}`,
@@ -90,8 +129,9 @@ export default function HomePage() {
         },
         "sameAs": [
           "https://www.facebook.com/kandorlogistics",
-          "https://www.linkedin.com/company/kandorlogistics",
-          "https://twitter.com/KandorLogistics"
+          "https://x.com/kandorlogistics",
+          "https://www.instagram.com/kandorlogistics",
+          "https://www.youtube.com/@KandorLogistics"
         ]
       },
       {
@@ -132,6 +172,18 @@ export default function HomePage() {
           "addressCountry": "US"
         },
         "serviceType": "Freight Forwarding and Logistics"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${BASE_URL}/#faq`,
+        "mainEntity": faqItems.map((item) => ({
+          "@type": "Question",
+          "name": item.title,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.content
+          }
+        }))
       }
     ]
   };
@@ -221,7 +273,7 @@ export default function HomePage() {
         items={whyhireus}
       />
 
-      <section className="relative bg-white py-10">
+      <section className="relative bg-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           
           <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
@@ -240,7 +292,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="bg-white max-w-7xl mx-auto px-6 py-20">
+      <section id="contact" className="bg-white max-w-7xl mx-auto px-6 pb-20">
           <div className="rounded-3xl bg-white drop-shadow-lg p-8">
             <div className="relative text-center pb-8 space-y-3">
                 <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
@@ -263,50 +315,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-100">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
             <div className="relative text-center pb-8 space-y-3">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
-
-            <FaqSection
-              title="Why Outsource the Dispatch?"
-              content={`Outsourcing trucking dispatch services offers several advantages:
-                    <ul>
-                      <li>1. It is cost-efficient to hire cheaper labor from overseas countries.</li>
-                      <li>2. Professional dispatch availability for 24/7, ensuring better load management.</li>
-                      <li>3. Accessibility to experienced dispatchers, who can do load negotiations, route optimization, and compliance management in a professional way.</li>
-                      <li>4. Trucking companies can focus on their core operations while dispatch work can be handled by professional dispatchers offshore.</li>
-                    </ul>`}
-            />
-            <FaqSection
-              title="What Security Protocols Are Followed While Dispatching?"
-              content={`For the security and safety of operations, dispatch follows strict protocols:
-              <ul>
-                <li>1 . Secure servers and encrypted communication channels are used for data protection.</li>
-                <li>2. To ensure all the drivers follow FMCSA and DOT transport regulations</li>
-                <li>3. Regular checks to ensure driver’s license, truck insurance and licenses are up to date in the system.</li>
-                <li>4. Verification of brokers to prevent fraud or late payments.</li>
-                <li>5. GPS tracking and ELD integration to monitor driver tracking and their driving records.</li>
-              </ul>`}
-            />
-            <FaqSection
-              title="How to Ensure a Smooth Transition?"
-              content={`Proper planning is required to ensure a smooth transition.
-              <ul>
-                <li>1. Start with partial outsourcing and proper training before full transition of dispatch operations</li>
-                <li>2. The driver and in-house team should be informed about the new dispatch.</li>
-                <li>3. Access to TMS, tracking software, and other required tools should be integrated with the remote Team.</li>
-                <li>4. Provide proper training & support to start a smooth transition with the new dispatch processes.</li>
-              </ul>`}
-            />
-            <FaqSection
-              title="Understanding of dispatching process"
-              content={`Knowing how to assign loads to drivers, considering factors like route optimization, driver availability, and delivery deadlines.`}
-            />
+            <FaqSection items={faqItems} />
         </div>
       </section>
-
 
       <TestimonialsSection
         subheading=""

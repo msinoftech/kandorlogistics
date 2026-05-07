@@ -1,25 +1,30 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { APP_NAME, BASE_URL } from "@/lib/config";
+import { APP_NAME, BASE_URL, contactInfo,  } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
-import FaqSection from "@/components/FaqSection";
+import {FaqSection} from "@/components/FaqSection";
+
+const { phone, logo } = contactInfo;
 
 export const metadata: Metadata = {
-    title: "Best Paying Reefer Trucking Dispatch Services for Owner-Operators",
-    description: "Work with top-paying reefer dispatch companies. Our experienced refrigerated truck dispatchers provide reliable loads, 24/7 support, and complete logistics management for owner-operators.",
+    title: "Nationwide Reefer Dispatch Services | Kandor Logistics",
+    description: "USA's expert reefer dispatch with temperature-controlled load sourcing, real-time monitoring & expert paperwork management for refrigerated freight owner-operators and fleet owners.",
     keywords: "reefer dispatcher, reefer transport companies, reefer refrigerated truck dispatcher for owner operator, reefer dispatcher in Texas, reefer dispatcher California, reefer dispatcher in chicago",
+    alternates: {
+        canonical: `${BASE_URL}/services/reefer-dispatching`,
+    },
     openGraph: {
-      title: "Best Paying Reefer Trucking Dispatch Services for Owner-Operators",
-      description: "Work with top-paying reefer dispatch companies. Our experienced refrigerated truck dispatchers provide reliable loads, 24/7 support, and complete logistics management for owner-operators.",
+      title: "Nationwide Reefer Dispatch Services | Kandor Logistics",
+      description: "USA's expert reefer dispatch with temperature-controlled load sourcing, real-time monitoring & expert paperwork management for refrigerated freight owner-operators and fleet owners.",
       url: `${BASE_URL}/services/reefer-dispatching`,
       siteName: `${APP_NAME}`,
       images: [
         {
-          url: `${BASE_URL}/reefers-dispatch.jpg`,
-          width: 1200,
-          height: 630,
-          alt: "Best Paying Reefer Trucking Dispatch Services for Owner-Operators",
+          url: `${BASE_URL}/Reefer-Dispatch-Support-for-Trucking.jpg`,
+          width: 500,
+          height: 500,
+          alt: "Nationwide Reefer Dispatch Services",
         },
       ],
       locale: "en_US",
@@ -27,38 +32,70 @@ export const metadata: Metadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Best Paying Reefer Trucking Dispatch Services for Owner-Operators",
-      description: "Work with top-paying reefer dispatch companies. Our experienced refrigerated truck dispatchers provide reliable loads, 24/7 support, and complete logistics management for owner-operators.",
-      images: [`${BASE_URL}/reefers-dispatch.jpg`],
+      title: "Nationwide Reefer Dispatch Services | Kandor Logistics",
+      description: "USA's expert reefer dispatch with temperature-controlled load sourcing, real-time monitoring & expert paperwork management for refrigerated freight owner-operators and fleet owners.",
+      images: [`${BASE_URL}${logo}`],
     },
-    alternates: {
-      canonical: `${BASE_URL}/services/reefer-dispatching`,
-    },
+    
 };
+
+const faqItems = [
+    {
+        title: "What is the role of Reefer Truck Dispatchers?",
+        content: `They handle every detail of your reefer dispatch—from seamless back-office management to connecting you with the most profitable loads—so your business stays on track and thriving.`,
+    },
+    {
+        title: "Why choose a Professional Dispatcher for your Reefer truck?",
+        content: `Reefer trucks transport sensitive, temperature-controlled freight and require a dispatch expert to monitor each mile, maintain communication, and keep loads on schedule. Reefer truck dispatchers also identify high-value loads, match them to your equipment, plan routes, and manage paperwork. Their expertise helps your reefer truck stay competitive and maximise earnings.`,
+    },
+    {
+        title: "How can owner-operators find the highest-paying reefer loads?",
+        content: `Owner-operators can target the temperature-sensitive freight markets where the opportunities are consistently strong. Specialised load boards, freight brokers, and direct contracts with shippers are key to consistently securing the highest-paying reefer loads and, alternatively, partnering with a dedicated reefer dispatcher who has the industry experience of using technology in searching for and securing reefer-specific loads, negotiating, and managing paperwork.​`,
+    }
+]
 
 const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
     {
-        // 1. WebSite Definition
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
         "url": `${BASE_URL}`,
         "name": `${APP_NAME}`
     },
     {
-        // 2. WebPage Definition for the Subpage
         "@type": "WebPage",
         "@id": `${BASE_URL}/services/reefer-dispatching/#webpage`,
-        "url": `${BASE_URL}/services/reefer-dispatching/`,
-        "name": "Best Paying Reefer Trucking Dispatch Services for Owner-Operators",
-        "isPartOf": {"@id": `${BASE_URL}/#website`},
-        "description": "Work with top-paying reefer dispatch companies. Our experienced refrigerated truck dispatchers provide reliable loads, 24/7 support, and complete logistics management for owner-operators.",
+        "url": `${BASE_URL}/services/reefer-dispatching`,
+        "name": "Reefer Dispatch Services",
+        "isPartOf": {
+        "@type": "WebSite",
+        "url": `${BASE_URL}`,
+        "name": `${APP_NAME}`
+        },
+        "description": "USA's expert reefer dispatch with temperature-controlled load sourcing, real-time monitoring & expert paperwork management for refrigerated freight owner-operators and fleet owners.",
         "inLanguage": "en-US",
-        "breadcrumb": {"@id": `${BASE_URL}/services/reefer-dispatching/#breadcrumb`}
     },
     {
-        // 3. Breadcrumb List
+        "@type": "Organization",
+        "name": `${APP_NAME}`,
+        "url": `${BASE_URL}`,
+        "logo": `${BASE_URL}${logo}`,
+        "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": `${phone}`,
+        "contactType": "customer service",
+        "areaServed": "Global",
+        "availableLanguage": ["en","es","zh"]
+        },
+        "sameAs": [
+        "https://www.facebook.com/kandorlogistics",
+        "https://x.com/kandorlogistics",
+        "https://www.instagram.com/kandorlogistics",
+        "https://www.youtube.com/@KandorLogistics"
+        ]
+    },
+    {
         "@type": "BreadcrumbList",
         "@id": `${BASE_URL}/services/reefer-dispatching/#breadcrumb`,
         "itemListElement": [
@@ -72,27 +109,27 @@ const schemaData = {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": `${BASE_URL}/services/`
+            "item": `${BASE_URL}/services`
         },
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Reefer Dispatch Service"
+            "name": "Reefer Dispatch Services",
+            "item": `${BASE_URL}/services/reefer-dispatching`
         }
         ]
     },
     {
-        // 4. Specific Service Definition (Reefer Dispatch)
         "@type": "Service",
         "serviceType": "Reefer Dispatch",
-        "name": "Best Paying Reefer Trucking Dispatch Services for Owner-Operators",
-        "description": "Work with top-paying reefer dispatch companies. Our experienced refrigerated truck dispatchers provide reliable loads, 24/7 support, and complete logistics management for owner-operators.",
-        "url": `${BASE_URL}/services/reefer-dispatching/`,
+        "name": "Reefer Dispatch Services",
+        "description": "USA's expert reefer dispatch with temperature-controlled load sourcing, real-time monitoring & expert paperwork management for refrigerated freight owner-operators and fleet owners. ",
+        "url": `${BASE_URL}/services/reefer-dispatching`,
         "provider": {
         "@type": "ShippingCompany",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}/logo.png`
+        "logo": `${BASE_URL}${logo}`
         },
         "areaServed": [
         {"@type": "State", "name": "Texas"},
@@ -108,6 +145,18 @@ const schemaData = {
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Back-Office Paperwork and Compliance"}}
         ]
         }
+    },
+    {
+        "@type": "FAQPage",
+        "@id": `${BASE_URL}/services/reefer-dispatching/#faq`,
+        "mainEntity": faqItems.map((item) => ({
+          "@type": "Question",
+          "name": item.title,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.content
+          }
+        }))
     }
     ]
 };
@@ -115,10 +164,9 @@ const schemaData = {
 export default function ReeferDispatchPage() {
   return (
     <>
-    {/* Schema Markup */}
     <Script id="reefer-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
 
-    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-12">
+    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Reefer Dispatch</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -133,7 +181,7 @@ export default function ReeferDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             {/* Heading Section */}
             <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
@@ -182,7 +230,7 @@ export default function ReeferDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white relative py-12">
+    <section className="bg-white relative py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-18">
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -208,7 +256,7 @@ export default function ReeferDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 {/* Left Content */}
@@ -225,7 +273,7 @@ export default function ReeferDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white relative py-12">
+    <section className="bg-white relative py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-18">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 {/* Left Image */}
@@ -241,7 +289,7 @@ export default function ReeferDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white max-w-7xl mx-auto px-6 py-12">
+    <section className="bg-white max-w-7xl mx-auto px-6 py-20">
         <div className="rounded-3xl bg-white drop-shadow-lg p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {/* Left Content */}
@@ -260,24 +308,12 @@ export default function ReeferDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
             <div className="relative text-center space-y-3 pb-8">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
-
-            <FaqSection
-              title="What is the role of Reefer Truck Dispatchers?"
-              content={`They handle every detail of your reefer dispatch—from seamless back-office management to connecting you with the most profitable loads—so your business stays on track and thriving.`}
-            />
-            <FaqSection
-              title="Why choose a Professional Dispatcher for your Reefer truck?"
-              content={`Reefer trucks transport sensitive, temperature-controlled freight and require a dispatch expert to monitor each mile, maintain communication, and keep loads on schedule. Reefer truck dispatchers also identify high-value loads, match them to your equipment, plan routes, and manage paperwork. Their expertise helps your reefer truck stay competitive and maximise earnings.`}
-            />           
-            <FaqSection
-              title="How can owner-operators find the highest-paying reefer loads?"
-              content={`Owner-operators can target the temperature-sensitive freight markets where the opportunities are consistently strong. Specialised load boards, freight brokers, and direct contracts with shippers are key to consistently securing the highest-paying reefer loads and, alternatively, partnering with a dedicated reefer dispatcher who has the industry experience of using technology in searching for and securing reefer-specific loads, negotiating, and managing paperwork.​`}
-            />                     
+            <FaqSection items={faqItems} />
         </div>
     </section>
     </>

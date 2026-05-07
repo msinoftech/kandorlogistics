@@ -4,39 +4,57 @@ import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
 import LocationSection from "@/components/LocationSection";
 
+const { phone, logo } = contactInfo;
+
 export const metadata: Metadata = {
-  title: `Contact Us | ${APP_NAME}`,
-  description: "Kandor Logistics, your trusted logistics and dispatch support partner in the USA. Our dedicated dispatchers are ready to empower truck owners and fleet companies. Reach out to us today.",
-  keywords: ["logistics", "Kandor", "Contact us"],
-  openGraph: {
-    title: `Contact Us | ${APP_NAME}`,
-    description: "Kandor Logistics, your trusted logistics and dispatch support partner in the USA. Our dedicated dispatchers are ready to empower truck owners and fleet companies. Reach out to us today.",
-    images: [
-      {
-        url: `${BASE_URL}/contact-og.jpg`,
-        width: 1200,
-        height: 630,
-        alt: `Contact Us | ${APP_NAME}`,
-      },
-    ],
-  },
+  title: `Contact Us to Explore the Partnership Opportunity`,
+  description: "Reach the Kandor Logistics team for trucking dispatch support — call, email, or book a free consultation. We help owner-operators and fleet companies across the USA.",
+  keywords: ["logistics", "Kandor", "Contact us", "Trucking Dispatch Support"],
   alternates: {
     canonical: `${BASE_URL}/contact`,
   },
+  openGraph: {
+    title: `Contact Us to Explore the Partnership Opportunity`,
+    description: "Reach the Kandor Logistics team for trucking dispatch support — call, email, or book a free consultation. We help owner-operators and fleet companies across the USA.",
+    images: [
+      {
+        url: `${BASE_URL}/contact-us.jpg`,
+        width: 500,
+        height: 500,
+        alt: `Contact Us to Explore the Partnership Opportunity`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@KandorLogistics",
+    creator: "@KandorLogistics",
+    title: `Contact Us to Explore the Partnership Opportunity`,
+    description: "Reach the Kandor Logistics team for trucking dispatch support — call, email, or book a free consultation. We help owner-operators and fleet companies across the USA.",
+    images: `${BASE_URL}${logo}`,
+  },
 };
 
-const { phone } = contactInfo;
-
-// Schema Data for Contact Page
 const contactSchemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "url": `${BASE_URL}`,
+      "name": `${APP_NAME}`,
+      "description": "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${BASE_URL}/search?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      }
+    },
+    {
       "@type": "WebPage",
       "url": `${BASE_URL}/contact`,
-      "name": "Contact Kandor Logistics",
+      "name": "Contact Us",
       "inLanguage": "en-US",
-      "description": "Kandor Logistics, your trusted logistics and dispatch support partner in the USA. Our dedicated dispatchers are ready to empower truck owners and fleet companies. Reach out to us today.",
+      "description": "Reach the Kandor Logistics team for trucking dispatch support — call, email, or book a free consultation. We help owner-operators and fleet companies across the USA.",
       "isPartOf": {
         "@type": "WebSite",
         "url": `${BASE_URL}`,
@@ -47,24 +65,25 @@ const contactSchemaData = {
       "@type": "Organization",
       "name": `${APP_NAME}`,
       "url": `${BASE_URL}`,
-      "logo": `${BASE_URL}/logo.png`,
-      "foundingDate": "2019",
+      "logo": `${BASE_URL}${logo}`,
+      "foundingDate": "2020",
       "founder": {
         "@type": "Person",
-        "name": "Kandor Logistics Team",
+        "name": `${APP_NAME}`,
       },
-      "description": "Kandor Logistics, your trusted logistics and dispatch support partner in the USA. Our dedicated dispatchers are ready to empower truck owners and fleet companies. Reach out to us today.",
+      "description": "Reach the Kandor Logistics team for trucking dispatch support — call, email, or book a free consultation. We help owner-operators and fleet companies across the USA.",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": `${phone}`,
-        "contactType": "Customer Support",
+        "contactType": "customer service",
         "areaServed": "US",
         "availableLanguage": ["en", "es"],
       },
       "sameAs": [
         "https://www.facebook.com/kandorlogistics",
-        "https://www.linkedin.com/company/kandorlogistics",
-        "https://twitter.com/KandorLogistics",
+        "https://x.com/kandorlogistics",
+        "https://www.instagram.com/kandorlogistics",
+        "https://www.youtube.com/@KandorLogistics"
       ],
       "address": {
         "@type": "PostalAddress",
@@ -75,9 +94,9 @@ const contactSchemaData = {
     },
     {
       "@type": "ContactPage",
-      "name": "Contact Kandor Logistics",
+      "name": "Contact Us",
       "url": `${BASE_URL}/contact`,
-      "primaryImageOfPage": `${BASE_URL}/contact-og.jpg`,
+      "primaryImageOfPage": `${BASE_URL}${logo}`,
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -102,7 +121,6 @@ const contactSchemaData = {
 export default function Contact() {
   return (
     <>
-      {/* Inject JSON-LD Schema */}
       <Script id="contact-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchemaData) }}/>
 
       <section className="sm:pt-40 md:pt-40 lg:pt-40 pt-40 bg-gray-50 pb-20">

@@ -1,25 +1,30 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { APP_NAME, BASE_URL } from "@/lib/config";
+import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
-import FaqSection from "@/components/FaqSection";
+import {FaqSection} from "@/components/FaqSection";
+
+const { phone, logo } = contactInfo;
 
 export const metadata: Metadata = {
-    title: "Reliable Power Only Dispatch Services for Owner Operators",
-    description: "Work with our experienced power-only dispatcher for logistics management, rate negotiation, and back-office support to help grow your fleet.",
+    title: "Power Only Dispatch Services | Owner-Operators & Fleets | Kandor Logistics",
+    description: "Partner with Kandor Logistics' power-only dispatchers, serving single-unit operators and large fleets nationwide for logistics management, load sourcing, and back-office support",
     keywords: "dispatcher in California for owner operators, dispatcher in chicago for owner operators",
+    alternates: {
+        canonical: `${BASE_URL}/services/power-only-units-dispatching`,
+    },
     openGraph: {
-      title: "Reliable Power Only Dispatch Services for Owner Operators",
-      description: "Work with our experienced power-only dispatcher for logistics management, rate negotiation, and back-office support to help grow your fleet.",
+      title: "Power Only Dispatch Services | Owner-Operators & Fleets | Kandor Logistics",
+      description: "Partner with Kandor Logistics' power-only dispatchers, serving single-unit operators and large fleets nationwide for logistics management, load sourcing, and back-office support",
       url: `${BASE_URL}/services/power-only-units-dispatching`,
       siteName: `${APP_NAME}`,
       images: [
         {
-          url: `${BASE_URL}/power-only-units.jpg`,
-          width: 1200,
-          height: 630,
-          alt: "Reliable Power Only Dispatch Services for Owner Operators",
+          url: `${BASE_URL}/power-only-units-dispatch.jpg`,
+          width: 500,
+          height: 500,
+          alt: "Power Only Dispatch Services | Owner-Operators & Fleets",
         },
       ],
       locale: "en_US",
@@ -27,38 +32,69 @@ export const metadata: Metadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Reliable Power Only Dispatch Services for Owner Operators",
-      description: "Work with our experienced power-only dispatcher for logistics management, rate negotiation, and back-office support to help grow your fleet.",
-      images: [`${BASE_URL}/power-only-units.jpg`],
-    },
-    alternates: {
-      canonical: `${BASE_URL}/services/power-only-units-dispatching`,
-    },
+      title: "Power Only Dispatch Services | Owner-Operators & Fleets | Kandor Logistics",
+      description: "Partner with Kandor Logistics' power-only dispatchers, serving single-unit operators and large fleets nationwide for logistics management, load sourcing, and back-office support",
+      images: `${BASE_URL}${logo}`,
+    }, 
 };
+
+const faqItems = [
+    {
+        title: "What does 'power only unit' mean in trucking?",
+        content: `A power-only unit is a combination of a semi-truck tractor and driver. A shipper or third-party logistics company hires a carrier to haul their trailer. The carrier provides the truck and driver, who hook up and transport the preloaded trailer. This arrangement offers businesses flexibility and cost-efficiency, especially if they own trailers or need to move loads quickly using available trucking capacity.`,
+    },
+    {
+        title: "What Do Power-Only Units Dispatchers Offer?",
+        content: `Power-Only Units Dispatchers use advanced load sequencing to maximise weekly profitability by optimising partial and expedited shipments. They aim to reduce empty miles, increase net earnings per mile, and connect you with reliable partners.`,
+    },
+    {
+        title: "What is the difference between power only and a trailer of your own?",
+        content: `Power only when the trucking company provides a driver and a tractor to move pre-load trailers of shippers, brokers, or third parties. They own or lease that. This arrangement offers excellent flexibility, allowing tractors to be hired only when needed, reducing capital outlay and maintenance costs for trailers.​`,
+    },
+]
   
 const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
     {
-        // 1. WebSite Definition
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
         "url": `${BASE_URL}`,
         "name": `${APP_NAME}`
     },
     {
-        // 2. WebPage Definition for the Subpage
         "@type": "WebPage",
         "@id": `${BASE_URL}/services/power-only-units-dispatching/#webpage`,
-        "url": `${BASE_URL}/services/power-only-units-dispatching/`,
-        "name": "Reliable Power Only Dispatch Services for Owner Operators",
-        "isPartOf": {"@id": `${BASE_URL}/#website`},
-        "description": "Work with our experienced power-only dispatcher for logistics management, rate negotiation, and back-office support to help grow your fleet.",
+        "url": `${BASE_URL}/services/power-only-units-dispatching`,
+        "name": "Power Only Units Dispatching",
+        "isPartOf": {
+            "@type": "WebSite",
+            "url": `${BASE_URL}`,
+            "name": `${APP_NAME}`
+        },
+        "description": "Partner with Kandor Logistics' power-only dispatchers, serving single-unit operators and large fleets nationwide for logistics management, load sourcing, and back-office support",
         "inLanguage": "en-US",
-        "breadcrumb": {"@id": `${BASE_URL}/services/power-only-units-dispatching/#breadcrumb`}
     },
     {
-        // 3. Breadcrumb List
+        "@type": "Organization",
+        "name": `${APP_NAME}`,
+        "url": `${BASE_URL}`,
+        "logo": `${BASE_URL}${logo}`,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": `${phone}`,
+          "contactType": "customer service",
+          "areaServed": "Global",
+          "availableLanguage": ["en","es","zh"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/kandorlogistics",
+          "https://x.com/kandorlogistics",
+          "https://www.instagram.com/kandorlogistics",
+          "https://www.youtube.com/@KandorLogistics"
+        ]
+    },
+    {
         "@type": "BreadcrumbList",
         "@id": `${BASE_URL}/services/power-only-units-dispatching/#breadcrumb`,
         "itemListElement": [
@@ -72,27 +108,27 @@ const schemaData = {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": `${BASE_URL}/services/`
+            "item": `${BASE_URL}/services`
         },
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Power Only Units Dispatch Service"
+            "name": "Power Only Units Dispatching",
+            "item": `${BASE_URL}/services/power-only-units-dispatching`
         }
         ]
     },
     {
-        // 4. Specific Service Definition (Power Only Units Dispatch)
         "@type": "Service",
         "serviceType": "Power Only Units Dispatch",
-        "name": "Reliable Power Only Dispatch Services for Owner Operators",
-        "description": "Work with our experienced power-only dispatcher for logistics management, rate negotiation, and back-office support to help grow your fleet.",
-        "url": `${BASE_URL}/services/power-only-units-dispatching/`,
+        "name": "Power Only Units Dispatching",
+        "description": "Partner with Kandor Logistics' power-only dispatchers, serving single-unit operators and large fleets nationwide for logistics management, load sourcing, and back-office support",
+        "url": `${BASE_URL}/services/power-only-units-dispatching`,
         "provider": {
-        "@type": "ShippingCompany",
-        "name": `${APP_NAME}`,
-        "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}/logo.png`
+            "@type": "ShippingCompany",
+            "name": `${APP_NAME}`,
+            "url": `${BASE_URL}`,
+            "logo": `${BASE_URL}${logo}`
         },
         "areaServed": [
         {"@type": "State", "name": "Texas"},
@@ -108,6 +144,18 @@ const schemaData = {
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Back-Office Paperwork and Compliance"}}
         ]
         }
+    },
+    {
+        "@type": "FAQPage",
+        "@id": `${BASE_URL}/services/power-only-units-dispatching/#faq`,
+        "mainEntity": faqItems.map((item) => ({
+          "@type": "Question",
+          "name": item.title,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.content
+          }
+        }))
     }
     ]
 };
@@ -115,10 +163,9 @@ const schemaData = {
 export default function PowerDispatchPage() {
   return (
     <>
-    {/* Schema Markup */}
     <Script id="power-only-units-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
     
-    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-12">
+    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Power Only Units Dispatch</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -309,19 +356,7 @@ export default function PowerDispatchPage() {
             <div className="relative text-center space-y-3 pb-8">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
-
-            <FaqSection
-              title="What does 'power only unit' mean in trucking?"
-              content={`A power-only unit is a combination of a semi-truck tractor and driver. A shipper or third-party logistics company hires a carrier to haul their trailer. The carrier provides the truck and driver, who hook up and transport the preloaded trailer. This arrangement offers businesses flexibility and cost-efficiency, especially if they own trailers or need to move loads quickly using available trucking capacity.`}
-            />
-            <FaqSection
-              title="What Do Power-Only Units Dispatchers Offer?"
-              content={`Power-Only Units Dispatchers use advanced load sequencing to maximise weekly profitability by optimising partial and expedited shipments. They aim to reduce empty miles, increase net earnings per mile, and connect you with reliable partners.`}
-            />           
-            <FaqSection
-              title="What is the difference between power only and a trailer of your own?"
-              content={`Power only when the trucking company provides a driver and a tractor to move pre-load trailers of shippers, brokers, or third parties. They own or lease that. This arrangement offers excellent flexibility, allowing tractors to be hired only when needed, reducing capital outlay and maintenance costs for trailers.​`}
-            />                     
+            <FaqSection items={faqItems} />
         </div>
     </section>
     </>

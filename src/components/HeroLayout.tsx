@@ -3,9 +3,9 @@ import { BASE_URL } from "@/lib/config";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-indigo-50 sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-red-50 via-white to-orange-50 sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
       {/* Animated Gradient Background */}
-      <div className="absolute inset-0 -z-10 animate-gradient bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-red-200 via-white to-indigo-200 opacity-60"></div>
+      <div className="absolute inset-0 -z-10 animate-gradient bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-red-200 via-white to-orange-200 opacity-60"></div>
 
       {/* Floating Gradient Blobs */}
       <div className="absolute -top-32 -left-32 h-96 w-96 bg-red-400/30 rounded-full blur-3xl animate-float-slow"></div>

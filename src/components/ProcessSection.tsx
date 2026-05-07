@@ -21,7 +21,7 @@ const ProcessSection: React.FC = () => {
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {processSteps.map((step) => (
             <div key={step.n} className="rounded-2xl space-y-3 p-6 border border-gray-400 bg-gray-800 hover:shadow-2xl transition transform hover:-translate-y-1">
-              <div className="h-10 w-10 rounded-full bg-gradient-to-r from-red-600 to-orange-400 text-white grid place-content-center font-bold">{step.n}</div>
+              <div className="h-10 w-10 rounded-xl bg-gradient-to-r from-red-600 to-orange-400 text-white grid place-content-center font-bold">{step.n}</div>
               <div className="text-xl text-white font-semibold">{step.t}</div>
               <p className="text-white">{step.d}</p>
             </div>

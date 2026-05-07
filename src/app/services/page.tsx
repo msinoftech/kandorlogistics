@@ -5,30 +5,37 @@ import ContactForm from "@/components/ContactForm";
 import ContactSection from "@/components/ContactSection";
 import ServicesCardLayout from "@/components/ServicesCardLayout";
 
+const { phone, logo } = contactInfo;
+
 export const metadata: Metadata = {
-  title: `Top-Notch Dispatch Service for Owner Operators and Fleet Companies`,
-  description: "For the past decade, our experienced dispatchers have delivered high-quality freight dispatch services to owner-operators and carriers, supporting their business growth.",
+  title: `Dispatch Services for Owner-Operators and Fleet Owners | Kandor Logistics`,
+  description: "Explore all Kandor Logistics dispatch services. For those, we offer 24/7 support across the USA, Dm free.",
   keywords: [ "logistics", "freight forwarding", "supply chain", "shipping", "customs brokerage", "cargo", "global transport", "Kandor",],
-  openGraph: {
-    title: `Top-Notch Dispatch Service for Owner Operators and Fleet Companies`,
-    description: "For the past decade, our experienced dispatchers have delivered high-quality freight dispatch services to owner-operators and carriers, supporting their business growth.",
-    images: [
-      {
-        url: `${BASE_URL}/services-og.jpg`,
-        width: 1200,
-        height: 630,
-        alt: `Top-Notch Dispatch Service for Owner Operators and Fleet Companies`,
-      },
-    ],
-  },
   alternates: {
     canonical: `${BASE_URL}/services`,
   },
+  openGraph: {
+    title: `Dispatch Services for Owner-Operators and Fleet Owners | Kandor Logistics`,
+    description: "Explore all Kandor Logistics dispatch services. For those, we offer 24/7 support across the USA, Dm free.",
+    images: [
+      {
+        url: `${BASE_URL}/comprehensive-power-only-units-dispatch.jpg`,
+        width: 500,
+        height: 500,
+        alt: `Dispatch Services for Owner-Operators and Fleet Owners | Kandor Logistics`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@KandorLogistics",
+    creator: "@KandorLogistics",
+    title: "Dispatch Services for Owner-Operators and Fleet Owners | Kandor Logistics",
+    description: "Explore all Kandor Logistics dispatch services. For those, we offer 24/7 support across the USA, Dm free.",
+    images: `${BASE_URL}${logo}`,
+  },
 };
 
-const { phone } = contactInfo;
-
-// Schema Data
 const serviceschemaData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -36,11 +43,23 @@ const serviceschemaData = {
       "@type": "WebSite",
       url: `${BASE_URL}`,
       name: `${APP_NAME}`,
-      description: "Professional truck dispatching and logistics company in the USA offering reliable freight forwarding, dispatch, and transportation services.",
+      description: "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!",
       potentialAction: {
         "@type": "SearchAction",
         target: `${BASE_URL}/search?q={search_term_string}`,
         "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "WebPage",
+      "url": `${BASE_URL}/services`,
+      "name": "Services | Kandor Logistics",
+      "inLanguage": "en-US",
+      "description": "Explore all Kandor Logistics dispatch services. For those, we offer 24/7 support across the USA, Dm free.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": `${BASE_URL}`,  
+        "name": `${APP_NAME}`,
       },
     },
     {
@@ -55,23 +74,22 @@ const serviceschemaData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Truck Dispatching Services",
-          item: `${BASE_URL}/truck-dispatching-services`,
+          name: "Services",
+          item: `${BASE_URL}/services`,
         },
       ],
     },
     {
       "@type": "Service",
       serviceType: "Truck Dispatching & Freight Logistics",
-      name: "Truck Dispatching Services USA",
-      description: "Kandor Logistics offers professional truck dispatching services for owner-operators and carriers across the USA. We help maximize fleet revenue with optimized loads and dedicated dispatch support.",
+      name: "Dispatch Services for Owner-Operators and Fleet Owners",
+      description: "Explore all Kandor Logistics dispatch services. For those, we offer 24/7 support across the USA, Dm free.",
       provider: {
         "@type": "ShippingCompany",
         name: `${APP_NAME}`,
         url: `${BASE_URL}`,
-        logo: `${BASE_URL}/kas-logo.png`,
-        slogan:
-          "Reliable Dispatching and Freight Solutions Across the USA",
+        logo: `${BASE_URL}${logo}`,
+        slogan: "Dispatch Services for Owner-Operators and Fleet Owners",
         telephone: `${phone}`,
         areaServed: [
           { "@type": "Place", name: "Texas" },
@@ -81,8 +99,9 @@ const serviceschemaData = {
         ],
         sameAs: [
           "https://www.facebook.com/kandorlogistics",
-          "https://www.linkedin.com/company/kandorlogistics",
-          "https://twitter.com/KandorLogistics",
+          "https://x.com/kandorlogistics",
+          "https://www.instagram.com/kandorlogistics",
+          "https://www.youtube.com/@KandorLogistics"
         ],
       },
     },
@@ -140,7 +159,7 @@ export default function ServicesPage() {
     <section className="bg-gray-50 sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 mb-12">
-          <h2 className="text-2xl text-gray-900 md:text-4xl font-bold">Professional Dispatch Service for Owner-Operators & Growing Fleets</h2>
+          <h1 className="text-2xl text-gray-900 md:text-4xl font-bold">Professional Dispatch Service for Owner-Operators & Growing Fleets</h1>
           <p>We are a full-service dispatching company dedicated to the profitable outcomes you deserve. Whether you are an owner-operator or a fleet company, our expert freight dispatchers manage all back-office tasks, secure high-value loads, and offer the support you need to grow your business. Focus on driving while we handle your earnings.</p>
         </div>
 
@@ -186,27 +205,27 @@ export default function ServicesPage() {
     </section>
 
     <section className="bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="rounded-3xl bg-white drop-shadow-lg p-8">
-            <div className="relative text-center space-y-3 pb-8">
-                <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
-                <p>Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
-            </div>
+        <div className="rounded-3xl bg-white drop-shadow-lg p-8">
+          <div className="relative text-center space-y-3 pb-8">
+              <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
+              <p>Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Left Content */}
-              <div className="relative">
-                <div className="mt-6">
-                  <ContactSection/>
-                </div>
-              </div>
-
-              {/* Right Form */}
-              <div className="relative">
-                <ContactForm />
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Left Content */}
+            <div className="relative">
+              <div className="mt-6">
+                <ContactSection/>
               </div>
             </div>
+
+            {/* Right Form */}
+            <div className="relative">
+              <ContactForm />
+            </div>
+          </div>
         </div>
-      </section>
+    </section>
     </>
   );
 }

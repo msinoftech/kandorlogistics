@@ -5,7 +5,6 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { FaqProvider } from "@/components/FaqSection";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -26,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
         {/* Google Tag Manager Script */}
         <Script id="gtm-script" strategy="beforeInteractive">
@@ -39,16 +38,14 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${roboto.variable} antialiased bg-white`}>
+      <body className={`${roboto.variable} bg-white`}>
         {/* Google Tag Manager (noscript) fallback */}
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDVGJZWP" height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe>
         </noscript>
         
         <Header />
-        <FaqProvider>
-          <main>{children}</main>
-        </FaqProvider>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

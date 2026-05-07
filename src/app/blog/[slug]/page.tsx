@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { blogs } from "@/lib/data";
-import { APP_NAME, BASE_URL } from "@/lib/config";
+import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import BlogDetails from "./BlogDetails";
+
+const { logo } = contactInfo;
 
 // Define page props for this dynamic route
 type PageProps = { params: Promise<{ slug: string }> };
@@ -20,29 +22,31 @@ export async function generateMetadata( { params }: PageProps ): Promise<Metadat
     };
   }
 
-  const url = `/blog/${slug}`;
-  const ogImageSource = post.image || "/default-og.jpg";
-  const ogImage = ogImageSource.startsWith("http") ? ogImageSource : `/${ogImageSource}`;
+  const url = `${BASE_URL}/blog/${slug}`;
+  const ogImageSource = post.image || "/default-image.jpg";
+  const ogImage = ogImageSource.startsWith("http") ? ogImageSource : `${BASE_URL}/${ogImageSource}`;
   const description = post.content?.slice(0, 150) || "";
 
   return {
     title: `${post.title} | ${APP_NAME}`,
     description,
     keywords: [ "logistics", "Kandor"],
-    alternates: { canonical: url },
+    alternates: { 
+      canonical: url, 
+    },
     openGraph: {
       title: post.title,
       description,
       url,
       siteName: APP_NAME,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: ogImage, width: 500, height: 500, alt: post.title }],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description,
-      images: [ogImage],
+      images: `${BASE_URL}${logo}`,
     },
   };
 }
@@ -54,38 +58,32 @@ export default async function BlogPage({ params }: PageProps) {
   if (!post) notFound();
 
   const url = `${BASE_URL}/blog/${slug}`;
-  const imageUrl = post.image?.startsWith("http")
-    ? post.image
-    : `/${post.image || "/default-og.jpg"}`;
-
-  
-  // Dynamic Schema Data
+  const imageUrl = post.image?.startsWith("http") ? post.image : `${BASE_URL}${post.image || "/default-image.jpg"}`;
 
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
-      // Website Definition
       {
         "@type": "WebSite",
         "@id": `/#website`,
         "url": `${BASE_URL}`,
         "name": `${APP_NAME}`,
       },
-      // WebPage for the Blog Post
       {
         "@type": "WebPage",
-        "@id": `${url}#webpage`,
+        "@id": `${url}/#webpage`,
         "url": url,
         "name": post.title,
-        "isPartOf": { "@id": `/#website` },
+        "isPartOf": { 
+          "@id": `${BASE_URL}/#website`,
+          "name": `${APP_NAME}`,
+        },
         "description": post.content?.slice(0, 160) || "",
         "inLanguage": "en-US",
-        "breadcrumb": { "@id": `${url}#breadcrumb` },
       },
-      // BreadcrumbList
       {
         "@type": "BreadcrumbList",
-        "@id": `${url}#breadcrumb`,
+        "@id": `${url}/#breadcrumb`,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -107,15 +105,14 @@ export default async function BlogPage({ params }: PageProps) {
           },
         ],
       },
-      // BlogPosting
       {
         "@type": "BlogPosting",
-        "@id": `${url}#blogposting`,
+        "@id": `${url}/#blogposting`,
         "headline": post.title,
         "description": post.content?.slice(0, 160) || "",
         "articleBody": post.content || "",
         "url": url,
-        "mainEntityOfPage": { "@id": `${url}#webpage` },
+        "mainEntityOfPage": { "@id": `${url}/#webpage` },
         "image": {
           "@type": "ImageObject",
           "url": imageUrl,
@@ -124,7 +121,7 @@ export default async function BlogPage({ params }: PageProps) {
         "dateModified": post.updated_at || post.published_at || "2024-01-01",
         "author": {
           "@type": "Person",
-          "name": post.author || "Kandor Logistics Team",
+          "name": post.author || `${APP_NAME}`,
         },
         "publisher": {
           "@type": "Organization",
@@ -132,7 +129,7 @@ export default async function BlogPage({ params }: PageProps) {
           "url": `${BASE_URL}`,
           "logo": {
             "@type": "ImageObject",
-            "url": `${BASE_URL}/logo.png`,
+            "url": `${BASE_URL}${logo}`,
           },
         },
       },
@@ -140,14 +137,12 @@ export default async function BlogPage({ params }: PageProps) {
   };
 
   return <>
-      {/* Inject Schema in Head */}
       <Script id="blogpost-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
 
       <BlogDetails post={post} blogs={blogs} />
     </>;
 }
 
-// Enable static generation for all known blog slugs
 export async function generateStaticParams() {
   return blogs.map((b) => ({ slug: b.slug }));
 }

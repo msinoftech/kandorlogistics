@@ -1,25 +1,30 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { APP_NAME, BASE_URL } from "@/lib/config";
+import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
-import FaqSection from "@/components/FaqSection";
+import {FaqSection} from "@/components/FaqSection";
+
+const { phone, logo } = contactInfo;
 
 export const metadata: Metadata = {
-  title: "Best Hotshot Dispatch Services | Dispatcher for Hotshot Trucking",
-  description: "Our expert dispatchers are available 24/7 to provide you with customized dispatch services for hotshot trucking.",
+  title: "Nationwide Hotshot Dispatch Services for Owner-Operators | Kandor Logistics",
+  description: "Work with a dedicated hotshot dispatcher at Kandor Logistics. We offer reliable services with 24/7 back-office support to CDL and non-CDL hotshot owner-operators nationwide.",
   keywords: "hotshot dispatch, hotshot dispatch services, find a hotshot dispatcher, dispatch services for hotshot in texas, hotshot trucking dispatch california, hotshot trucking dispatch services chicago, non cdl hotshot dispatch services",
+  alternates: {
+    canonical: `${BASE_URL}/services/hotshot-dispatch`,
+  },
   openGraph: {
-    title: "Best Hotshot Dispatch Services | Dispatcher for Hotshot Trucking",
-    description: "Our expert dispatchers are available 24/7 to provide you with customized dispatch services for hotshot trucking.",
+    title: "Nationwide Hotshot Dispatch Services for Owner-Operators | Kandor Logistics",
+    description: "Work with a dedicated hotshot dispatcher at Kandor Logistics. We offer reliable services with 24/7 back-office support to CDL and non-CDL hotshot owner-operators nationwide.",
     url: `${BASE_URL}/services/hotshot-dispatch`,
     siteName: `${APP_NAME}`,
     images: [
       {
         url: `${BASE_URL}/hotshots.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Best Hotshot Dispatch Services | Dispatcher for Hotshot Trucking",
+        width: 500,
+        height: 500,
+        alt: "Nationwide Hotshot Dispatch Services for Owner-Operators",
       },
     ],
     locale: "en_US",
@@ -27,38 +32,74 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Hotshot Dispatch Services | Dispatcher for Hotshot Trucking",
-    description: "Our expert dispatchers are available 24/7 to provide you with customized dispatch services for hotshot trucking.",
-    images: [`${BASE_URL}/hotshots.jpg`],
+    title: "Nationwide Hotshot Dispatch Services for Owner-Operators | Kandor Logistics",
+    description: "Work with a dedicated hotshot dispatcher at Kandor Logistics. We offer reliable services with 24/7 back-office support to CDL and non-CDL hotshot owner-operators nationwide.",
+    images: `${BASE_URL}${logo}`,
   },
-  alternates: {
-    canonical: `${BASE_URL}/services/hotshot-dispatch`,
-  },
+  
 };
+
+const faqItems = [
+    {
+        title: "What is a hotshot dispatching, and how does it work?",
+        content:`Hotshot dispatching handles urgent, smaller deliveries with small- or medium-duty trucks, often using flatbed trailers. It is ideal for industries needing fast, flexible transportation, such as construction and oil and gas. Hotshot dispatchers quickly find and assign loads to drivers, owner-operators, or small fleet owners. They also handle paperwork and provide back-office support to ensure timely deliveries.`,
+    },
+    {
+        title: "What are the basic steps to find reliable hotshot dispatch services in the USA?",
+        content: `Look for hotshot dispatchers with industry experience and knowledge of DOT regulations. Verify their MC numbers, check references, and review customer feedback on platforms like LinkedIn and Google. Reliable services also offer 24/7 support and transparent, reasonable pricing.`,
+    },
+    {
+        title: "How is hotshot dispatching profitable for owner-operators?",
+        content: `Hotshot dispatching is profitable for owner-operators because of lower startup costs, flexible load selection, and the ability to operate independently. Dispatchers handle logistics and reduce deadhead miles, allowing owner-operators to focus on driving and increasing revenue.`,
+    },
+    {
+        title: "How does a hotshot dispatcher differ from a freight dispatcher?",
+        content: `Freight dispatchers primarily manage larger commercial loads for long-haul or regional transport using dry vans, reefers, or tankers. Hotshot dispatchers handle urgent loads for small to medium-duty trucks, such as flatbed trailers, typically on shorter or local routes.`,
+    }
+]
 
 const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
     {
-        // 1. WebSite Definition
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
         "url": `${BASE_URL}`,
         "name": `${APP_NAME}`
     },
     {
-        // 2. WebPage Definition for the Subpage
         "@type": "WebPage",
         "@id": `${BASE_URL}/services/hotshot-dispatch/#webpage`,
-        "url": `${BASE_URL}/services/hotshot-dispatch/`,
-        "name": "Hotshot Dispatch Services for Urgent Freight",
-        "isPartOf": {"@id": `${BASE_URL}/#website`},
-        "description": "Specialized hotshot dispatching for urgent freight, small loads, and time-sensitive deliveries across key US areas.",
+        "url": `${BASE_URL}/services/hotshot-dispatch`,
+        "name": "Hotshot Dispatch Services",
+        "isPartOf": {
+            "@type": "WebSite",
+            "url": `${BASE_URL}`,
+            "name": `${APP_NAME}`
+        },
+        "description": "Work with a dedicated hotshot dispatcher at Kandor Logistics. We offer reliable services with 24/7 back-office support to CDL and non-CDL hotshot owner-operators nationwide.",
         "inLanguage": "en-US",
-        "breadcrumb": {"@id": `${BASE_URL}/services/hotshot-dispatch/#breadcrumb`}
     },
     {
-        // 3. Breadcrumb List
+        "@type": "Organization",
+        "name": `${APP_NAME}`,
+        "url": `${BASE_URL}`,
+        "logo": `${BASE_URL}${logo}`,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": `${phone}`,
+          "contactType": "customer service",
+          "areaServed": "Global",
+          "availableLanguage": ["en","es","zh"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/kandorlogistics",
+          "https://x.com/kandorlogistics",
+          "https://www.instagram.com/kandorlogistics",
+          "https://www.youtube.com/@KandorLogistics"
+        ]
+    },
+    {
         "@type": "BreadcrumbList",
         "@id": `${BASE_URL}/services/hotshot-dispatch/#breadcrumb`,
         "itemListElement": [
@@ -72,27 +113,27 @@ const schemaData = {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": `${BASE_URL}/services/`
+            "item": `${BASE_URL}/services`
         },
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Hotshot Dispatch Service"
+            "name": "Hotshot Dispatch Service",
+            "item": `${BASE_URL}/services/hotshot-dispatch`
         }
         ]
     },
     {
-        // 4. Specific Service Definition (Hotshot Dispatch)
         "@type": "Service",
         "serviceType": "Hotshot Dispatch",
         "name": "Hotshot Dispatch Services",
-        "description": "Managing and coordinating smaller and urgent deliveries using small to medium-duty trucks (often pulling flatbed trailers). Ideal for time-sensitive deliveries in construction, oil fields, and local freight needs.",
-        "url": `${BASE_URL}/services/hotshot-dispatch/`,
+        "description": "Work with a dedicated hotshot dispatcher at Kandor Logistics. We offer reliable services with 24/7 back-office support to CDL and non-CDL hotshot owner-operators nationwide.",
+        "url": `${BASE_URL}/services/hotshot-dispatch`,
         "provider": {
-        "@type": "ShippingCompany",
-        "name": `${APP_NAME}`,
-        "url": `/`,
-        "logo": `${BASE_URL}/logo.png`
+            "@type": "ShippingCompany",
+            "name": `${APP_NAME}`,
+            "url": `${BASE_URL}`,
+            "logo": `${BASE_URL}${logo}`
         },
         "areaServed": [
         {"@type": "State", "name": "Texas"},
@@ -101,13 +142,25 @@ const schemaData = {
         ],
         "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Hotshot Service Offerings",
+        "name": "Hotshot Dispatch Services",
         "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Urgent Freight Coordination"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Small Load Management"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Back-Office Paperwork and Compliance"}}
         ]
         }
+    },
+    {
+        "@type": "FAQPage",
+        "@id": `${BASE_URL}/services/hotshot-dispatch/#faq`,
+        "mainEntity": faqItems.map((item) => ({
+          "@type": "Question",
+          "name": item.title,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.content
+          }
+        }))
     }
     ]
 };
@@ -116,10 +169,9 @@ const schemaData = {
 export default function HotshotDispatchPage() {
   return (
     <>
-    {/* Schema Markup */}
     <Script id="hotshot-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
 
-    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-12">
+    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Hotshot Dispatch</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -134,7 +186,7 @@ export default function HotshotDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             {/* Heading Section */}
             <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
@@ -170,7 +222,7 @@ export default function HotshotDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white relative py-12">
+    <section className="bg-white relative py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-18">
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -197,7 +249,7 @@ export default function HotshotDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             {/* Heading Section */}
             <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
@@ -228,7 +280,7 @@ export default function HotshotDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white relative py-12">
+    <section className="bg-white relative py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-18">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <div className="flex-1 space-y-3">
@@ -247,7 +299,7 @@ export default function HotshotDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900">What Do Kandor Logistics&apos; Hotshot Dispatchers Offer?</h2>
@@ -281,7 +333,7 @@ export default function HotshotDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white max-w-7xl relative mx-auto px-6 py-12">
+    <section className="bg-white max-w-7xl relative mx-auto px-6 py-20">
         <div className="rounded-3xl bg-white drop-shadow-lg p-8">
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Left Content */}
@@ -299,30 +351,12 @@ export default function HotshotDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
             <div className="relative text-center space-y-3 pb-8">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
-
-            <FaqSection
-              title="What is a hotshot dispatching, and how does it work?"
-              content={`Hotshot dispatching handles urgent, smaller deliveries with small- or medium-duty trucks, often using flatbed trailers. It is ideal for industries needing fast, flexible transportation, such as construction and oil and gas.
-                Hotshot dispatchers quickly find and assign loads to drivers, owner-operators, or small fleet owners. They also handle paperwork and provide back-office support to ensure timely deliveries.`}
-            />
-            <FaqSection
-              title="What are the basic steps to find reliable hotshot dispatch services in the USA?"
-              content={`Look for hotshot dispatchers with industry experience and knowledge of DOT regulations. Verify their MC numbers, check references, and review customer feedback on platforms like LinkedIn and Google. Reliable services also offer 24/7 support and transparent, reasonable pricing.`}
-            />           
-            <FaqSection
-              title="How is hotshot dispatching profitable for owner-operators?"
-              content={`Hotshot dispatching is profitable for owner-operators because of lower startup costs, flexible load selection, and the ability to operate independently. Dispatchers handle logistics and reduce deadhead miles, allowing owner-operators to focus on driving and increasing revenue.`}
-            />           
-            <FaqSection
-              title="How does a hotshot dispatcher differ from a freight dispatcher?"
-              content={`Freight dispatchers primarily manage larger commercial loads for long-haul or regional transport using dry vans, reefers, or tankers.
-                    Hotshot dispatchers handle urgent loads for small to medium-duty trucks, such as flatbed trailers, typically on shorter or local routes.`}
-            />           
+            <FaqSection items={faqItems} />
         </div>
     </section>
 

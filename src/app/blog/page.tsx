@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { APP_NAME, BASE_URL } from "@/lib/config";
+import { APP_NAME, BASE_URL, contactInfo,  } from "@/lib/config";
 import BlogClient from "@/app/blog/BlogClient";
 
-// Static metadata (server-only)
+const { logo } = contactInfo;
+
 export const metadata: Metadata = {
-  title: `Insights, News & Analysis | ${APP_NAME}`,
-  description: "Updated transport market insights. Must reading for every professional managing freight, logistics, or dispatching services.",
+  title: `Trucking Dispatch Blog — Tips, News & Insights | Kandor Logistics`,
+  description: "Explore our blog for trucking dispatch tips, freight market insights, and owner-operator guides to grow your business on the road.",
   keywords: [ "logistics", "Kandor",],
   openGraph: {
-    title: `Insights, News & Analysis | ${APP_NAME}`,
-    description: "Updated transport market insights. Must reading for every professional managing freight, logistics, or dispatching services.",
+    title: `Trucking Dispatch Blog — Tips, News & Insights | Kandor Logistics`,
+    description: "Explore our blog for trucking dispatch tips, freight market insights, and owner-operator guides to grow your business on the road.",
     images: [
       {
-        url: "${BASE_URL}/blog-og.jpg",
+        url: `${BASE_URL}/blog.jpg`,
         width: 1200,
         height: 630,
-        alt: `Blog | ${APP_NAME}`,
+        alt: `Trucking Dispatch Blog — Tips, News & Insights`,
       },
     ],
   },
@@ -32,7 +33,7 @@ const blogSchemaData = {
       "@type": "WebSite",
       "url": `${BASE_URL}`,
       "name": `${APP_NAME}`,
-      "description": "Updated transport market insights. Must reading for every professional managing freight, logistics, or dispatching services.",
+      "description": "Explore our blog for trucking dispatch tips, freight market insights, and owner-operator guides to grow your business on the road.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": `${BASE_URL}/search?q={search_term_string}`,
@@ -60,8 +61,8 @@ const blogSchemaData = {
       "@type": "WebPage",
       "@id": `${BASE_URL}/blog`,
       "url": `${BASE_URL}/blog`,
-      "name": `Insights, News & Analysis | ${APP_NAME}`,
-      "description": "Updated transport market insights. Must reading for every professional managing freight, logistics, or dispatching services.",
+      "name": `Blog | Kandor Logistics`,
+      "description": "Explore our blog for trucking dispatch tips, freight market insights, and owner-operator guides to grow your business on the road.",
       "isPartOf": {
         "@type": "WebSite",
         "url": `${BASE_URL}`,
@@ -71,23 +72,24 @@ const blogSchemaData = {
     },
     {
       "@type": "Blog",
-      "@id": `${BASE_URL}/blog#blog`,
-      "mainEntityOfPage": `/blog`,
+      "@id": `${BASE_URL}/blog/#blog`,
+      "mainEntityOfPage": `${BASE_URL}/blog`,
       "url": `${BASE_URL}/blog`,
-      "name": `Kandor Logistics Blog`,
-      "description": "Updated transport market insights. Must reading for every professional managing freight, logistics, or dispatching services.",
+      "name": `Blog | Kandor Logistics`,
+      "description": "Explore our blog for trucking dispatch tips, freight market insights, and owner-operator guides to grow your business on the road.",
       "publisher": {
         "@type": "Organization",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
         "logo": {
           "@type": "ImageObject",
-          "url": `${BASE_URL}/logo.png`,
+          "url": `${BASE_URL}${logo}`,
         },
         "sameAs": [
           "https://www.facebook.com/kandorlogistics",
-          "https://www.linkedin.com/company/kandorlogistics",
-          "https://twitter.com/KandorLogistics",
+          "https://x.com/kandorlogistics",
+          "https://www.instagram.com/kandorlogistics",
+          "https://www.youtube.com/@KandorLogistics"
         ],
       },
     },
@@ -95,10 +97,10 @@ const blogSchemaData = {
 };
 
 export default function BlogPage() {
-  return <>
-      {/* Add schema JSON-LD to <head> */}
+  return (
+    <>
       <Script id="blog-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchemaData) }}/>
-
       <BlogClient />
-    </>;
+    </>
+  )
 }

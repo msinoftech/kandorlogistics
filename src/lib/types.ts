@@ -26,5 +26,5 @@ export interface faqItems {
 export interface whyhire {
   title: string;
   content: string;
-  image: string;
+  icon: string;
 }

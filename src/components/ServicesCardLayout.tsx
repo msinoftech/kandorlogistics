@@ -34,7 +34,7 @@ export default function ServicesCardLayout({
             </div>
             </div>
         </div>
-        <div className="absolute bottom-0 w-full -z-0">
+        <div className="absolute -bottom-1 w-full -z-0">
             <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" className="w-full opacity-40 group-hover:opacity-60 transition-all duration-300">
             <path fill={`url(#${gradientId})`} d="M0,224L30,192C60,160,120,96,180,74.7C240,53,300,75,360,101.3C420,128,480,160,540,176C600,192,660,192,720,170.7C780,149,840,107,900,96C960,85,1020,107,1080,138.7C1140,171,1200,213,1260,213.3C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
             <defs>

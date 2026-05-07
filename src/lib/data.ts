@@ -1,4 +1,5 @@
 import { Blog } from "./types";
+import { BASE_URL } from "./config";
 
 export const blogs: Blog[] = [
   {
@@ -15,14 +16,14 @@ export const blogs: Blog[] = [
     content: 
     `<p>Starting a trucking business, whether as a single owner-operator or a full-scale freight compnay, can offer high long-term earning potential. If you successfully overcome their challenges, including following strict regulations, managing fuel and other expenses, ensuring on-time delivery, etc. We are here to break down the trucking business plan into simple steps for you how to start a trucking company.</p>
 
-    <p>In the USA, Trucks, truckers, and trucking companies are in high demand, as they account for <a href="https://www.fcc-inc.com/importance-trucking-industry/"><span style="font-weight: 400;">70% of U.S. freight goods movement</span></a>. However, there is constant demand for freight movement across the country to start a successful trucking business. As well, it is necessary to familiarize oneself with all the economic and logistical factors, including obtaining business licenses, managing expenses, <a href="https://kandorlogistics.us/blog/finding-loads-for-trucks/">finding loads for trucks</a>, etc.</p>
+    <p>In the USA, Trucks, truckers, and trucking companies are in high demand, as they account for <a href="https://www.fcc-inc.com/importance-trucking-industry"><span style="font-weight: 400;">70% of U.S. freight goods movement</span></a>. However, there is constant demand for freight movement across the country to start a successful trucking business. As well, it is necessary to familiarize oneself with all the economic and logistical factors, including obtaining business licenses, managing expenses, <a href="${BASE_URL}/blog/finding-loads-for-trucks">finding loads for trucks</a>, etc.</p>
 
     <p>If you are getting a foothold and are concerned about how to start a tracking business in the USA, you are at the right place. In this blog, we break down all the essential steps to start a trucking business and make it profitable.</p>
 
     <h2>Trucking Business Plan and Its Importance</h2>
 
     <h3>What Is a Trucking Business Plan</h3>
-    <p>A trucking business plan is a clear, well-written, organized document about how to operate and develop your company. It acts as a roadmap that includes your goals, services, market, pricing, and operations, whether it is a trucking company or a <a href="https://kandorlogistics.us/">dispatching company</a>.</p>
+    <p>A trucking business plan is a clear, well-written, organized document about how to operate and develop your company. It acts as a roadmap that includes your goals, services, market, pricing, and operations, whether it is a trucking company or a <a href="${BASE_URL}">dispatching company</a>.</p>
 
     <p>Additionally, it helps you plan finances, funding and guide decision-making.</p>
 
@@ -98,7 +99,7 @@ export const blogs: Blog[] = [
     updated_at: "2025-11-03",
     content:  
     `<p>When you think of what drives a successful trucking enterprise, you may immediately think on the vehicles themselves or the drivers behind the wheel. While they are essential, many other unsung heroes are running behind the scenes: the Trusted dispatchers who may be the Backbone of a Successful Trucking Business. A dependable dispatching gadget is what keeps routes organized, hundreds maximized, and shipping times sharp. Even the best-kept fleet and competent drivers might fail without effective dispatching.</p>
-    <p>Why Reliable Dispatching Is the Backbone of a Successful Trucking Business? It guarantees to <a href="https://kandorlogistics.us/blog/finding-loads-for-trucks/">find ideal loads</a>, run operations smoothly, minimize delays, and ensure client satisfaction. In this article, we will discover why dependable dispatching is important in your business enterprise success, and way to collaborate with a <a href="https://kandorlogistics.us/">reliable dispatching service in USA</a> can rework your bottom line.</p>
+    <p>Why Reliable Dispatching Is the Backbone of a Successful Trucking Business? It guarantees to <a href="${BASE_URL}/blog/finding-loads-for-trucks">find ideal loads</a>, run operations smoothly, minimize delays, and ensure client satisfaction. In this article, we will discover why dependable dispatching is important in your business enterprise success, and way to collaborate with a <a href="${BASE_URL}">reliable dispatching service in USA</a> can rework your bottom line.</p>
     <h2>The Role of a Dispatcher in Trucking</h2>
     <p>Dispatchers serve as the liaison between drivers, customers, and management. Their function is to:</p>
         <ul>
@@ -180,7 +181,7 @@ export const blogs: Blog[] = [
     updated_at: "2025-11-03",
     content: 
     `<p>Getting consistent and high-paying loads is essential in the United States to increase earnings as a truck owner-operator or in the trucking business. Whether you are operating dry vans, flatbeds, hotshots, or box trucks. Achieving success is next to finding the loads for the truck, where you must have freight negotiation skills with shippers, and you must know the rules and regulations of transporting,  managing paperwork, route planning, etc.</p>
-    <p>Additionally, a <a href="https://kandorlogistics.us/">reputable dispatch company in the USA</a> can find loads for you and make sure to boost your profits.</p>
+    <p>Additionally, a <a href="${BASE_URL}">reputable dispatch company in the USA</a> can find loads for you and make sure to boost your profits.</p>
     <p>In this article, we are exploring different ways to find loads for trucks and keep your fleet busy on the road.</p>
     
     <h2>Top Ways to Find Loads for Trucks in the USA</h2>
@@ -189,8 +190,8 @@ export const blogs: Blog[] = [
     <p>The load board is a popular tool among the community due to having flexibility to maximize every load, the option to choose the best rates, and more variety.</p>
     <p>Top Load Boards:</p>
         <ul>
-          <li><a href="https://www.dat.com/"><span style="font-weight: 400;">DAT</span></a></li>
-          <li><a href="https://truckerpath.com/"><span style="font-weight: 400;">Trucker Path</span></a></li>
+          <li><a href="https://www.dat.com"><span style="font-weight: 400;">DAT</span></a></li>
+          <li><a href="https://truckerpath.com"><span style="font-weight: 400;">Trucker Path</span></a></li>
           <li>TruckStop</li>
           <li>123Loadboard</li>
           <li>Direct Freight</li>
@@ -211,19 +212,19 @@ export const blogs: Blog[] = [
     <h3>Different types of trucks that are used for transporting:</h3>
     
     <h4>Dry Vans:</h4>
-    <p><a href="https://kandorlogistics.us/services/dry-van-dispatching/">Dry Vans</a> are typically used to transport non-perishable and dry goods such as furniture, home appliances, electronics, pallets, or other boxed items. It is highly in demand for short to medium shipments and in local areas.</p>
+    <p><a href="${BASE_URL}/services/dry-van-dispatching">Dry Vans</a> are typically used to transport non-perishable and dry goods such as furniture, home appliances, electronics, pallets, or other boxed items. It is highly in demand for short to medium shipments and in local areas.</p>
     
     <h4>Flatbeds & Step Decks</h4>
     <p>Trailers with a single and elevated deck are called Flatbeds, and those with a lower deck and an upper deck are called Step Decks. These trucks are specially designed to transport oversized and oddly shaped loads, such as large equipment.</p>
     
     <h4>Box Trucks</h4>
-    <p>One-piece, large, and enclosed, these <a href="https://kandorlogistics.us/services/box-truck-dispatching/">box trucks</a> are ideal for local and regional deliveries, carrying goods and materials.</p>
+    <p>One-piece, large, and enclosed, these <a href="${BASE_URL}/services/box-truck-dispatching">box trucks</a> are ideal for local and regional deliveries, carrying goods and materials.</p>
     
     <h4>Hotshots</h4>
-    <p><a href="https://kandorlogistics.us/services/hotshot-dispatch/">Hotshot</a> trucking is most suitable for urgent and time-sensitive delivery by medium-duty pickup trucks with flatbed trailers. It is in high demand for shipments such as construction equipment and machinery, particularly over short to medium distances.</p>
+    <p><a href="${BASE_URL}/services/hotshot-dispatch">Hotshot</a> trucking is most suitable for urgent and time-sensitive delivery by medium-duty pickup trucks with flatbed trailers. It is in high demand for shipments such as construction equipment and machinery, particularly over short to medium distances.</p>
     
     <h4>Power-Only Units</h4>
-    <p>Where Shippers or businesses have their own or lease trailers, partner with tractor operators or <a href="https://kandorlogistics.us/services/power-only-units-dispatching/">power-only units</a>, or hire a tractor when needed to move their trailers or loads.</p>
+    <p>Where Shippers or businesses have their own or lease trailers, partner with tractor operators or <a href="${BASE_URL}/services/power-only-units-dispatching">power-only units</a>, or hire a tractor when needed to move their trailers or loads.</p>
     
     <h4>Low Boys</h4>
     <p>A lowboy truck is designed to haul heavy and oversized loads, typically ideal to carry heavy machinery and large equipment due to its lower deck height.</p>

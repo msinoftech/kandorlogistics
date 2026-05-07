@@ -1,25 +1,30 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { APP_NAME, BASE_URL } from "@/lib/config";
+import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
-import FaqSection from "@/components/FaqSection";
+import {FaqSection} from "@/components/FaqSection";
+
+const { phone, logo } = contactInfo;
 
 export const metadata: Metadata = {
-    title: "Trusted Box Truck Dispatcher for owner operators",
-    description: "Our expertise in box truck dispatch services for owner-operators and fleet companies provides route optimization, real-time tracking, and smooth operations to ensure maximum earning potential.",
+    title: "Box Dispatch Services for Solo Drivers and Fleet Owners",
+    description: "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
     keywords: "dispatcher for box trucks, box truck dispatcher, box truck dispatcher in texas, box truck dispatcher calofornia, box truck dispatcher chicago, trucking dispatch companies, best local trucking companies for owner operators, best paying trucking companies for owner operators, best trucking dispatch companies, trucking dispatcher in texas, trucking dispatcher in california, trucking dispatcher chicago",
+    alternates: {
+        canonical: `${BASE_URL}/services/box-truck-dispatching`,
+    },
     openGraph: {
-      title: "Trusted Box Truck Dispatcher for owner operators",
-      description: "Our expertise in box truck dispatch services for owner-operators and fleet companies provides route optimization, real-time tracking, and smooth operations to ensure maximum earning potential.",
+      title: "Box Dispatch Services for Solo Drivers and Fleet Owners",
+      description: "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
       url: `${BASE_URL}/services/box-truck-dispatching`,
       siteName: `${APP_NAME}`,
       images: [ 
         {
-          url: `${BASE_URL}/box-trucks.jpg`,
-          width: 1200,
-          height: 630,
-          alt: "Trusted Box Truck Dispatcher for owner operators",
+          url: `${BASE_URL}/box-truck-dispatch-support-for-trucking.jpg`,
+          width: 500,
+          height: 500,
+          alt: "Box Dispatch Services for Solo Drivers and Fleet Owners",
         },
       ],
       locale: "en_US",
@@ -27,72 +32,104 @@ export const metadata: Metadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Trusted Box Truck Dispatcher for owner operators",
-      description: "Our expertise in box truck dispatch services for owner-operators and fleet companies provides route optimization, real-time tracking, and smooth operations to ensure maximum earning potential.",
-      images: [`${BASE_URL}/box-trucks.jpg`],
+      title: "Box Dispatch Services for Solo Drivers and Fleet Owners",
+      description: "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
+      images: `${BASE_URL}${logo}`,
     },
-    alternates: {
-      canonical: `${BASE_URL}/services/box-truck-dispatching`,
+    
+};
+
+const faqItems = [
+    {
+        title: "What does a box truck dispatcher do?",
+        content: `A dedicated dispatcher oversees daily routes, paperwork, and load tracking to streamline your workflow. They apply industry expertise and use modern tools and load boards to ensure efficiency.`,
     },
-  };
+    {
+        title: "How to find the best box truck dispatcher?",
+        content: `A simple way is to go online and search for “box truck dispatcher near me” to access local service listings, industry directories, and dispatcher networks. Prioritise dispatchers or companies with box truck experience, transparent pricing, and positive driver reviews. Additionally, assess their technology expertise, load-sourcing strategies, and communication methods.`,
+    },
+    {
+        title: "How to make a box truck profitable?",
+        content: `Operating a profitable box truck business as a single owner requires prioritising high-paying, consistent loads from sources such as load boards, local delivery contracts, and dispatchers. Efficient route planning is essential to minimise empty miles and fuel costs, while regular truck maintenance helps prevent costly breakdowns. Partnering with a dedicated dispatcher can facilitate the expansion of specialised services, including expedited deliveries, moving assistance, niche cargo, and back-office logistics management. Monitoring expenses closely and combining partial loads when feasible can further maximise revenue per trip.`,
+    }
+]
   
 const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-      {
-          // 1. WebSite Definition
-          "@type": "WebSite",
-          "@id": `${BASE_URL}/#website`,
-          "url": `${BASE_URL}`,
-          "name": `${APP_NAME}`
-      },
-      {
-          // 2. WebPage Definition for the Subpage
-          "@type": "WebPage",
-          "@id": `${BASE_URL}/services/box-truck-dispatching/#webpage`,
-          "url": `${BASE_URL}/services/box-truck-dispatching/`,
-          "name": "Box Truck Dispatch Services for Urgent Freight",
-          "isPartOf": {"@id": `${BASE_URL}/#website`},
-          "description": "Specialized box truck dispatching for urgent freight, small loads, and time-sensitive deliveries across key US areas.",
-          "inLanguage": "en-US",
-          "breadcrumb": {"@id": `${BASE_URL}/services/box-truck-dispatching/#breadcrumb`}
-      },
-      {
-          // 3. Breadcrumb List
-          "@type": "BreadcrumbList",
-          "@id": `${BASE_URL}/services/box-truck-dispatching/#breadcrumb`,
-          "itemListElement": [
-          {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": `${BASE_URL}`
-          },
-          {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Services",
-              "item": `${BASE_URL}/services/`
-          },
-          {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Box Truck Dispatch Service"
-          }
-          ]
-      },
-      {
-          // 4. Specific Service Definition (Hotshot Dispatch)
+    "@context": "https://schema.org",
+    "@graph": [
+    {
+        "@type": "WebSite",
+        "@id": `${BASE_URL}/#website`,
+        "url": `${BASE_URL}`,
+        "name": `${APP_NAME}`
+    },
+    {
+        "@type": "WebPage",
+        "@id": `${BASE_URL}/services/box-truck-dispatching/#webpage`,
+        "url": `${BASE_URL}/services/box-truck-dispatching`,
+        "name": "Box Truck Dispatch Services",
+        "isPartOf": {
+        "@type": "WebSite",
+        "url": `${BASE_URL}`,
+        "name": `${APP_NAME}`
+        },
+        "description": "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
+        "inLanguage": "en-US",
+    },
+    {
+        "@type": "Organization",
+        "name": `${APP_NAME}`,
+        "url": `${BASE_URL}`,
+        "logo": `${BASE_URL}${logo}`,
+        "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": `${phone}`,
+        "contactType": "customer service",
+        "areaServed": "Global",
+        "availableLanguage": ["en","es","zh"]
+        },
+        "sameAs": [
+        "https://www.facebook.com/kandorlogistics",
+        "https://x.com/kandorlogistics",
+        "https://www.instagram.com/kandorlogistics",
+        "https://www.youtube.com/@KandorLogistics"
+        ]
+    },
+    {
+        "@type": "BreadcrumbList",
+        "@id": `${BASE_URL}/services/box-truck-dispatching/#breadcrumb`,
+        "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": `${BASE_URL}`
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": `${BASE_URL}/services`
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Box Truck Dispatch Services",
+            "item": `${BASE_URL}/services/box-truck-dispatching`
+        }
+        ]
+    },
+    {
           "@type": "Service",
-          "serviceType": "Box Truck Dispatch",
+          "serviceType": "Box Truck Dispatch Services",
           "name": "Box Truck Dispatch Services",
-          "description": "Managing and coordinating smaller and urgent deliveries using small to medium-duty trucks (often pulling flatbed trailers). Ideal for time-sensitive deliveries in construction, oil fields, and local freight needs.",
-          "url": `${BASE_URL}/services/box-truck-dispatching/`,
+          "description": "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
+          "url": `${BASE_URL}/services/box-truck-dispatching`,
           "provider": {
-          "@type": "ShippingCompany",
-          "name": `${APP_NAME}`,
-          "url": `${BASE_URL}`,
-          "logo": `${BASE_URL}/logo.png`
+            "@type": "ShippingCompany",
+            "name": `${APP_NAME}`,
+            "url": `${BASE_URL}`,
+            "logo": `${BASE_URL}${logo}`
           },
           "areaServed": [
           {"@type": "State", "name": "Texas"},
@@ -108,14 +145,25 @@ const schemaData = {
               {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Back-Office Paperwork and Compliance"}}
           ]
           }
-      }
-      ]
+    },
+    {
+        "@type": "FAQPage",
+        "@id": `${BASE_URL}/services/box-truck-dispatching/#faq`,
+        "mainEntity": faqItems.map((item) => ({
+          "@type": "Question",
+          "name": item.title,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.content
+          }
+        }))
+    }
+    ]
 };
 
 export default function BoxTruckDispatchPage() {
   return (
     <>
-    {/* Schema Markup */}
     <Script id="box-truck-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
     
     <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
@@ -133,7 +181,7 @@ export default function BoxTruckDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             {/* Heading Section */}
             <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
@@ -182,7 +230,7 @@ export default function BoxTruckDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white relative py-12">
+    <section className="bg-white relative py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-18">
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -218,7 +266,7 @@ export default function BoxTruckDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">            
 
             {/* Content Section */}
@@ -238,7 +286,7 @@ export default function BoxTruckDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white max-w-7xl mx-auto px-6 py-12">
+    <section className="bg-white max-w-7xl mx-auto px-6 py-20">
         <div className="rounded-3xl bg-white drop-shadow-lg p-8">
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Left Content */}
@@ -258,25 +306,12 @@ export default function BoxTruckDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
             <div className="relative text-center space-y-3 pb-8">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
-
-            <FaqSection
-              title="What does a box truck dispatcher do?"
-              content={`A dedicated dispatcher oversees daily routes, paperwork, and load tracking to streamline your workflow. They apply industry expertise and use modern tools and load boards to ensure efficiency.`}
-            />
-            <FaqSection
-              title="How to find the best box truck dispatcher?"
-              content={`A simple way is to go online and search for “box truck dispatcher near me” to access local service listings, industry directories, and dispatcher networks. Prioritise dispatchers or companies with box truck experience, transparent pricing, and positive driver reviews. Additionally, assess their technology expertise, load-sourcing strategies, and communication methods.`}
-            />
-            <FaqSection
-              title="How to make a box truck profitable?"
-              content={`Operating a profitable box truck business as a single owner requires prioritising high-paying, consistent loads from sources such as load boards, local delivery contracts, and dispatchers. Efficient route planning is essential to minimise empty miles and fuel costs, while regular truck maintenance helps prevent costly breakdowns. Partnering with a dedicated dispatcher can facilitate the expansion of specialised services, including expedited deliveries, moving assistance, niche cargo, and back-office logistics management. Monitoring expenses closely and combining partial loads when feasible can further maximise revenue per trip.`}
-            />
-           
+            <FaqSection items={faqItems} />
         </div>
     </section>
     </>

@@ -1,25 +1,30 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { APP_NAME, BASE_URL } from "@/lib/config";
+import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
-import FaqSection from "@/components/FaqSection";
+import {FaqSection} from "@/components/FaqSection";
+
+const { phone, logo } = contactInfo;
 
 export const metadata: Metadata = {
-  title: "Best Flatbed Dispatch Services | Step Deck Dispatcher",
-  description: "Top Flatbed Dispatch Services to help your trucking business grow. Our experienced Step Deck Dispatchers excel at finding and handling loads of unusual size or shape.",
+  title: "Flatbed & Step Deck Dispatch Services | Kandor Logistics",
+  description: "Partner with expert flatbed and stepdeck dispatchers to connect with steady, top-paying loads.  Also ensuring handling & route optimisation for oversized freight — 24/7.",
   keywords: "flatbed dispatch services, flatbed truck dispatch, flatbed dispatcher Texas, flatbed dispatcher california, flatbed dispatcher Chicago, dispatch service for owner operators, dispatcher in Texas for owner operators, step deck dispatch services, step deck dispatcher, step decks dispatch for Owner Operator",
+  alternates: {
+    canonical: `${BASE_URL}/services/flatbeds-step-deck-dispatch`,
+  },
   openGraph: {
-    title: "Best Flatbed Dispatch Services | Step Deck Dispatcher",
-    description: "Top Flatbed Dispatch Services to help your trucking business grow. Our experienced Step Deck Dispatchers excel at finding and handling loads of unusual size or shape.",
+    title: "Flatbed & Step Deck Dispatch Services | Kandor Logistics",
+    description: "Partner with expert flatbed and stepdeck dispatchers to connect with steady, top-paying loads.  Also ensuring handling & route optimisation for oversized freight — 24/7.",
     url: `${BASE_URL}/services/flatbeds-step-deck-dispatch`,
     siteName: `${APP_NAME}`,
     images: [
       {
-        url: `${BASE_URL}/flatbeds.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Best Flatbed Dispatch Services | Step Deck Dispatcher",
+        url: `${BASE_URL}/flatbedstep-truck-dispatch.jpg`,
+        width: 500,
+        height: 500,
+        alt: "Flatbed & Step Deck Dispatch Services | Kandor Logistics",
       },
     ],
     locale: "en_US",
@@ -27,38 +32,74 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Flatbed Dispatch Services | Step Deck Dispatcher",
-    description: "Top Flatbed Dispatch Services to help your trucking business grow. Our experienced Step Deck Dispatchers excel at finding and handling loads of unusual size or shape.",
-    images: [`${BASE_URL}/flatbeds.jpg`],
+    title: "Flatbed & Step Deck Dispatch Services | Kandor Logistics",
+    description: "Partner with expert flatbed and stepdeck dispatchers to connect with steady, top-paying loads.  Also ensuring handling & route optimisation for oversized freight — 24/7.",
+    images: `${BASE_URL}${logo}`,
   },
-  alternates: {
-    canonical: `${BASE_URL}/services/flatbeds-step-deck-dispatch`,
-  },
+  
 };
+
+const faqItems = [
+    {
+        title: "What is a flatbed dispatcher?",
+        content: `A flatbed dispatcher is responsible for sourcing and managing loads for flatbed or open-trailer trucks. They handle freight that exceeds standard size and shape, including oversized items and heavy machinery that require open transport. They also ensure compliance with safety and load requirements, negotiate freight rates, communicate with shippers and truck owners, and plan optimised routes. Adhering to DOT regulations and properly securing loads is essential for success in flatbed dispatching.`,
+    },
+    {
+        title: "What is a step deck in trucking?",
+        content: `A step deck, or drop deck, trailer is a flatbed with two deck levels designed to haul loads taller than the standard 8 feet, 6 inches height limit. With a legal clearance of up to 10 feet, step decks are suitable for transporting heavy equipment, machinery, or oversized freight that cannot fit on a traditional flatbed.`,
+    },
+    {
+        title: "Does a flatbed pay more than a dry van?",
+        content: `With the complex challenges of safety regulations, secure loads, and handling heavy or oversized cargo, Flatbed drivers earn more than dry van drivers. Market trends, region, demand, weather, and loading conditions can impact the margins.`,
+    },
+    {
+        title: "How much weight can a step deck carry?",
+        content: `The weight a step deck can carry depends on federal and state regulations, axle configuration, and trailer length. Generally, a standard step deck trailer measuring 48 to 53 feet can support up to 48,000 pounds of freight. Its 10-foot height capacity exceeds the legal limit of standard flatbeds.`,
+    },
+]
 
 const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
     {
-        // 1. WebSite Definition
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
         "url": `${BASE_URL}`,
         "name": `${APP_NAME}`
     },
     {
-        // 2. WebPage Definition for the Subpage
         "@type": "WebPage",
         "@id": `${BASE_URL}/services/flatbeds-step-deck-dispatch/#webpage`,
-        "url": `${BASE_URL}/services/flatbeds-step-deck-dispatch/`,
-        "name": "Best Flatbed Dispatch Services | Step Deck Dispatcher",
-        "isPartOf": {"@id": `${BASE_URL}/#website`},
-        "description": "Top Flatbed Dispatch Services to help your trucking business grow. Our experienced Step Deck Dispatchers excel at finding and handling loads of unusual size or shape.",
+        "url": `${BASE_URL}/services/flatbeds-step-deck-dispatch`,
+        "name": "Flatbed & Step Deck Dispatch Services",
+        "isPartOf": {
+            "@type": "WebSite",
+            "url": `${BASE_URL}`,
+            "name": `${APP_NAME}`
+        },
+        "description": "Partner with expert flatbed and stepdeck dispatchers to connect with steady, top-paying loads. Also ensuring handling & route optimisation for oversized freight — 24/7.",
         "inLanguage": "en-US",
-        "breadcrumb": {"@id": `${BASE_URL}/services/flatbeds-step-deck-dispatch/#breadcrumb`}
     },
     {
-        // 3. Breadcrumb List
+        "@type": "Organization",
+        "name": `${APP_NAME}`,
+        "url": `${BASE_URL}`,
+        "logo": `${BASE_URL}${logo}`,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": `${phone}`,
+          "contactType": "customer service",
+          "areaServed": "Global",
+          "availableLanguage": ["en","es","zh"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/kandorlogistics",
+          "https://x.com/kandorlogistics",
+          "https://www.instagram.com/kandorlogistics",
+          "https://www.youtube.com/@KandorLogistics"
+        ]
+    },
+    {
         "@type": "BreadcrumbList",
         "@id": `${BASE_URL}/services/flatbeds-step-deck-dispatch/#breadcrumb`,
         "itemListElement": [
@@ -72,27 +113,27 @@ const schemaData = {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": `${BASE_URL}/services/`
+            "item": `${BASE_URL}/services`
         },
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "flatbeds step deck dispatch"
+            "name": "Flatbed & Step Deck Dispatch Services",
+            "item": `${BASE_URL}/services/flatbeds-step-deck-dispatch`
         }
         ]
     },
     {
-        // 4. Specific Service Definition (flatbeds step deck Dispatch)
         "@type": "Service",
-        "serviceType": "flatbeds step deck dispatch",
-        "name": "flatbeds step deck dispatch",
-        "description": "Top Flatbed Dispatch Services to help your trucking business grow. Our experienced Step Deck Dispatchers excel at finding and handling loads of unusual size or shape.",
-        "url": `${BASE_URL}/services/flatbeds-step-deck-dispatch/`,
+        "serviceType": "Flatbed & Step Deck Dispatch",
+        "name": "Flatbed & Step Deck Dispatch Services",
+        "description": "Partner with expert flatbed and stepdeck dispatchers to connect with steady, top-paying loads.  Also ensuring handling & route optimisation for oversized freight — 24/7.",
+        "url": `${BASE_URL}/services/flatbeds-step-deck-dispatch`,
         "provider": {
         "@type": "ShippingCompany",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}/logo.png`
+        "logo": `${BASE_URL}${logo}`
         },
         "areaServed": [
         {"@type": "State", "name": "Texas"},
@@ -108,6 +149,18 @@ const schemaData = {
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Back-Office Paperwork and Compliance"}}
         ]
         }
+    },
+    {
+        "@type": "FAQPage",
+        "@id": `${BASE_URL}/services/flatbeds-step-deck-dispatch/#faq`,
+        "mainEntity": faqItems.map((item) => ({
+          "@type": "Question",
+          "name": item.title,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.content
+          }
+        }))
     }
     ]
 };
@@ -118,7 +171,7 @@ export default function FlatbedsStepDeckDispatchPage() {
     {/* Schema Markup */}
     <Script id="FlatbedsStepDeck-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
 
-    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-12">
+    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Flatbed/Step Truck Dispatch</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -133,7 +186,7 @@ export default function FlatbedsStepDeckDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white relative pb-12">
+    <section className="bg-white relative pb-20">
         <div className="max-w-7xl mx-auto px-6 space-y-18">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <div className="flex-1 space-y-3">
@@ -147,7 +200,7 @@ export default function FlatbedsStepDeckDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 {/* Left Image */}
@@ -185,7 +238,7 @@ export default function FlatbedsStepDeckDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900">What Our Flatbed/Step Deck Dispatch Service Does for You</h2>
@@ -221,7 +274,7 @@ export default function FlatbedsStepDeckDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white max-w-7xl relative mx-auto px-6 py-12">
+    <section className="bg-white max-w-7xl relative mx-auto px-6 py-20">
         <div className="rounded-3xl bg-white drop-shadow-lg p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {/* Left Content */}
@@ -241,28 +294,12 @@ export default function FlatbedsStepDeckDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
             <div className="relative text-center space-y-3 pb-8">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
-
-            <FaqSection
-              title="What is a flatbed dispatcher?"
-              content={`A flatbed dispatcher is responsible for sourcing and managing loads for flatbed or open-trailer trucks. They handle freight that exceeds standard size and shape, including oversized items and heavy machinery that require open transport. They also ensure compliance with safety and load requirements, negotiate freight rates, communicate with shippers and truck owners, and plan optimised routes. Adhering to DOT regulations and properly securing loads is essential for success in flatbed dispatching.`}
-            />
-            <FaqSection
-              title="What is a step deck in trucking?"
-              content={`A step deck, or drop deck, trailer is a flatbed with two deck levels designed to haul loads taller than the standard 8 feet, 6 inches height limit. With a legal clearance of up to 10 feet, step decks are suitable for transporting heavy equipment, machinery, or oversized freight that cannot fit on a traditional flatbed.`}
-            />           
-            <FaqSection
-              title="Does a flatbed pay more than a dry van?"
-              content={`With the complex challenges of safety regulations, secure loads, and handling heavy or oversized cargo, Flatbed drivers earn more than dry van drivers. Market trends, region, demand, weather, and loading conditions can impact the margins.`}
-            />           
-            <FaqSection
-              title="How much weight can a step deck carry?"
-              content={`The weight a step deck can carry depends on federal and state regulations, axle configuration, and trailer length. Generally, a standard step deck trailer measuring 48 to 53 feet can support up to 48,000 pounds of freight. Its 10-foot height capacity exceeds the legal limit of standard flatbeds.`}
-            />           
+            <FaqSection items={faqItems} />
         </div>
     </section>
     </>

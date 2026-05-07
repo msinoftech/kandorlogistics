@@ -1,25 +1,30 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Script from "next/script";
-import { APP_NAME, BASE_URL } from "@/lib/config";
+import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
-import FaqSection from "@/components/FaqSection";
+import {FaqSection} from "@/components/FaqSection";
+
+const { phone, logo } = contactInfo;
 
 export const metadata: Metadata = {
-    title: "Professional Lowboy Dispatch Services for owner-operators",
-    description: "Our team specializes in Lowboy Dispatch Services for heavy haul logistics and oversized load transport.",
+    title: "Lowboy Dispatch Services for Heavy Hauling | Kandor Logistics",
+    description: "Get reliable lowboy dispatch services for heavy haul and oversized loads — load sourcing, permit management, route planning & 24/7 back-office support for owner-operators.",
     keywords: "low boy dispatch services",
+    alternates: {
+        canonical: `${BASE_URL}/services/low-boy-dispatching`,
+    },
     openGraph: {
-      title: "Professional Lowboy Dispatch Services for owner-operators",
-      description: "Our team specializes in Lowboy Dispatch Services for heavy haul logistics and oversized load transport.",
+      title: "Lowboy Dispatch Services for Heavy Hauling | Kandor Logistics",
+      description: "Get reliable lowboy dispatch services for heavy haul and oversized loads — load sourcing, permit management, route planning & 24/7 back-office support for owner-operators.",
       url: `${BASE_URL}/services/low-boy-dispatching`,
       siteName: `${APP_NAME}`,
       images: [
         {
-          url: `${BASE_URL}/low-boys.jpg`,
-          width: 1200,
-          height: 630,
-          alt: "Professional Lowboy Dispatch Services for owner-operators",
+          url: `${BASE_URL}/lowboy-dispatch-services-for-oversized-load.jpg`,
+          width: 500,
+          height: 500,
+          alt: "Lowboy Dispatch Services for Heavy Hauling",
         },
       ],
       locale: "en_US",
@@ -27,38 +32,69 @@ export const metadata: Metadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Professional Lowboy Dispatch Services for owner-operators",
-      description: "Our team specializes in Lowboy Dispatch Services for heavy haul logistics and oversized load transport.",
-      images: [`${BASE_URL}/low-boys.jpg`],
-    },
-    alternates: {
-      canonical: `${BASE_URL}/services/low-boy-dispatching`,
+      title: "Lowboy Dispatch Services for Heavy Hauling | Kandor Logistics",
+      description: "Get reliable lowboy dispatch services for heavy haul and oversized loads — load sourcing, permit management, route planning & 24/7 back-office support for owner-operators.",
+      images: `${BASE_URL}${logo}`,
     },
 };
+
+const faqItems = [
+    {
+        title: "What do lowboy dispatchers for a trucking company do?",
+        content:`Lowboy Dispatchers specialise in handling every aspect of heavy-haul transportation, including construction machinery, oversized freight, and special equipment. They plan loads efficiently, make sure everything meets regulations, and coordinate each move carefully. Also, they are dedicated to maximising your earnings and maintaining efficient, stress-free operations.`,
+    },
+    {
+        title: "Why choose Lowboy Truck Dispatcher?",
+        content: `Lowboy truck dispatchers manage logistics to increase efficiency and profitability. They handle load searches, paperwork, permits, and communication, while seeking better freight opportunities, negotiating rates, optimizing fuel use, and minimizing downtime to boost revenue. Their support also helps drivers stay compliant, safe, and focused on driving.`,
+    },
+    {
+        title: "How to Find Reliable Dispatchers for a Lowboy Trailer?",
+        content: `A simple way is to go online and search for “lowboy dispatcher near me” to find local service listings, industry directories, and dispatcher networks. Select dispatchers or companies based on their experience, transparent pricing, and positive driver reviews. Also, check how well they use technology, how they find loads, and how they communicate about the lowboy trailer. Then sign the contract with the one who fits your needs.`,
+    }
+]
   
 const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
     {
-        // 1. WebSite Definition
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
         "url": `${BASE_URL}`,
         "name": `${APP_NAME}`
     },
     {
-        // 2. WebPage Definition for the Subpage
         "@type": "WebPage",
         "@id": `${BASE_URL}/services/low-boy-dispatching/#webpage`,
-        "url": `${BASE_URL}/services/low-boy-dispatching/`,
-        "name": "Low Boy Dispatch Services for Urgent Freight",
-        "isPartOf": {"@id": `${BASE_URL}/#website`},
-        "description": "Our team specializes in Lowboy Dispatch Services for heavy haul logistics and oversized load transport.",
+        "url": `${BASE_URL}/services/low-boy-dispatching`,
+        "name": "Low Boy Dispatch Services",
+        "isPartOf": {
+            "@type": "WebSite",
+            "url": `${BASE_URL}`,
+            "name": `${APP_NAME}`
+        },
+        "description": "Get reliable lowboy dispatch services for heavy haul and oversized loads — load sourcing, permit management, route planning & 24/7 back-office support for owner-operators.",
         "inLanguage": "en-US",
-        "breadcrumb": {"@id": `${BASE_URL}/services/low-boy-dispatching/#breadcrumb`}
     },
     {
-        // 3. Breadcrumb List
+        "@type": "Organization",
+        "name": `${APP_NAME}`,
+        "url": `${BASE_URL}`,
+        "logo": `${BASE_URL}${logo}`,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": `${phone}`,
+          "contactType": "customer service",
+          "areaServed": "Global",
+          "availableLanguage": ["en","es","zh"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/kandorlogistics",
+          "https://x.com/kandorlogistics",
+          "https://www.instagram.com/kandorlogistics",
+          "https://www.youtube.com/@KandorLogistics"
+        ]
+    },
+    {
         "@type": "BreadcrumbList",
         "@id": `${BASE_URL}/services/low-boy-dispatching/#breadcrumb`,
         "itemListElement": [
@@ -72,27 +108,27 @@ const schemaData = {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": `${BASE_URL}/services/`
+            "item": `${BASE_URL}/services`
         },
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Low Boy Dispatch Service"
+            "name": "Low Boy Dispatch Services",
+            "item": `${BASE_URL}/services/low-boy-dispatching`
         }
         ]
     },
     {
-        // 4. Specific Service Definition (Low Boy Dispatch)
         "@type": "Service",
         "serviceType": "Low Boy Dispatch",
         "name": "Low Boy Dispatch Services",
-        "description": "Our team specializes in Lowboy Dispatch Services for heavy haul logistics and oversized load transport.",
-        "url": `${BASE_URL}/services/low-boy-dispatching/`,
+        "description": "Get reliable lowboy dispatch services for heavy haul and oversized loads — load sourcing, permit management, route planning & 24/7 back-office support for owner-operators.",
+        "url": `${BASE_URL}/services/low-boy-dispatching`,
         "provider": {
         "@type": "ShippingCompany",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}/logo.png`
+        "logo": `${BASE_URL}${logo}`
         },
         "areaServed": [
         {"@type": "State", "name": "Texas"},
@@ -108,6 +144,18 @@ const schemaData = {
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Back-Office Paperwork and Compliance"}}
         ]
         }
+    },
+    {
+        "@type": "FAQPage",
+        "@id": `${BASE_URL}/services/low-boy-dispatching/#faq`,
+        "mainEntity": faqItems.map((item) => ({
+          "@type": "Question",
+          "name": item.title,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.content
+          }
+        }))
     }
     ]
 };
@@ -118,7 +166,7 @@ export default function LowBoyDispatchPage() {
     {/* Schema Markup */}
     <Script id="low-boy-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
 
-    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-12">
+    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Lowboy Dispatch</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -133,7 +181,7 @@ export default function LowBoyDispatchPage() {
         </div>
     </section>
 
-     <section className="py-12 bg-gray-50">
+     <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             {/* Heading Section */}
             <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
@@ -174,7 +222,7 @@ export default function LowBoyDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white relative py-12">
+    <section className="bg-white relative py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-18">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <div className="flex-1 space-y-3">
@@ -206,7 +254,7 @@ export default function LowBoyDispatchPage() {
         </div>
     </section>
     
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900">What Do Kandor Logistics Lowboy Dispatchers Offer?</h2>
@@ -241,7 +289,7 @@ export default function LowBoyDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white max-w-7xl relative mx-auto px-6 py-12">
+    <section className="bg-white max-w-7xl relative mx-auto px-6 py-20">
         <div className="rounded-3xl bg-white drop-shadow-lg p-8">
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Left Content */}
@@ -258,24 +306,12 @@ export default function LowBoyDispatchPage() {
         </div>
     </section>
 
-     <section className="py-12 bg-gray-50">
+     <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
             <div className="relative text-center space-y-3 pb-8">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
-
-            <FaqSection
-              title="What do lowboy dispatchers for a trucking company do?"
-              content={`Lowboy Dispatchers specialise in handling every aspect of heavy-haul transportation, including construction machinery, oversized freight, and special equipment. They plan loads efficiently, make sure everything meets regulations, and coordinate each move carefully. Also, they are dedicated to maximising your earnings and maintaining efficient, stress-free operations.`}
-            />
-            <FaqSection
-              title="Why choose Lowboy Truck Dispatcher?"
-              content={`Lowboy truck dispatchers manage logistics to increase efficiency and profitability. They handle load searches, paperwork, permits, and communication, while seeking better freight opportunities, negotiating rates, optimizing fuel use, and minimizing downtime to boost revenue. Their support also helps drivers stay compliant, safe, and focused on driving.`}
-            />           
-            <FaqSection
-              title="How to Find Reliable Dispatchers for a Lowboy Trailer?"
-              content={`A simple way is to go online and search for “lowboy dispatcher near me” to find local service listings, industry directories, and dispatcher networks. Select dispatchers or companies based on their experience, transparent pricing, and positive driver reviews. Also, check how well they use technology, how they find loads, and how they communicate about the lowboy trailer. Then sign the contract with the one who fits your needs.`}
-            />                     
+            <FaqSection items={faqItems} />
         </div>
     </section>
     </>

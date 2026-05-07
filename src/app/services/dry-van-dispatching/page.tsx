@@ -3,25 +3,28 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
-import FaqSection from "@/components/FaqSection";
+import {FaqSection} from "@/components/FaqSection";
 
-const { phone } = contactInfo;
+const { phone, logo } = contactInfo;
 
 export const metadata: Metadata = {
-    title: `Dry Van Dispatch Service for Owner Operators & Fleets | ${APP_NAME}`,
-    description: "Hire a dedicated dry van dispatcher — 24/7 load finding, rate negotiation, paperwork & compliance. Serving owner operators and fleets across the USA. Get a free quote today.",
+    title: `Dry Van Dispatch Services for Owner-Operators and Fleet Companies`,
+    description: "For owner-operators and growing fleets, our dry van dispatchers support 24/7 across the USA-  secure high-paying loads, optimise routes, and handle all paperwork.",
     keywords: "dry van dispatcher, dry van dispatch service",
+    alternates: {
+        canonical: `${BASE_URL}/services/dry-van-dispatching`,
+    },
     openGraph: {
-      title: `Dry Van Dispatch Service for Owner Operators & Fleets | ${APP_NAME}`,
-      description: "Hire a dedicated dry van dispatcher — 24/7 load finding, rate negotiation, paperwork & compliance. Serving owner operators and fleets across the USA. Get a free quote today.",
+      title: `Dry Van Dispatch Services for Owner-Operators and Fleet Companies`,
+      description: "For owner-operators and growing fleets, our dry van dispatchers support 24/7 across the USA-  secure high-paying loads, optimise routes, and handle all paperwork.",
       url: `${BASE_URL}/services/dry-van-dispatching`,
       siteName: `${APP_NAME}`,
       images: [
         {
-          url: `${BASE_URL}/dry-vans.jpg`,
-          width: 1200,
-          height: 630,
-          alt: `Dry Van Dispatch Service for Owner Operators & Fleets | ${APP_NAME}`,
+          url: `${BASE_URL}/Dry-Van-Dispatch.jpg`,
+          width: 500,
+          height: 500,
+          alt: `Dry Van Dispatch Services for Owner-Operators and Fleet Companies`,
         },
       ],
       locale: "en_US",
@@ -29,48 +32,65 @@ export const metadata: Metadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title: `Dry Van Dispatch Service for Owner Operators & Fleets | ${APP_NAME}`,
-      description: "Hire a dedicated dry van dispatcher — 24/7 load finding, rate negotiation, paperwork & compliance. Serving owner operators and fleets across the USA. Get a free quote today.",
-      images: [`${BASE_URL}/dry-vans.jpg`],
-    },
-    alternates: {
-      canonical: `${BASE_URL}/services/dry-van-dispatching`,
+      title: `Dry Van Dispatch Services for Owner-Operators and Fleet Companies`,
+      description: "For owner-operators and growing fleets, our dry van dispatchers support 24/7 across the USA-  secure high-paying loads, optimise routes, and handle all paperwork.",
+      images: [`${BASE_URL}${logo}`],
     },
 };
+
+const faqItems = [
+    {
+        title: "What Do Dry Van Dispatchers do?",
+        content: `Dry Van Dispatchers combine industry expertise with technology to efficiently manage logistics. They secure high-paying loads, coordinate schedules, and handle documentation, allowing you to focus on driving and improving your business operations.`,
+    },
+    {
+        title: "What should you look for in a dry van dispatch service?",
+        content: `Is the dry van dispatch company meeting the requirements you expect from them? Means they have enough experience to secure high-paying freight, handle load scheduling, negotiate, and manage paperwork and bills, with 24/7 support on the road.`,
+    },
+]
 
 const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
         {
-        "@type": "WebSite",
-        "@id": `${BASE_URL}/#website`,
-        "url": `${BASE_URL}`,
-        "name": `${APP_NAME}`
+            "@type": "WebSite",
+            "@id": `${BASE_URL}/#website`,
+            "url": `${BASE_URL}`,
+            "name": `${APP_NAME}`
         },
         {
-        "@type": "LocalBusiness",
-        "@id": `${BASE_URL}/#business`,
-        "name": `${APP_NAME}`,
-        "url": `${BASE_URL}`,
-        "telephone": `${phone}`,
-        "logo": {
-            "@type": "ImageObject",
-            "url": `${BASE_URL}/logo.png`
-        },
-        
+            "@type": "WebPage",
+            "@id": `${BASE_URL}/services/dry-van-dispatching/#webpage`,
+            "url": `${BASE_URL}/services/dry-van-dispatching`,
+            "name": "Dry Van Dispatch Services",
+            "isPartOf": {
+            "@type": "WebSite",
+            "url": `${BASE_URL}`,
+            "name": `${APP_NAME}`
+            },
+            "description": "For owner-operators and growing fleets, our dry van dispatchers support 24/7 across the USA-  secure high-paying loads, optimise routes, and handle all paperwork.",
+            "inLanguage": "en-US",
         },
         {
-        "@type": "WebPage",
-        "@id": `${BASE_URL}/services/dry-van-dispatching/#webpage`,
-        "url": `${BASE_URL}/services/dry-van-dispatching/`,
-        "name": "Dry Van Dispatch Services for Owner-operators and Fleet Owners",
-        "isPartOf": { "@id": `${BASE_URL}/#website` },
-        "about": { "@id": `${BASE_URL}/services/dry-van-dispatching/#service` },
-        "description": "Specialized dry van dispatching for urgent freight, small loads, and time-sensitive deliveries across Texas, Chicago, and California.",
-        "inLanguage": "en-US",
-        "datePublished": "2025-01-01",
-        "dateModified": "2025-01-01",
-        "breadcrumb": {
+            "@type": "Organization",
+            "name": `${APP_NAME}`,
+            "url": `${BASE_URL}`,
+            "logo": `${BASE_URL}${logo}`,
+            "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": `${phone}`,
+            "contactType": "customer service",
+            "areaServed": "Global",
+            "availableLanguage": ["en","es","zh"]
+            },
+            "sameAs": [
+            "https://www.facebook.com/kandorlogistics",
+            "https://x.com/kandorlogistics",
+            "https://www.instagram.com/kandorlogistics",
+            "https://www.youtube.com/@KandorLogistics"
+            ]
+        },
+        {
             "@type": "BreadcrumbList",
             "@id": `${BASE_URL}/services/dry-van-dispatching/#breadcrumb`,
             "itemListElement": [
@@ -84,100 +104,64 @@ const schemaData = {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": `${BASE_URL}/services/`
+                "item": `${BASE_URL}/services`
             },
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Dry Van Dispatch Service"
+                "name": "Dry Van Dispatch Services",
+                "item": `${BASE_URL}/services/dry-van-dispatching`
             }
             ]
-        }
         },
         {
-        "@type": "Service",
-        "@id": `${BASE_URL}/services/dry-van-dispatching/#service`,
-        "serviceType": "Dry Van Truck Dispatching",
-        "name": "Dry Van Dispatching Service",
-        "description": "Full-service dry van dispatch for owner-operators and carriers. We handle load finding, rate negotiation, paperwork, and compliance so drivers can focus on the road.",
-        "url": `${BASE_URL}/services/dry-van-dispatching/`,
-        "provider": { "@id": `${BASE_URL}/#business` },
-        "areaServed": [
-            { "@type": "State", "name": "Texas" },
-            { "@type": "State", "name": "Illinois" },
-            { "@type": "State", "name": "California" },
-            { "@type": "City",  "name": "Chicago" }
-        ],
-        "hasOfferCatalog": {
+            "@type": "Service",
+            "serviceType": "Dry Van Dispatch Services",
+            "name": "Dry Van Dispatch Services",
+            "description": "For owner-operators and growing fleets, our dry van dispatchers support 24/7 across the USA-  secure high-paying loads, optimise routes, and handle all paperwork.",
+            "url": `${BASE_URL}/services/dry-van-dispatching`,
+            "provider": {
+              "@type": "ShippingCompany",
+              "name": `${APP_NAME}`,
+              "url": `${BASE_URL}`,
+              "logo": `${BASE_URL}${logo}`
+            },
+            "areaServed": [
+            {"@type": "State", "name": "Texas"},
+            {"@type": "City", "name": "Chicago"},
+            {"@type": "State", "name": "California"}
+            ],
+            "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Dry Van Dispatch Offerings",
+            "name": "Dry Van Service Offerings",
             "itemListElement": [
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                "@type": "Service",
-                "name": "Urgent Freight Coordination",
-                "description": "Load matching and real-time communication for time-critical dry van shipments."
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                "@type": "Service",
-                "name": "Small Load Management",
-                "description": "Efficient dispatch for LTL and partial loads across key US corridors."
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                "@type": "Service",
-                "name": "Back-Office Paperwork and Compliance",
-                "description": "Rate confirmations, BOL preparation, carrier packets, and invoice follow-up."
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                "@type": "Service",
-                "name": "24/7 Load Board Monitoring",
-                "description": "Continuous coverage across DAT, Truckstop, and direct broker networks."
-                }
-            }
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "High-Paying Loads"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Route Optimization"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paperwork and Compliance"}}
             ]
-        }
+            }
         },
         {
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-            "@type": "Question",
-            "name": "What Do Dry Van Dispatchers do?",
-            "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dry Van Dispatchers combine industry expertise with technology to efficiently manage logistics. They secure high-paying loads, coordinate schedules, and handle documentation, allowing you to focus on driving and improving your business operations."
-            }
-            },
-            {
-                "@type": "Question",
-                "name": "What should you look for in a dry van dispatch service?",
-                "acceptedAnswer": {
+            "@type": "FAQPage",
+            "@id": `${BASE_URL}/services/dry-van-dispatching/#faq`,
+            "mainEntity": faqItems.map((item) => ({
+              "@type": "Question",
+              "name": item.title,
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Is the dry van dispatch company meeting the requirements you expect from them? Means they have enough experience to secure high-paying freight, handle load scheduling, negotiate, and manage paperwork and bills, with 24/7 support on the road."
-                }
-            }
-        ]
-        },
+                "text": item.content
+              }
+            }))
+        }
     ]
 };
 
 export default function DryVanDispatchPage() {
   return (
     <>
-    {/* Schema Markup */}
     <Script id="dry-van-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}/>
 
-    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-12">
+    <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Dry Van Dispatch</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -192,7 +176,7 @@ export default function DryVanDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
             {/* Heading Section */}
             <div className="max-w-4xl mx-auto text-center space-y-3 mb-12">
@@ -246,7 +230,7 @@ export default function DryVanDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white relative py-12">
+    <section className="bg-white relative py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-18">
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
@@ -281,7 +265,7 @@ export default function DryVanDispatchPage() {
         </div>
     </section>
 
-    <section className="relative py-12 bg-gray-50">
+    <section className="relative py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 space-y-18">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <div className="flex-1">
@@ -295,7 +279,7 @@ export default function DryVanDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white max-w-7xl mx-auto px-6 py-12">
+    <section className="bg-white max-w-7xl mx-auto px-6 py-20">
         <div className="rounded-3xl bg-white drop-shadow-lg p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {/* Left Content */}
@@ -315,20 +299,12 @@ export default function DryVanDispatchPage() {
         </div>
     </section>
 
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
             <div className="relative text-center space-y-3 pb-8">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 text-center">Frequently Asked Questions</h2>
             </div>
-
-            <FaqSection
-              title="What Do Dry Van Dispatchers do?"
-              content={`Dry Van Dispatchers combine industry expertise with technology to efficiently manage logistics. They secure high-paying loads, coordinate schedules, and handle documentation, allowing you to focus on driving and improving your business operations.`}
-            />
-            <FaqSection
-              title="What should you look for in a dry van dispatch service?"
-              content={`Is the dry van dispatch company meeting the requirements you expect from them? Means they have enough experience to secure high-paying freight, handle load scheduling, negotiate, and manage paperwork and bills, with 24/7 support on the road.`}
-            />           
+            <FaqSection items={faqItems} />
         </div>
     </section>
 
