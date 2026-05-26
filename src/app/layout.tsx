@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { APP_NAME } from "@/lib/config";
+import { APP_NAME, BASE_URL } from "@/lib/config";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -16,6 +16,39 @@ export const metadata: Metadata = {
   description: "experience of more than 5 years, we make sure that the net revenues of our owner-operators and fleets increase by at least 20% every year by providing them with a good value load.",
   verification: {
     google: "qgjKFTLBzz-5_x3q36cjiaUxa6Wqt2jh5HyqZlvjFdU",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: `${APP_NAME} | Best Trucking Dispatch Service USA`,
+    description: "experience of more than 5 years, we make sure that the net revenues of our owner-operators and fleets increase by at least 20% every year by providing them with a good value load.",
+    url: `${BASE_URL}`,
+    siteName: `${APP_NAME}`,
+    images: [
+      {
+        url: `${BASE_URL}/about-us1.1.jpg`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en-CA",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: `${APP_NAME} | Best Trucking Dispatch Service USA`,
+    description: "experience of more than 5 years, we make sure that the net revenues of our owner-operators and fleets increase by at least 20% every year by providing them with a good value load.",
+    images: [`${BASE_URL}/about-us1.1.jpg`],
   },
 };
 

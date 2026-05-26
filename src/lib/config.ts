@@ -1,6 +1,6 @@
 export const APP_NAME = "Kandor Logistics";
 export const BASE_URL = "https://kandorlogistics.us";
-//export const BASE_URL = "http://localhost:3000";
+
 
 export const contactInfo = {
   logo: "/kas-logo.png",
