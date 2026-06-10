@@ -6,9 +6,12 @@ import BlogCard from "@/components/BlogCard";
 export default function BlogClient() {
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(blogs.length / itemsPerPage);
+  const sortedBlogs = [...blogs].sort(
+    (a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+  );
+  const totalPages = Math.ceil(sortedBlogs.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentItems = blogs.slice(startIndex, startIndex + itemsPerPage);
+  const currentItems = sortedBlogs.slice(startIndex, startIndex + itemsPerPage);
   const handlePageChange = (page: number) => {
     if (page < 1 || page > totalPages) return;
     setCurrentPage(page);
@@ -29,7 +32,7 @@ export default function BlogClient() {
           ))}
         </div>
 
-        {blogs.length > itemsPerPage && (
+        {sortedBlogs.length > itemsPerPage && (
           <div className="flex justify-center items-center mt-10 space-x-3">
             {/* Previous Button */}
             <button

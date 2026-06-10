@@ -282,9 +282,12 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {blogs.slice(0, 3).map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
+            {[...blogs]
+              .sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime())
+              .slice(0, 3)
+              .map((post) => (
+                <BlogCard key={post.slug} post={post} />
+              ))}
           </div>
           <div className="text-center mt-6">
             <Link href={`${BASE_URL}/blog`} role="button" id="all_blog_link" className="inline-flex items-center gap-2 text-gray-600 hover:text-red-600 hover:scale-105 transition">View All Blogs →</Link>

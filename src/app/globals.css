@@ -19,6 +19,9 @@ body {
   font-size: 16px;
 }
 
+h1, h2, h3, h4, h5, h6{
+  color: var(--color-gray-900);
+}
 
 @keyframes gradientMove {
   0% {
@@ -113,18 +116,18 @@ body {
 .details-page .post-content h3, .details-page .post-content h4{
   font-size: 1.2rem;
   font-weight: 600;
-  color: #101828;
+  color: var(--color-gray-900);
 }
 .details-page .post-content h5, .details-page .post-content h6{
   font-size: 1rem;
   font-weight: 600;
-  color: #101828;
+  color: var(--color-gray-900);
 }
 .details-page .post-content p{
-  color: var(--color-gray-600);
+  color: var(--color-gray-700);
 }
-.details-page .post-content strong{
-  color: #101828;
+.details-page .post-content strong, .details-page .post-content b {
+  color: var(--color-gray-900);
 }
 .details-page .post-content ul{
   list-style-type: disc;
@@ -135,4 +138,121 @@ body {
 }
 .details-page .post-content a{
   color: var(--color-red-600);
+}
+
+.details-page .post-content .dispatcher-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .details-page .post-content .dispatcher-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.details-page .post-content .dispatcher-card {
+  background: linear-gradient(to bottom right, #ffffff, #fff7ed);
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.details-page .post-content .dispatcher-card:hover {
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.15);
+  transform: translateY(-2px);
+}
+
+.details-page .post-content .dispatcher-card__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #dc2626, #fb923c);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.details-page .post-content .dispatcher-card__label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #dc2626;
+  margin-bottom: 0.25rem;
+}
+
+.details-page .post-content .dispatcher-card h4 {
+  margin-bottom: 0.5rem;
+}
+/* Comparison table */
+.details-page .post-content .comparison-table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08);
+}
+
+.details-page .post-content .comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  min-width: 600px;
+}
+
+.details-page .post-content .comparison-table thead {
+  background: linear-gradient(to right, #dc2626, #fb923c);
+}
+
+.details-page .post-content .comparison-table th {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.details-page .post-content .comparison-table th.col-independent {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.details-page .post-content .comparison-table td {
+  padding: 1rem 1.25rem;
+  color: var(--color-gray-600);
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: top;
+}
+
+.details-page .post-content .comparison-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.details-page .post-content .comparison-table tbody tr:hover {
+  background: #fff7ed;
+}
+
+.details-page .post-content .comparison-table td.factor {
+  font-weight: 600;
+  color: #101828;
+  white-space: nowrap;
+  background: #f9fafb;
+  border-right: 1px solid #f3f4f6;
+}
+
+.details-page .post-content .comparison-table .highlight {
+  font-weight: 600;
+  color: #dc2626;
+  background: linear-gradient(to right, #fef2f2, #fff7ed);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
 }

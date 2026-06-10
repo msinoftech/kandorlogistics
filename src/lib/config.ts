@@ -2,6 +2,7 @@ export const APP_NAME = "Kandor Logistics";
 export const BASE_URL = "https://kandorlogistics.us";
 
 
+
 export const contactInfo = {
   logo: "/kas-logo.png",
   phone: "+1 650 275 4660",

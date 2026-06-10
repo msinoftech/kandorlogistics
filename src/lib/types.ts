@@ -10,6 +10,8 @@ export interface Blog {
   author: string;
   published_at: string;
   updated_at: string;
+  metaData: string;
+  metaDescription: string;
 }
 
 export interface testimonial {
