@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { APP_NAME, BASE_URL, contactInfo,  } from "@/lib/config";
+import { APP_NAME, BASE_URL  } from "@/lib/config";
 import BlogClient from "@/app/blog/BlogClient";
-
-const { logo } = contactInfo;
 
 export const metadata: Metadata = {
   title: `Trucking Dispatch Blog — Tips, News & Insights | Kandor Logistics`,
   description: "Explore our blog for trucking dispatch tips, freight market insights, and owner-operator guides to grow your business on the road.",
   keywords: [ "logistics", "Kandor",],
+  alternates: {
+    canonical: `${BASE_URL}/blog`,
+  },
   openGraph: {
     title: `Trucking Dispatch Blog — Tips, News & Insights | Kandor Logistics`,
     description: "Explore our blog for trucking dispatch tips, freight market insights, and owner-operator guides to grow your business on the road.",
@@ -21,8 +22,11 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: {
-    canonical: `${BASE_URL}/blog`,
+  twitter: {
+    card: "summary_large_image",
+    title: `Trucking Dispatch Blog — Tips, News & Insights | Kandor Logistics`,
+    description: "Explore our blog for trucking dispatch tips, freight market insights, and owner-operator guides to grow your business on the road.",
+    images: `${BASE_URL}/blog.jpg`,
   },
 };
 
@@ -81,9 +85,9 @@ const blogSchemaData = {
         "@type": "Organization",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": {
+        "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": `${BASE_URL}${logo}`,
+          "url": `${BASE_URL}/blog.jpg`,
         },
         "sameAs": [
           "https://www.facebook.com/kandorlogistics",

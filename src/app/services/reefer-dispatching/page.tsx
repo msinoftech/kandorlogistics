@@ -5,7 +5,7 @@ import { APP_NAME, BASE_URL, contactInfo,  } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
 import {FaqSection} from "@/components/FaqSection";
 
-const { phone, logo } = contactInfo;
+const { phone } = contactInfo;
 
 export const metadata: Metadata = {
     title: "Nationwide Reefer Dispatch Services | Kandor Logistics",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       card: "summary_large_image",
       title: "Nationwide Reefer Dispatch Services | Kandor Logistics",
       description: "USA's expert reefer dispatch with temperature-controlled load sourcing, real-time monitoring & expert paperwork management for refrigerated freight owner-operators and fleet owners.",
-      images: [`${BASE_URL}${logo}`],
+      images: `${BASE_URL}/Reefer-Dispatch-Support-for-Trucking.jpg`,
     },
     
 };
@@ -80,13 +80,13 @@ const schemaData = {
         "@type": "Organization",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}${logo}`,
+        "primaryImageOfPage": `${BASE_URL}/Reefer-Dispatch-Support-for-Trucking.jpg`,
         "contactPoint": {
         "@type": "ContactPoint",
         "telephone": `${phone}`,
         "contactType": "customer service",
         "areaServed": "Global",
-        "availableLanguage": ["en","es","zh"]
+        "availableLanguage": ["en","es"]
         },
         "sameAs": [
         "https://www.facebook.com/kandorlogistics",
@@ -129,7 +129,7 @@ const schemaData = {
         "@type": "ShippingCompany",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}${logo}`
+        "primaryImageOfPage": `${BASE_URL}/Reefer-Dispatch-Support-for-Trucking.jpg`
         },
         "areaServed": [
         {"@type": "State", "name": "Texas"},
@@ -168,7 +168,7 @@ export default function ReeferDispatchPage() {
 
     <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Reefer Dispatch</h2>
+            <h1 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Reefer Dispatch</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <div className="flex-1">
                     <Image src="/Reefer-Dispatch-Support-for-Trucking.jpg" alt="reefer dispatcher" width={600} height={400} className="w-full rounded-xl shadow-md object-cover"/>

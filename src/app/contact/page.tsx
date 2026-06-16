@@ -4,7 +4,7 @@ import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
 import LocationSection from "@/components/LocationSection";
 
-const { phone, logo } = contactInfo;
+const { phone } = contactInfo;
 
 export const metadata: Metadata = {
   title: `Contact Us to Explore the Partnership Opportunity`,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     creator: "@KandorLogistics",
     title: `Contact Us to Explore the Partnership Opportunity`,
     description: "Reach the Kandor Logistics team for trucking dispatch support — call, email, or book a free consultation. We help owner-operators and fleet companies across the USA.",
-    images: `${BASE_URL}${logo}`,
+    images: `${BASE_URL}/contact-us.jpg`,
   },
 };
 
@@ -65,7 +65,7 @@ const contactSchemaData = {
       "@type": "Organization",
       "name": `${APP_NAME}`,
       "url": `${BASE_URL}`,
-      "logo": `${BASE_URL}${logo}`,
+      "primaryImageOfPage": `${BASE_URL}/contact-us.jpg`,
       "foundingDate": "2020",
       "founder": {
         "@type": "Person",
@@ -96,7 +96,7 @@ const contactSchemaData = {
       "@type": "ContactPage",
       "name": "Contact Us",
       "url": `${BASE_URL}/contact`,
-      "primaryImageOfPage": `${BASE_URL}${logo}`,
+      "primaryImageOfPage": `${BASE_URL}/contact-us.jpg`,
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [

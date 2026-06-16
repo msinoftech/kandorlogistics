@@ -5,18 +5,18 @@ import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
 import {FaqSection} from "@/components/FaqSection";
 
-const { phone, logo } = contactInfo;
+const { phone } = contactInfo;
 
 export const metadata: Metadata = {
-    title: "Box Dispatch Services for Solo Drivers and Fleet Owners",
-    description: "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
+    title: "Box Truck Dispatch Service for Owner-Operators and Fleet Companies",
+    description: "24/7 back-office support, load sourcing, permit management, and route planning. DM Kandor Logistics to hire a dedicated dispatcher for your box truck.",
     keywords: "dispatcher for box trucks, box truck dispatcher, box truck dispatcher in texas, box truck dispatcher calofornia, box truck dispatcher chicago, trucking dispatch companies, best local trucking companies for owner operators, best paying trucking companies for owner operators, best trucking dispatch companies, trucking dispatcher in texas, trucking dispatcher in california, trucking dispatcher chicago",
     alternates: {
         canonical: `${BASE_URL}/services/box-truck-dispatching`,
     },
     openGraph: {
-      title: "Box Dispatch Services for Solo Drivers and Fleet Owners",
-      description: "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
+      title: "Box Truck Dispatch Service for Owner-Operators and Fleet Companies",
+      description: "24/7 back-office support, load sourcing, permit management, and route planning. DM Kandor Logistics to hire a dedicated dispatcher for your box truck.",
       url: `${BASE_URL}/services/box-truck-dispatching`,
       siteName: `${APP_NAME}`,
       images: [ 
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
           url: `${BASE_URL}/box-truck-dispatch-support-for-trucking.jpg`,
           width: 500,
           height: 500,
-          alt: "Box Dispatch Services for Solo Drivers and Fleet Owners",
+          alt: "Box Truck Dispatch Service for Owner-Operators and Fleet Companies",
         },
       ],
       locale: "en_US",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Box Dispatch Services for Solo Drivers and Fleet Owners",
-      description: "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
-      images: `${BASE_URL}${logo}`,
+      title: "Box Truck Dispatch Service for Owner-Operators and Fleet Companies",
+      description: "24/7 back-office support, load sourcing, permit management, and route planning. DM Kandor Logistics to hire a dedicated dispatcher for your box truck.",
+      images: `${BASE_URL}/box-truck-dispatch-support-for-trucking.jpg`,
     },
     
 };
@@ -73,14 +73,14 @@ const schemaData = {
         "url": `${BASE_URL}`,
         "name": `${APP_NAME}`
         },
-        "description": "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
+        "description": "24/7 back-office support, load sourcing, permit management, and route planning. DM Kandor Logistics to hire a dedicated dispatcher for your box truck.",
         "inLanguage": "en-US",
     },
     {
         "@type": "Organization",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}${logo}`,
+        "primaryImageOfPage": `${BASE_URL}/box-truck-dispatch-support-for-trucking.jpg`,
         "contactPoint": {
         "@type": "ContactPoint",
         "telephone": `${phone}`,
@@ -123,13 +123,13 @@ const schemaData = {
           "@type": "Service",
           "serviceType": "Box Truck Dispatch Services",
           "name": "Box Truck Dispatch Services",
-          "description": "Kandor Logistics's box dispatch services with  24/7 back-office support - load sourcing, permit management, route planning. Dm today.",
+          "description": "24/7 back-office support, load sourcing, permit management, and route planning. DM Kandor Logistics to hire a dedicated dispatcher for your box truck.",
           "url": `${BASE_URL}/services/box-truck-dispatching`,
           "provider": {
             "@type": "ShippingCompany",
             "name": `${APP_NAME}`,
             "url": `${BASE_URL}`,
-            "logo": `${BASE_URL}${logo}`
+            "primaryImageOfPage": `${BASE_URL}/box-truck-dispatch-support-for-trucking.jpg`
           },
           "areaServed": [
           {"@type": "State", "name": "Texas"},
@@ -168,7 +168,7 @@ export default function BoxTruckDispatchPage() {
     
     <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Box Truck Dispatch</h2>
+            <h1 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Box Truck Dispatch</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <div className="flex-1">
                     <Image src="/box-truck-dispatch-support-for-trucking.jpg" alt="dispatcher for box trucks" width={600} height={400} className="w-full rounded-xl shadow-md object-cover"/>

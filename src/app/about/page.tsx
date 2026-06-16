@@ -6,7 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import CounterSection from "@/components/CounterSection";
 import WhoWeAre from "@/components/WhoWeAre";
 
-const { phone, logo } = contactInfo;
+const { phone } = contactInfo;
 
 export const metadata: Metadata = {
   title: "Kandor Logistics | Trusted Trucking Dispatch Partner in the USA",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "Kandor Logistics, How we have grown from port drayage in Texas to a nationwide dispatch partner — helping owner-operators and fleets run more profitably.",
     images: [
       {
-        url: `${BASE_URL}/about-us1.1.jpg`,
+        url: `${BASE_URL}/who-we-are.webp`,
         width: 500,
         height: 500,
         alt: "Kandor Logistics | Trusted Trucking Dispatch Partner in the USA",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     creator: "@KandorLogistics",
     title: "Kandor Logistics | Trusted Trucking Dispatch Partner in the USA",
     description: "Kandor Logistics, How we have grown from port drayage in Texas to a nationwide dispatch partner — helping owner-operators and fleets run more profitably.",
-    images: `${BASE_URL}${logo}`,
+    images: `${BASE_URL}/who-we-are.webp`,
   },
 };
 
@@ -69,7 +69,7 @@ export default function about() {
         "@type": "Organization",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}${logo}`,
+        "primaryImageOfPage": `${BASE_URL}/who-we-are.webp`,
         "foundingDate": "2020",
         "founder": {
           "@type": "Person",
@@ -100,7 +100,7 @@ export default function about() {
         "@type": "AboutPage",
         "name": "About | Kandor Logistics",
         "url": `${BASE_URL}/about`,
-        "primaryImageOfPage": `${BASE_URL}/about-us1.1.jpg`,
+        "primaryImageOfPage": `${BASE_URL}/who-we-are.webp`,
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [

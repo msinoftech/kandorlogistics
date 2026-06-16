@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import ContactSection from "@/components/ContactSection";
 import ServicesCardLayout from "@/components/ServicesCardLayout";
 
-const { phone, logo } = contactInfo;
+const { phone } = contactInfo;
 
 export const metadata: Metadata = {
   title: `Dispatch Services for Owner-Operators and Fleet Owners | Kandor Logistics`,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     creator: "@KandorLogistics",
     title: "Dispatch Services for Owner-Operators and Fleet Owners | Kandor Logistics",
     description: "Explore all Kandor Logistics dispatch services. For those, we offer 24/7 support across the USA, Dm free.",
-    images: `${BASE_URL}${logo}`,
+    images: `${BASE_URL}/comprehensive-power-only-units-dispatch.jpg`,
   },
 };
 
@@ -41,12 +41,12 @@ const serviceschemaData = {
   "@graph": [
     {
       "@type": "WebSite",
-      url: `${BASE_URL}`,
-      name: `${APP_NAME}`,
-      description: "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!",
-      potentialAction: {
+      "url": `${BASE_URL}`,
+      "name": `${APP_NAME}`,
+      "description": "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!",
+      "potentialAction": {
         "@type": "SearchAction",
-        target: `${BASE_URL}/search?q={search_term_string}`,
+        "target": `${BASE_URL}/search?q={search_term_string}`,
         "query-input": "required name=search_term_string",
       },
     },
@@ -64,40 +64,40 @@ const serviceschemaData = {
     },
     {
       "@type": "BreadcrumbList",
-      itemListElement: [
+      "itemListElement": [
         {
           "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `${BASE_URL}`,
+          "position": 1,
+          "name": "Home",
+          "item": `${BASE_URL}`,
         },
         {
           "@type": "ListItem",
-          position: 2,
-          name: "Services",
-          item: `${BASE_URL}/services`,
+          "position": 2,
+          "name": "Services",
+          "item": `${BASE_URL}/services`,
         },
       ],
     },
     {
       "@type": "Service",
-      serviceType: "Truck Dispatching & Freight Logistics",
-      name: "Dispatch Services for Owner-Operators and Fleet Owners",
-      description: "Explore all Kandor Logistics dispatch services. For those, we offer 24/7 support across the USA, Dm free.",
-      provider: {
+      "serviceType": "Truck Dispatching & Freight Logistics",
+      "name": "Dispatch Services for Owner-Operators and Fleet Owners",
+      "description": "Explore all Kandor Logistics dispatch services. For those, we offer 24/7 support across the USA, Dm free.",
+      "provider": {
         "@type": "ShippingCompany",
-        name: `${APP_NAME}`,
-        url: `${BASE_URL}`,
-        logo: `${BASE_URL}${logo}`,
-        slogan: "Dispatch Services for Owner-Operators and Fleet Owners",
-        telephone: `${phone}`,
-        areaServed: [
+        "name": `${APP_NAME}`,
+        "url": `${BASE_URL}`,
+        "primaryImageOfPage": `${BASE_URL}/comprehensive-power-only-units-dispatch.jpg`,
+        "slogan": "Dispatch Services for Owner-Operators and Fleet Owners",
+        "telephone": `${phone}`,
+        "areaServed": [
           { "@type": "Place", name: "Texas" },
           { "@type": "Place", name: "Chicago" },
           { "@type": "Place", name: "California" },
           { "@type": "Place", name: "United States" },
         ],
-        sameAs: [
+        "sameAs": [
           "https://www.facebook.com/kandorlogistics",
           "https://x.com/kandorlogistics",
           "https://www.instagram.com/kandorlogistics",
@@ -107,45 +107,45 @@ const serviceschemaData = {
     },
     {
       "@type": "ShippingCompany",
-      name: `${APP_NAME} - Texas Hub`,
-      url: `${BASE_URL}/locations/texas`,
-      telephone: `${phone}`,
-      address: {
+      "name": `${APP_NAME} - Texas Hub`,
+      "url": `${BASE_URL}/locations/texas`,
+      "telephone": `${phone}`,
+      "address": {
         "@type": "PostalAddress",
-        addressLocality: "Houston",
-        addressRegion: "TX",
-        addressCountry: "US",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US",
       },
-      serviceType: "Truck Dispatching, Freight Brokerage, and Logistics Services",
-      areaServed: "Texas",
+      "serviceType": "Truck Dispatching, Freight Brokerage, and Logistics Services",
+      "areaServed": "Texas",
     },
     {
       "@type": "ShippingCompany",
-      name: `${APP_NAME} - Chicago Hub`,
-      url: `${BASE_URL}/locations/chicago`,
-      telephone: `${phone}`,
-      address: {
+      "name": `${APP_NAME} - Chicago Hub`,
+      "url": `${BASE_URL}/locations/chicago`,
+      "telephone": `${phone}`,
+      "address": {
         "@type": "PostalAddress",
-        addressLocality: "Chicago",
-        addressRegion: "IL",
-        addressCountry: "US",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "addressCountry": "US",
       },
-      serviceType: "Dispatching and Freight Services for Midwest Region",
-      areaServed: "Illinois",
+      "serviceType": "Dispatching and Freight Services for Midwest Region",
+      "areaServed": "Illinois",
     },
     {
       "@type": "ShippingCompany",
-      name: `${APP_NAME} - California Hub`,
-      url: `${BASE_URL}/locations/california`,
-      telephone: `${phone}`,
-      address: {
+      "name": `${APP_NAME} - California Hub`,
+      "url": `${BASE_URL}/locations/california`,
+      "telephone": `${phone}`,
+      "address": {
         "@type": "PostalAddress",
-        addressLocality: "Los Angeles",
-        addressRegion: "CA",
-        addressCountry: "US",
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "addressCountry": "US",
       },
-      serviceType: "Truck Dispatching and Logistics Services in West Coast",
-      areaServed: "California",
+      "serviceType": "Truck Dispatching and Logistics Services in West Coast",
+      "areaServed": "California",
     },
   ],
 };

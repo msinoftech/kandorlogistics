@@ -5,7 +5,7 @@ import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
 import {FaqSection} from "@/components/FaqSection";
 
-const { phone, logo } = contactInfo;
+const { phone } = contactInfo;
 
 export const metadata: Metadata = {
     title: "Power Only Dispatch Services | Owner-Operators & Fleets | Kandor Logistics",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       card: "summary_large_image",
       title: "Power Only Dispatch Services | Owner-Operators & Fleets | Kandor Logistics",
       description: "Partner with Kandor Logistics' power-only dispatchers, serving single-unit operators and large fleets nationwide for logistics management, load sourcing, and back-office support",
-      images: `${BASE_URL}${logo}`,
+      images: `${BASE_URL}/power-only-units-dispatch.jpg`,
     }, 
 };
 
@@ -79,13 +79,13 @@ const schemaData = {
         "@type": "Organization",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}${logo}`,
+        "primaryImageOfPage": `${BASE_URL}/power-only-units-dispatch.jpg`,
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": `${phone}`,
           "contactType": "customer service",
           "areaServed": "Global",
-          "availableLanguage": ["en","es","zh"]
+          "availableLanguage": ["en","es"]
         },
         "sameAs": [
           "https://www.facebook.com/kandorlogistics",
@@ -128,7 +128,7 @@ const schemaData = {
             "@type": "ShippingCompany",
             "name": `${APP_NAME}`,
             "url": `${BASE_URL}`,
-            "logo": `${BASE_URL}${logo}`
+            "primaryImageOfPage": `${BASE_URL}/power-only-units-dispatch.jpg`
         },
         "areaServed": [
         {"@type": "State", "name": "Texas"},
@@ -167,7 +167,7 @@ export default function PowerDispatchPage() {
     
     <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Power Only Units Dispatch</h2>
+            <h1 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Power Only Units Dispatch</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <div className="flex-1">
                     <Image src="/power-only-units-dispatch.jpg" alt="dispatcher in California for owner operators" width={600} height={400} className="w-full rounded-xl shadow-md object-cover"/>

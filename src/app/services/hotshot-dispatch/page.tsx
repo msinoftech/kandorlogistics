@@ -5,7 +5,7 @@ import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
 import {FaqSection} from "@/components/FaqSection";
 
-const { phone, logo } = contactInfo;
+const { phone } = contactInfo;
 
 export const metadata: Metadata = {
   title: "Nationwide Hotshot Dispatch Services for Owner-Operators | Kandor Logistics",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nationwide Hotshot Dispatch Services for Owner-Operators | Kandor Logistics",
     description: "Work with a dedicated hotshot dispatcher at Kandor Logistics. We offer reliable services with 24/7 back-office support to CDL and non-CDL hotshot owner-operators nationwide.",
-    images: `${BASE_URL}${logo}`,
+    images: `${BASE_URL}/hotshots.jpg`,
   },
   
 };
@@ -84,13 +84,13 @@ const schemaData = {
         "@type": "Organization",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}${logo}`,
+        "primaryImageOfPage": `${BASE_URL}/hotshots.jpg`,
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": `${phone}`,
           "contactType": "customer service",
           "areaServed": "Global",
-          "availableLanguage": ["en","es","zh"]
+          "availableLanguage": ["en","es"]
         },
         "sameAs": [
           "https://www.facebook.com/kandorlogistics",
@@ -133,7 +133,7 @@ const schemaData = {
             "@type": "ShippingCompany",
             "name": `${APP_NAME}`,
             "url": `${BASE_URL}`,
-            "logo": `${BASE_URL}${logo}`
+            "primaryImageOfPage": `${BASE_URL}/hotshots.jpg`
         },
         "areaServed": [
         {"@type": "State", "name": "Texas"},
@@ -173,7 +173,7 @@ export default function HotshotDispatchPage() {
 
     <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Hotshot Dispatch</h2>
+            <h1 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Hotshot Dispatch</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <div className="flex-1">
                     <Image src="/hotshots.jpg" alt="hotshot dispatch services" width={600} height={350} className="w-full rounded-xl shadow-md object-cover"/>

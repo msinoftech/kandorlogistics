@@ -5,7 +5,7 @@ import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
 import {FaqSection} from "@/components/FaqSection";
 
-const { phone, logo } = contactInfo;
+const { phone } = contactInfo;
 
 export const metadata: Metadata = {
     title: `Dry Van Dispatch Services for Owner-Operators and Fleet Companies`,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       card: "summary_large_image",
       title: `Dry Van Dispatch Services for Owner-Operators and Fleet Companies`,
       description: "For owner-operators and growing fleets, our dry van dispatchers support 24/7 across the USA-  secure high-paying loads, optimise routes, and handle all paperwork.",
-      images: [`${BASE_URL}${logo}`],
+      images: `${BASE_URL}/Dry-Van-Dispatch.jpg`,
     },
 };
 
@@ -75,7 +75,7 @@ const schemaData = {
             "@type": "Organization",
             "name": `${APP_NAME}`,
             "url": `${BASE_URL}`,
-            "logo": `${BASE_URL}${logo}`,
+            "primaryImageOfPage": `${BASE_URL}/Dry-Van-Dispatch.jpg`,
             "contactPoint": {
             "@type": "ContactPoint",
             "telephone": `${phone}`,
@@ -124,7 +124,7 @@ const schemaData = {
               "@type": "ShippingCompany",
               "name": `${APP_NAME}`,
               "url": `${BASE_URL}`,
-              "logo": `${BASE_URL}${logo}`
+              "primaryImageOfPage": `${BASE_URL}/Dry-Van-Dispatch.jpg`
             },
             "areaServed": [
             {"@type": "State", "name": "Texas"},
@@ -163,7 +163,7 @@ export default function DryVanDispatchPage() {
 
     <section className="bg-white relative sm:pt-40 md:pt-40 lg:pt-40 pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Dry Van Dispatch</h2>
+            <h1 className="text-2xl text-gray-900 md:text-4xl font-bold mb-8">Dry Van Dispatch</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <div className="flex-1">
                     <Image src="/Dry-Van-Dispatch.jpg" alt="dry van dispatcher" width={600} height={400} className="w-full rounded-xl shadow-md object-cover"/>

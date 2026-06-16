@@ -19,7 +19,7 @@ import {FaqSection} from "@/components/FaqSection";
 import HeroLayout from "@/components/HeroLayout";
 import ServiceCard from "@/components/ServiceCard";
 
-const { phone, logo } = contactInfo;
+const { phone } = contactInfo;
 
 export const metadata: Metadata = {
   title: `Trucking Dispatch Company in Texas | Kandor Logistics`,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     creator: "@KandorLogistics",
     title: "Trucking Dispatch Company in Texas | Kandor Logistics",
     description: "Kandor Logistics, a dedicated team of truck dispatchers, provides 24/7 back-office support for owner-operators and fleets. Get a free quote today!",
-    images: `${BASE_URL}${logo}`,
+    images: `${BASE_URL}/about-us1.1.jpg`,
   },
 };
 
@@ -119,7 +119,7 @@ export default function HomePage() {
         "@type": "Organization",
         "name": `${APP_NAME}`,
         "url": `${BASE_URL}`,
-        "logo": `${BASE_URL}${logo}`,
+        "primaryImageOfPage": `${BASE_URL}/about-us1.1.jpg`,
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": `${phone}`,

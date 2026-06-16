@@ -33,8 +33,7 @@ export const FaqSection = ({ items = [] }: FaqSectionProps) => {
             {isOpen && (
               <div className="border-t border-gray-200 px-6 pb-6 pt-5">
                 {item.content && (
-                  <div className="pl-2 border-t border-gray-100 pt-5 text-gray-600 prose prose-sm prose-li:my-1 prose-ul:my-2 max-w-none" dangerouslySetInnerHTML={{ __html: item.content }}
-                  />
+                  <div className="pl-2 text-gray-600 prose prose-sm prose-li:my-1 prose-ul:my-2 max-w-none" dangerouslySetInnerHTML={{ __html: item.content }}/>
                 )}
               </div>
             )}

@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { blogs } from "@/lib/data";
-import { APP_NAME, BASE_URL, contactInfo } from "@/lib/config";
+import { APP_NAME, BASE_URL } from "@/lib/config";
 import BlogDetails from "./BlogDetails";
-
-const { logo } = contactInfo;
 
 // Define page props for this dynamic route
 type PageProps = { params: Promise<{ slug: string }> };
@@ -46,7 +44,7 @@ export async function generateMetadata( { params }: PageProps ): Promise<Metadat
       card: "summary_large_image",
       title: post.title,
       description,
-      images: `${BASE_URL}${logo}`,
+      images: `${BASE_URL}${ogImageSource}`,
     },
   };
 }
@@ -127,9 +125,9 @@ export default async function BlogPage({ params }: PageProps) {
           "@type": "Organization",
           "name": `${APP_NAME}`,
           "url": `${BASE_URL}`,
-          "logo": {
+          "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": `${BASE_URL}${logo}`,
+            "url": imageUrl,
           },
         },
       },
