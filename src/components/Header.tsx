@@ -60,12 +60,15 @@ export default function Header() {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8 mx-auto">
-              {NAV.map((item) => (
-                <Link key={item.href} href={item.href} className="text-sm font-medium hover:text-red-600 transition-all duration-200 relative group">
-                  {item.name}
-                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-red-500 to-orange-400 transition-all duration-300 group-hover:w-full" />
-                </Link>
-              ))}
+              {NAV.map((item) => {
+                const active = isNavActive(item.href);
+                return (
+                  <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={`text-sm font-medium transition-all duration-200 relative group ${active ? "text-red-600" : "hover:text-red-600"}`}>
+                    {item.name}
+                    <span className={`absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-red-500 to-orange-400 transition-all duration-300 ${active ? "w-full" : "w-0 group-hover:w-full"}`} />
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* CTA + Mobile Toggle */}

@@ -66,6 +66,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: `${name} <${email}>`,
+      replyTo: `${name} <${email}>`,
       to: process.env.SEND_TO,
       subject: "New Inquiry via Contact Form - " + name + " - " + new Date().toLocaleDateString('en-IN'),
       html: `<div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">

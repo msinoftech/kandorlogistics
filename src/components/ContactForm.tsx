@@ -120,7 +120,7 @@ const ContactForm = () => {
         <button type="submit" disabled={status === "sending"} className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-400 text-white px-6 py-3 rounded-md font-medium shadow-lg hover:bg-red-700 transition-transform transform hover:-translate-y-1 cursor-pointer" aria-disabled={status === "sending"}>
           {status === "sending" ? "Sending…" : "Request Quote"}
         </button>
-        <div className="text-gray-500">Or <a href={phoneHref} className="underline">book a call</a></div>
+        <div className="text-gray-500">or <a href={phoneHref} className="underline">Quick a call</a></div>
       </div>
 
       {status === "success" && (
