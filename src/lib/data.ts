@@ -416,8 +416,8 @@ export const blogs: Blog[] = [
     image: "/trucking-dispatch-terminology-the-complete-glossary-for-carriers-and-owner-operators.jpg",
     status: "published",
     author: "kandorlogistics",
-    published_at: "2026-06-30",
-    updated_at: "2026-06-30",
+    published_at: "2026-07-01",
+    updated_at: "2026-07-01",
     metaData: "The Complete Trucking Dispatch Terminology",
     metaDescription: "Whether you're an owner-operator just getting your authority or a fleet owner expanding your operation, this freight dispatch terminology glossary is built for you.",
     content: 
