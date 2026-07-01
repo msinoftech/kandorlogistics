@@ -295,7 +295,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="bg-white max-w-7xl mx-auto px-6 pb-20">
+      <section className="bg-white max-w-7xl mx-auto px-6 pb-20">
           <div className="rounded-3xl bg-white drop-shadow-lg p-8">
             <div className="relative text-center pb-8 space-y-3">
                 <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
@@ -312,7 +312,7 @@ export default function HomePage() {
 
               {/* Right Form */}
               <div className="relative">
-                <ContactForm />
+                <ContactForm submitRole="button" submitAriaLabel="Request a quote from above the footer" />
               </div>
             </div>
         </div>

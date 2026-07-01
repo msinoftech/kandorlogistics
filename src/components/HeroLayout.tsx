@@ -42,13 +42,13 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column */}
-          <div id="contact" className="w-full order-1 md:order-2">
+          <div className="w-full order-1 md:order-2">
             <div className="relative w-full">
               <div className="relative bg-white rounded-3xl shadow-2xl ring-1 ring-black/5 overflow-hidden transform transition-all duration-500 hover:-translate-y-2">
                 <div className="p-8">
                   <div className="text-xl font-semibold text-gray-900">Need A Dedicated Dispatcher?</div>
                   <p>Request a Quote for Nationwide Services</p>
-                  <div className="mt-6"><ContactForm /></div>
+                  <div className="mt-6"><ContactForm submitRole="button" submitAriaLabel="Request a quote from the hero section" /></div>
                 </div>
               </div>
             </div>

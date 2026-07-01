@@ -59,7 +59,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-8 mx-auto">
+            <nav className="hidden md:flex items-center gap-8 mx-auto" aria-label="Main navigation" role="navigation">
               {NAV.map((item) => {
                 const active = isNavActive(item.href);
                 return (
@@ -73,7 +73,7 @@ export default function Header() {
 
             {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-3">
-              <Link href={schedule} target="_blank" id="schedule_a_call" role="button" className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-md text-sm font-semibold bg-gradient-to-r from-red-600 to-orange-500 text-white shadow">
+              <Link href={schedule} target="_blank" aria-label="schedule_a_call" role="button" className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-md text-sm font-semibold bg-gradient-to-r from-red-600 to-orange-500 text-white shadow">
                 Schedule a Call
                 <svg className="w-4 h-4 -mr-1" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12h14M12 5l7 7-7 7" stroke="rgba(255,255,255,0.95)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -143,7 +143,7 @@ export default function Header() {
         </div>
 
         {/* Nav Links */}
-        <nav className="flex-1 overflow-y-auto">
+        <nav className="flex-1 overflow-y-auto" aria-label="Mobile navigation" role="navigation">
           {NAV.map((item) => {
             const active = isNavActive(item.href);
             return (
@@ -203,7 +203,7 @@ export default function Header() {
           <Link
             href={schedule}
             target="_blank"
-            id="schedule_a_call_mobile"
+            aria-label="schedule_a_call_mobile"
             role="button"
             onClick={() => setOpen(false)}
             className="block w-full text-center py-3.5 rounded-lg bg-gradient-to-r from-red-600 to-orange-500 text-white font-semibold shadow transition-opacity hover:opacity-90"

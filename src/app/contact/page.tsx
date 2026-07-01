@@ -134,7 +134,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-white px-8 py-12 shadow-md rounded-lg">
             <div className="relative space-y-3">
               <div className="text-xl font-semibold text-gray-900 mb-4">Get in Touch with Our Support Team</div>
-              <ContactForm />
+              <ContactForm submitRole="button" submitAriaLabel="Request a quote from the contact page" />
             </div>
             <div className="relative">
               <LocationSection

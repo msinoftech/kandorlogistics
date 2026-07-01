@@ -9,7 +9,7 @@ interface TestimonialsSectionProps {
 
 const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ subheading, heading, testimonials }) => {
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {subheading && (
           <div className="text-sm font-semibold text-red-600 uppercase tracking-widest text-center mb-3">{subheading}</div>

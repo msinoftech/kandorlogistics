@@ -10,7 +10,12 @@ type FormData = {
   message: string;
 };
 
-const ContactForm = () => {
+type ContactFormProps = {
+  submitRole?: React.AriaRole;
+  submitAriaLabel?: string;
+};
+
+const ContactForm = ({ submitRole = "button", submitAriaLabel = "Submit form" }: ContactFormProps) => {
   const { phone  } = contactInfo;
 
   const phoneHref = `tel:${phone.replace(/[^+\d]/g, "")}`;
@@ -117,10 +122,10 @@ const ContactForm = () => {
       <textarea id="message" name="message" rows={4} required placeholder="How can we help?" value={formData.message} onChange={handleChange} className="block w-full border rounded-xl border-gray-200 bg-transparent px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-600"/>
       
       <div className="block sm:flex items-center justify-between items-center justify-between gap-3">
-        <button type="submit" disabled={status === "sending"} className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-400 text-white px-6 py-3 rounded-md font-medium shadow-lg hover:bg-red-700 transition-transform transform hover:-translate-y-1 cursor-pointer" aria-disabled={status === "sending"}>
+        <button type="submit" disabled={status === "sending"} role={submitRole} aria-label={submitAriaLabel} className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-400 text-white px-6 py-3 rounded-md font-medium shadow-lg hover:bg-red-700 transition-transform transform hover:-translate-y-1 cursor-pointer" aria-disabled={status === "sending"}>
           {status === "sending" ? "Sending…" : "Request Quote"}
         </button>
-        <div className="text-gray-500">or <a href={phoneHref} className="underline">Quick a call</a></div>
+        <div className="text-gray-500">or <a href={phoneHref} className="underline" aria-label="Quick a call">Quick a call</a></div>
       </div>
 
       {status === "success" && (
