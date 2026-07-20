@@ -572,4 +572,418 @@ export const blogs: Blog[] = [
     </ul>
     `,
   },
+  {
+    id: 6,
+    title: "Operating Costs of Running a Trucking Business",
+    slug: "operating-costs-of-running-a-trucking-business",
+    category: "",
+    excerpt: "Whether you are a solo owner-operator or the owner of a fleet, you will agree. In the United States, the trucking business is not just about finding freight and keeping trucks on the road.",
+    image: "/operating-costs-of-running-a-trucking-business.jpg",
+    status: "published",
+    author: "kandorlogistics",
+    published_at: "2026-07-20",
+    updated_at: "2026-07-20",
+    metaData: "Operating Costs of Running a Trucking Business",
+    metaDescription: "Whether you are a solo owner-operator or the owner of a fleet, you will agree. In the United States, the trucking business is not just about finding freight and keeping trucks on the road.",
+    content:
+    `<p>Whether you are a solo owner-operator or the owner of a fleet, you will agree. In the United States, the trucking business is not just about finding freight and keeping trucks on the road.</p>
+    <p>It is about knowing exactly what each mile costs, including upfront costs, payments to the dispatcher, insurance payments, maintenance, fuel costs, etc.,  before you accept the next load.</p>
+    <p>If you do not understand and track your true operating costs, including startup costs, annual expenses, monthly bills, and daily operating costs. At any point, you can be left wandering to find your margin in A profitable-looking load.</p>
+    <p>Here, we are breaking down the operating costs of running a trucking business. So that you can calculate your trucking average running cost per Mile and match it with ATRI cost benchmarks.</p>
+    <p>ATRI's operational cost research remains one of the most trusted trucking benchmarks in the U.S. trucking industry.</p>
+    <p>In the last survey, ATRI reported that the average cost of operating a truck in 2024 was $2.260 per Mile, slightly below the 2023 level.</p>
+
+    <h2>What Are the Main Operational Costs of Trucking?</h2>
+    <p>Every trucking business, whether it's one truck or fifty, carries the same core cost categories. What changes are the size of each number and how much control you have over it?</p>
+    
+    <h3>Labor and Driver Wages</h3>
+    <p>Driver pay is one of the largest cost categories in trucking. For fleets, this includes wages, payroll taxes, benefits, bonuses, workers' compensation, and recruiting costs. For owner-operators, "driver pay" should still be treated as a business expense because the owner needs to pay themselves from the truck's revenue.</p>
+    <p>Good carriers separate business profit from driver income. That makes it easier to see whether the truck is actually profitable or just creating cash flow.</p>
+    <p>ATRI reports combined driver pay and benefits at roughly <strong>$0.995 per mile</strong> industry-wide.</p>
+
+    <h3>Fuel and Energy Costs</h3>
+    <p>It's still the most volatile cost and hits cash flow every Mile a truck covers. Fuel cost varies with miles driven, idle time, weight, terrain, speed, and fuel economy. A single price swing at the pump can shift your margins overnight. So, carriers must monitor fuel price data released weekly by the U.S. Energy Information Administration to adjust the fuel surcharges and route planning.</p>
+    <p>Although Electric and alternative-fuel trucks may change this category over time, for most U.S. Class 8 operators, diesel remains a major operating cost.</p>
+
+    <h3>Maintenance and Repair</h3>
+    <p>Maintenance includes preventive service, oil changes, brakes, tires, aftertreatment systems, inspections, diagnostics, and emergency repairs. The older the truck, the more unpredictable this category becomes. A paid-off truck can still be expensive if downtime and repairs are not controlled.</p>
+    <p>A smart way is to set a maintenance budget per Mile rather than on an as-needed basis. Experienced carriers do so. It minimizes the reliance on credit cards or factoring advances. Repair and maintenance (R&M) averaged <strong>$0.198 per Mile</strong> in 2024, a slight dip from 2023.</p>
+
+    <h3>Insurance and Permits</h3>
+    <p>As the FMCSA states, insurance requirements vary by carrier type, operating authority, cargo type, and vehicle type. But it is a fixed cost, which is higher for new authorities and small carriers than for an established one. The difference range can be 15- 35%.</p>
+    <p>Permits and registrations can include IRP, IFTA, UCR, state permits, overweight permits, and business registrations.</p>
+    <p>FMCSA clearly explains to fleet companies that they may need a USDOT number, operating authority, insurance, and New Entrant Safety Assurance steps, depending on their operations.</p>
+    <p>As of the last record, Commercial truck insurance hit a record $0.102 per Mile in 2024.</p>
+
+    <h3>Safety and Compliance</h3>
+    <p>These expenses are not as much as fuel or insurance. But if ignored, they can lead to fines and a hit to the safety score, which lowers the chances of better freight opportunities.</p>
+    <p>ELD subscriptions, Drug and alcohol testing, DOT audits, annual inspections, etc., all fall under compliance.</p>
+
+    <h3>Administrative and Overhead Costs</h3>
+    <p>Dispatch, accounting, factoring fees, office space, and software subscriptions round out the picture. Factoring alone can run 1% to 5% of invoice value depending on your credit history and volume — a real cost that new carriers often underestimate.</p>
+    
+    <img src="/typical-breakdown-of-trucking-operating-costs.jpg" alt="Typical Breakdown of Trucking Operating Costs" class="w-full h-auto">
+
+    <h2>Breaking Down the Cost of Running a Trucking Business</h2>
+    <p>A carrier needs money before the first load, throughout the year, every month, and every day the truck runs. It becomes easier to understand and manage the operating costs of the trucking business when they are grouped. How? We can break down this way:</p>
+
+    <h3>Upfront Investment Costs</h3>
+    <p>Startup costs are the expenses required to get ready to haul, whether you are beginning with new or used equipment. Apart from the truck purchase, the operational budget includes insurance, authority setup, permit fees, ELD, software, and working capital.</p>
+
+    <div class="comparison-table-wrap">
+      <table class="comparison-table comparison-table--stacked">
+        <thead>
+          <tr>
+            <th>Cost Item</th>
+            <th class="col-independent">Single Truck (Used)</th>
+            <th class="col-inhouse">Single Truck (New)</th>
+            <th>Small Fleet (3-5 Trucks)</th>
+          </tr>
+        </thead>
+        <tbody class="space-y-3">
+          <tr>
+            <td class="factor">Truck purchase/down payment</td>
+            <td data-label="Single Truck (Used)"><span class="highlight">$40,000 – $100,000</span></td>
+            <td data-label="Single Truck (New)"><span class="highlight">$130,000 – $240,000</span></td>
+            <td data-label="Small Fleet (3-5 Trucks)"><span class="highlight">$150,000 – $500,000+</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Trailer purchase (dry van/reefer)</td>
+            <td data-label="Single Truck (Used)"><span class="highlight">$15,000 – $40,000</span></td>
+            <td data-label="Single Truck (New)"><span class="highlight">$40,000 – $90,000</span></td>
+            <td data-label="Small Fleet (3-5 Trucks)"><span class="highlight">$80,000 – $300,000+</span></td>
+          </tr>
+          <tr>
+            <td class="factor">MC authority, BOC-3, UCR</td>
+            <td data-label="Single Truck (Used)"><span class="highlight">$500 – $1,500</span></td>
+            <td data-label="Single Truck (New)"><span class="highlight">$500 – $1,500</span></td>
+            <td data-label="Small Fleet (3-5 Trucks)"><span class="highlight">$1,500 – $5,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">IRP plates</td>
+            <td data-label="Single Truck (Used)"><span class="highlight">$500 – $3,000</span></td>
+            <td data-label="Single Truck (New)"><span class="highlight">$500 – $3,000</span></td>
+            <td data-label="Small Fleet (3-5 Trucks)"><span class="highlight">$2,000 – $9,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Insurance down payment</td>
+            <td data-label="Single Truck (Used)"><span class="highlight">$2,400 – $6,000</span></td>
+            <td data-label="Single Truck (New)"><span class="highlight">$2,400 – $6,000</span></td>
+            <td data-label="Small Fleet (3-5 Trucks)"><span class="highlight">$8,000 – $18,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">ELD, technology setup</td>
+            <td data-label="Single Truck (Used)"><span class="highlight">$200 – $1,000</span></td>
+            <td data-label="Single Truck (New)"><span class="highlight">$200 – $1,000</span></td>
+            <td data-label="Small Fleet (3-5 Trucks)"><span class="highlight">$600 – $3,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Operating cash reserve</td>
+            <td data-label="Single Truck (Used)"><span class="highlight">$20,000 – $45,000</span></td>
+            <td data-label="Single Truck (New)"><span class="highlight">$20,000 – $45,000</span></td>
+            <td data-label="Small Fleet (3-5 Trucks)"><span class="highlight">$40,000 – $90,000+</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Estimated total</td>
+            <td data-label="Single Truck (Used)"><strong><span class="highlight">$50,000 – $120,000</span></strong></td>
+            <td data-label="Single Truck (New)"><strong><span class="highlight">$150,000 – $280,000</span></strong></td>
+            <td data-label="Small Fleet (3-5 Trucks)"><strong><span class="highlight">$250,000 – $850,000+</span></strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>These ranges are planning estimates. A used tractor with leased trailer access will require a different budget than a new truck-and-trailer purchase. Insurance history, credit strength, location, cargo type, and operating authority age can also change startup requirements.</p> 
+    <p>Common upfront costs include:</p>
+    <ul>
+      <li>Truck purchase or down payment</li>
+      <li>Trailer purchase, lease, or rental</li>
+      <li>Initial insurance deposit</li>
+      <li>USDOT and/or MC authority</li>
+      <li>IRP registration</li>
+      <li>IFTA setup</li>
+      <li>UCR registration</li>
+      <li>ELD and GPS setup</li>
+      <li>Drug and alcohol consortium enrollment</li>
+      <li>Business entity setup</li>
+      <li>Accounting and bookkeeping system</li>
+      <li>Dispatch and load board tools</li>
+      <li>Emergency repair reserve</li>
+    </ul>
+
+    <h3>Long-Term Annual Costs</h3>
+    <p>How was your last business year? It doesn't matter, but most of the annual expenses return every year. It's surprising when these expenses aren't included in the budget, and nothing is saved for them each month.</p>
+
+    <div class="comparison-table-wrap">
+      <table class="comparison-table comparison-table--stacked">
+        <thead>
+          <tr>
+            <th>Annual Cost Item</th>
+            <th class="col-independent">Typical Range</th>
+          </tr>
+        </thead>
+        <tbody class="space-y-3">
+          <tr>
+            <td class="factor">Insurance renewal (liability, cargo, physical damage)</td>
+            <td data-label="Typical Range"><span class="highlight">$8,000 – $25,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">IRP renewal (based on mileage)</td>
+            <td data-label="Typical Range"><span class="highlight">$500 – $3,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">IFTA license and decals</td>
+            <td data-label="Typical Range"><span class="highlight">$75 – $200</span></td>
+          </tr>
+          <tr>
+            <td class="factor">HVUT (Form 2290)</td>
+            <td data-label="Typical Range"><span class="highlight">$100 – $550</span></td>
+          </tr>
+          <tr>
+            <td class="factor">UCR registration</td>
+            <td data-label="Typical Range"><span class="highlight">$69 – $176</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Drug and alcohol consortium</td>
+            <td data-label="Typical Range"><span class="highlight">$150 – $300</span></td>
+          </tr>
+          <tr>
+            <td class="factor">ELD subscription</td>
+            <td data-label="Typical Range"><span class="highlight">$180 – $480</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Equipment replacement reserve</td>
+            <td data-label="Typical Range">Varies by fleet age</td>
+          </tr>
+          <tr>
+            <td class="factor">Software subscriptions (dispatch, accounting)</td>
+            <td data-label="Typical Range"><span class="highlight">$600 – $3,000</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Insurance is the biggest swing factor here. New authorities routinely pay 20-30% more than carriers with two or more clean years on record, which is one reason many operators lease on with an established carrier before going independent.</p>
+
+    <h3>Monthly Costs</h3>
+    <p>Monthly expenses that maintain the business flow. Sometimes it's tight cash flow, especially in the first 60-90 days before broker payments catch up.</p>
+    <p>For a solo truck operator, monthly costs may include truck payment, insurance installment, ELD, phone, load board, factoring, accounting, and parking. In fleet operations, driver payroll, dispatcher salaries, safety support, office rent, and payroll software are common expenses.</p>
+    
+    <div class="comparison-table-wrap">
+      <table class="comparison-table comparison-table--stacked">
+        <thead>
+          <tr>
+            <th>Monthly Cost Item</th>
+            <th class="col-independent">Typical Range</th>
+          </tr>
+        </thead>
+        <tbody class="space-y-3">
+          <tr>
+            <td class="factor">Driver payroll (per driver)</td>
+            <td data-label="Typical Range"><span class="highlight">$4,000 – $7,000+</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Dispatcher/office staff</td>
+            <td data-label="Typical Range"><span class="highlight">$2,500 – $5,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Truck/trailer loan payment</td>
+            <td data-label="Typical Range"><span class="highlight">$1,500 – $3,500</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Insurance installment</td>
+            <td data-label="Typical Range"><span class="highlight">$700 – $2,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Factoring fees</td>
+            <td data-label="Typical Range"><span class="highlight">1% – 5% of invoice value</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Office rent or terminal space</td>
+            <td data-label="Typical Range"><span class="highlight">$500 – $2,500</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Fleet management/dispatch software</td>
+            <td data-label="Typical Range"><span class="highlight">$100 – $500</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>What are the operating costs of running a trucking business per month?</h4>
+    <p>For one semi-truck, monthly operating costs typically range from <strong>$12,000 to $25,000+</strong> before owner profit, depending on truck payments, insurance, fuel, miles, maintenance, trailer costs, factoring, and dispatch support. A small fleet may spend <strong>$60,000 to $150,000+ per month</strong>, depending on truck count, driver payroll, equipment debt, and fuel usage. These are planning ranges, not guaranteed figures. A truck running 6,000 miles per month will not have the same cost profile as a truck running 10,000 miles per month.</p>
+
+    <h3>Daily Operating Costs</h3>
+    <p>Daily costs are expenses incurred while the truck is in motion. It can be minimized and controlled if thoroughly tracked and analyzed. Otherwise, it does not affect load profitability, but it can also quietly drain a bank account.</p>
+
+    <div class="comparison-table-wrap">
+      <table class="comparison-table comparison-table--stacked">
+        <thead>
+          <tr>
+            <th>Daily Cost Item</th>
+            <th class="col-independent">Typical Range</th>
+          </tr>
+        </thead>
+        <tbody class="space-y-3">
+          <tr>
+            <td class="factor">Fuel</td>
+            <td data-label="Typical Range"><span class="highlight">$300 – $600+</span> (varies with miles run)</td>
+          </tr>
+          <tr>
+            <td class="factor">DEF fluid</td>
+            <td data-label="Typical Range"><span class="highlight">$10 – $25</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Tolls</td>
+            <td data-label="Typical Range"><span class="highlight">$20 – $80</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Parking</td>
+            <td data-label="Typical Range"><span class="highlight">$15 – $25</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Scale fees</td>
+            <td data-label="Typical Range"><span class="highlight">$10 – $15</span> per weigh-in</td>
+          </tr>
+          <tr>
+            <td class="factor">Driver meals</td>
+            <td data-label="Typical Range"><span class="highlight">$30 – $50</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Minor repairs/tire wear reserve</td>
+            <td data-label="Typical Range"><span class="highlight">$0.10 – $0.25</span> per mile</td>
+          </tr>
+          <tr>
+            <td class="factor">Loading/unloading (lumper fees)</td>
+            <td data-label="Typical Range"><span class="highlight">$50 – $250</span> per stop</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Benchmarking: ATRI Operational Costs of Trucking</h2>
+    <p>Guessing at your numbers is how margins quietly disappear. Benchmarking against ATRI's data gives you a real reference point instead of a gut feeling.</p>
+
+    <h3>Why Benchmarking Matters?</h3>
+    <p>Trucking profit margins can be thin. If a carrier does not know whether its costs are above or below industry averages, it is difficult to price freight, negotiate rates, or decide when to replace equipment.</p>
+    <p>Using benchmarking, carriers can analyze and know where their spending deviates from the industry average.</p>
+    <p>Also, it helps carriers in key operational decisions. Such as:</p>
+    <ul>
+    <li>Reject unprofitable freight</li>
+    <li>Set rate targets</li>
+    <li>Compare equipment choices</li>
+    <li>Budget for vehicle maintenance</li>
+    <li>Track deadhead impact</li>
+    <li>Decide whether to lease, buy, or replace equipment</li>
+    </ul>
+
+    <h3>Using ATRI Cost Research for Benchmarking</h3>
+    <p>Carriers who participate in ATRI's data collection receive a customized report comparing their line-item costs against an anonymized peer group of similar fleet size and sector.</p>
+    <p>That comparison matters because a five-truck reefer fleet in the Northeast has a completely different cost structure than a ten-truck dry van operation in the South Central region — where costs run about 16.8% lower on average.</p>
+    <p>The 2025 update reported that the industry's average truck operating cost in 2024 was <strong>$2.260 per Mile</strong>, compared with <strong>$2.270 per Mile</strong> in 2023.</p>
+    <p>The same ATRI update noted an important trend: when fuel was excluded, non-fuel marginal costs increased to a record <strong>$1.779 per Mile</strong>. That matters because lower diesel prices can hide rising pressure in insurance, equipment, maintenance, labor, and overhead.</p>
+    <p>ATRI's 2025 report data included responses covering <strong>178,091 combination truck-tractors</strong>, making it one of the more useful public benchmarking tools for U.S. trucking operations.</p>
+
+    <h3>Fixed vs. Variable Costs</h3>
+    <p>Those expenses that a business owes, whether its truck runs on the road or not. Insurance installments, truck payments, permits, office rent, software subscriptions, etc., are considered fixed costs.</p>
+    <p>On the other hand, variable costs fluctuate with mileage and activity. These expenses are fuel, maintenance, tires, and driver bonuses or pay if paid by the Mile. Fixed costs set the target for at least the revenue the company must generate to maintain a reasonable profit margin. Variable costs help calculate the load price correctly.</p>
+
+    <h2>What Is the Average Trucking Cost Per Mile?</h2>
+    <p>Cost per Mile, or CPM, a <a href="${BASE_URL}/blog/trucking-dispatch-terminology-the-complete-glossary-for-carriers-and-owner-operators">common term in trucking</a>, is one of the most important factors in trucking finance. It is the cost of moving one Mile with a truck. It is the starting point for every rate negotiation. It tells you the minimum rate you need to cover costs before profit.</p>
+    
+    <p><strong>How to calculate trucking cost per Mile:</strong></p>
+    <ol>
+    <li>Add up all fixed costs for the period (insurance, truck payment, permits, admin).</li>
+    <li>Add up all variable costs for the same period (fuel, maintenance, tolls, tires).</li>
+    <li>Sum of fixed and variable totals.</li>
+    <li>Divide by total miles driven in that period.</li>
+    </ol>
+
+    <p><strong>Formula:</strong>(Fixed Costs + Variable Costs) ÷ Total Miles = Cost Per Mile</p>
+
+    <h3>Practical Cost-Per-Mile Example</h3>
+    <p>Assume a single truck has the following monthly numbers:</p>
+
+    <div class="comparison-table-wrap">
+      <table class="comparison-table comparison-table--stacked">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th class="col-independent">Monthly Cost</th>
+          </tr>
+        </thead>
+        <tbody class="space-y-3">
+          <tr>
+            <td class="factor">Truck payment</td>
+            <td data-label="Monthly Cost"><span class="highlight">$3,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Insurance</td>
+            <td data-label="Monthly Cost"><span class="highlight">$2,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Trailer</td>
+            <td data-label="Monthly Cost"><span class="highlight">$1,000</span></td>
+          </tr>
+          <tr>
+            <td class="factor">ELD, software, phone</td>
+            <td data-label="Monthly Cost"><span class="highlight">$300</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Parking</td>
+            <td data-label="Monthly Cost"><span class="highlight">$250</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Accounting/admin</td>
+            <td data-label="Monthly Cost"><span class="highlight">$450</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Fuel</td>
+            <td data-label="Monthly Cost"><span class="highlight">$6,500</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Maintenance reserve</td>
+            <td data-label="Monthly Cost"><span class="highlight">$1,800</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Tolls/parking/scales</td>
+            <td data-label="Monthly Cost"><span class="highlight">$700</span></td>
+          </tr>
+          <tr>
+            <td class="factor">Total Monthly Cost</td>
+            <td data-label="Monthly Cost"><span class="highlight">$16,000</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>If the truck runs <strong>8,000 miles</strong> in the month:</p>
+    <p><strong>$16,000 ÷ 8,000 miles = $2.00 per mile</strong></p>
+    <p>If the carrier wants a profit of $0.40 per Mile, the truck needs to average at least: <strong>$2.40 per mile</strong></p>
+    <p>That number should include loaded miles and deadhead miles. Counting only loaded miles can make the business look more profitable than it really is.</p>
+    
+    <h3>Why Cost Per Mile Matters</h3>
+    <p>CPM shows you a real profit margin. When you compare with a benchmark, you find the real position of your trucking business. Where you stand, at a reasonable profit margin or elsewhere. Cost per Mile helps carriers <a href="${BASE_URL}/blog/finding-loads-for-trucks">find better loads</a>, set rate targets, track equipment performance, and assess deadhead impact.</p>
+
+    <h3>How to Lower Your Cost Per Mile</h3>
+    <p>However, reducing empty miles directly lowers the cost per Mile. But there are some other areas where any improvement helps to reduce the overall Cost Per Mile:</p>
+    <ul>
+    <li>Fuel efficiency</li>
+    <li>Lowering idle time</li>
+    <li>Getting A better backhaul</li>
+    <li>Better route plan to cut deadhead miles</li>
+    <li>Maintaining tires properly</li>
+    <li>Preventing breakdowns</li>
+    <li>Reviewing factoring costs</li>
+    <li>Prefer profitable lanes</li>
+    <li>Using dispatch support</li>
+    <li>Tracking every cost category monthly</li>
+    </ul>
+
+    <p>If you plan with your professional dispatcher, you will find better results. It is hard to focus solely on deadhead miles, route planning, rate negotiation, and finding a better load while you are a solo driver-operator and a fleet company.</p>
+
+    <h2>Conclusion</h2>
+    <p>Running a trucking business comes down to controlling six major cost categories: labor, fuel, maintenance, insurance, compliance, and overhead. None of them move in isolation — a spike in insurance premiums or a jump in deadhead miles can quietly erase a healthy margin.</p>
+    `,
+  },
 ];

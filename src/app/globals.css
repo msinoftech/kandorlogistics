@@ -192,6 +192,7 @@ body {
 .details-page .post-content .dispatcher-card h4 {
   margin-bottom: 0.5rem;
 }
+
 /* Comparison table */
 .details-page .post-content .comparison-table-wrap {
   overflow-x: auto;
@@ -248,9 +249,85 @@ body {
 }
 
 .details-page .post-content .comparison-table .highlight {
-  font-weight: 600;
   color: #dc2626;
   background: linear-gradient(to right, #fef2f2, #fff7ed);
   padding: 0.1rem 0.35rem;
   border-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .details-page .post-content .comparison-table-wrap {
+    overflow-x: visible;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked {
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked thead {
+    display: none;
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked tbody,
+  .details-page .post-content .comparison-table.comparison-table--stacked tr,
+  .details-page .post-content .comparison-table.comparison-table--stacked td {
+    display: block;
+    width: 100%;
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked tr {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.875rem;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.06);
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked tr:hover {
+    background: #fff;
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked td {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.875rem 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    text-align: right;
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked td:last-child {
+    border-bottom: none;
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked td[data-label]::before {
+    content: attr(data-label);
+    flex: 0 0 42%;
+    font-weight: 600;
+    color: #374151;
+    text-align: left;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked td.factor {
+    display: block;
+    white-space: normal;
+    border-right: none;
+    border-bottom: 1px solid #fecaca;
+    background: linear-gradient(to right, #dc2626, #fb923c);
+    color: #fff;
+    font-size: 0.9375rem;
+    text-align: left;
+  }
+
+  .details-page .post-content .comparison-table.comparison-table--stacked tbody tr:nth-child(even) td.factor {
+    background: linear-gradient(to right, #dc2626, #fb923c);
+  }
 }
