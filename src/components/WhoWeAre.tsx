@@ -31,9 +31,6 @@ export default function WhoWeAre() {
           {/* Bullet Points */}
           <div className="space-y-3">
             <div className="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.5 1.2l-2.3 1.1a11 11 0 005.5 5.5l1.1-2.3a1 1 0 011.2-.5l4.5 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.7 21 3 14.3 3 6V5z"/>
-                </svg>
               <p>Get in Touch today. We are a dedicated partner to discuss your dispatch needs and how we can support your business growth.</p>
             </div>
           </div>
