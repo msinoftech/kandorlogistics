@@ -173,12 +173,14 @@ export default function about() {
       {/* Schema added to the <head> */}
       <Script id="about-schema" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchemaData) }}/>
 
-      <div className="max-w-7xl mx-auto sm:pt-40 md:pt-40 lg:pt-40 pt-40">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <h1 className="text-2xl text-gray-900 md:text-4xl font-bold">Meet Kandor Logistics: Your Trusted Dispatch Partner in the USA</h1>
-          <p>At Kandor Logistics, we are proud to be the trusted backbone for owner-operators and fleet companies across the USA. Our goal is to simplify trucking operations so your business operates efficiently and profitably.</p>
+      <section className="bg-white sm:pt-40 md:pt-40 lg:pt-40 pt-40">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <h1 className="text-2xl text-gray-900 md:text-4xl font-bold">Meet Kandor Logistics: Your Trusted Dispatch Partner in the USA</h1>
+            <p>At Kandor Logistics, we are proud to be the trusted backbone for owner-operators and fleet companies across the USA. Our goal is to simplify trucking operations so your business operates efficiently and profitably.</p>
+          </div>
         </div>
-      </div>
+      </section>
 
       <section className="bg-white relative py-12">
         <AboutSection

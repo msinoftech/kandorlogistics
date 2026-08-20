@@ -295,27 +295,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white max-w-7xl mx-auto px-6 pb-20">
-          <div className="rounded-3xl bg-white drop-shadow-lg p-8">
-            <div className="relative text-center pb-8 space-y-3">
-                <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
-                <p>Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
-            </div>
+      <section className="bg-white pb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-3xl bg-white drop-shadow-lg p-8">
+              <div className="relative text-center pb-8 space-y-3">
+                  <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
+                  <p>Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
+              </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Left Content */}
-              <div className="relative">
-                <div className="mt-6">
-                  <ContactSection/>
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Left Content */}
+                <div className="relative">
+                  <div className="mt-6">
+                    <ContactSection/>
+                  </div>
+                </div>
+
+                {/* Right Form */}
+                <div className="relative">
+                  <ContactForm submitRole="button" submitAriaLabel="Request a quote from above the footer" />
                 </div>
               </div>
-
-              {/* Right Form */}
-              <div className="relative">
-                <ContactForm submitRole="button" submitAriaLabel="Request a quote from above the footer" />
-              </div>
             </div>
-        </div>
+          </div>
       </section>
 
       <section className="py-20 bg-gray-100">

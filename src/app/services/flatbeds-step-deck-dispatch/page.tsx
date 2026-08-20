@@ -274,21 +274,23 @@ export default function FlatbedsStepDeckDispatchPage() {
         </div>
     </section>
 
-    <section className="bg-white max-w-7xl relative mx-auto px-6 py-20">
-        <div className="rounded-3xl bg-white drop-shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                {/* Left Content */}
-                <div className="relative">
-                    <div className="space-y-3">
-                        <div className="text-2xl md:text-3xl text-gray-900 font-bold">Partner with Us to Scale Your Business</div>
-                        <p>Contact us for a customised dispatch plan tailored to your equipment, lanes, and rate goals so that you can drive with confidence</p>
+    <section className="bg-white relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-3xl bg-white drop-shadow-lg p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    {/* Left Content */}
+                    <div className="relative">
+                        <div className="space-y-3">
+                            <div className="text-2xl md:text-3xl text-gray-900 font-bold">Partner with Us to Scale Your Business</div>
+                            <p>Contact us for a customised dispatch plan tailored to your equipment, lanes, and rate goals so that you can drive with confidence</p>
+                        </div>
+
                     </div>
 
-                </div>
-
-                {/* Right Form */}
-                <div className="relative">
-                    <ContactForm />
+                    {/* Right Form */}
+                    <div className="relative">
+                        <ContactForm />
+                    </div>
                 </div>
             </div>
         </div>

@@ -204,24 +204,26 @@ export default function ServicesPage() {
       </div>
     </section>
 
-    <section className="bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="rounded-3xl bg-white drop-shadow-lg p-8">
-          <div className="relative text-center space-y-3 pb-8">
-              <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
-              <p>Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Left Content */}
-            <div className="relative">
-              <div className="mt-6">
-                <ContactSection/>
-              </div>
+    <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl bg-white drop-shadow-lg p-8">
+            <div className="relative text-center space-y-3 pb-8">
+                <div className="text-2xl text-gray-900 md:text-4xl font-bold">Lets Plan Your Next Week of Loads</div>
+                <p>Tell us your lanes and equipment. We will share a quick lane strategy and pricing options.</p>
             </div>
 
-            {/* Right Form */}
-            <div className="relative">
-              <ContactForm />
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Left Content */}
+              <div className="relative">
+                <div className="mt-6">
+                  <ContactSection/>
+                </div>
+              </div>
+
+              {/* Right Form */}
+              <div className="relative">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>
